@@ -15,8 +15,8 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<section id="page-template" class="container-fluid">
+		<div class="row">
 
 		<?php
 		while ( have_posts() ) :
@@ -31,10 +31,9 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		<div>
+	</section><!-- #primary -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

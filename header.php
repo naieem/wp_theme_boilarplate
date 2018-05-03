@@ -41,8 +41,9 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
+                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+
+                    <!-- <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home
                                 <span class="sr-only">(current)</span>
@@ -72,8 +73,18 @@
                         <li class="nav-item">
                             <a class="nav-link gamiphy-get-started" href="#">Get Started</a>
                         </li>
-                    </ul>
-                </div>
+                    </ul> -->
+                <!-- </div> -->
+                <?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'menu_class' => 'navbar-nav ml-auto',
+						'container' => 'div',
+						'container_class' => 'collapse navbar-collapse',
+						'container_id' => 'navbarSupportedContent'
+					) );
+					?>
             </nav>
         </div>
     </header>
