@@ -146,6 +146,7 @@ header nav .navbar-collapse .navbar-nav .menu-item.current-menu-item a{
 }
 
 .gamiphy-get-started {
+    color: #fff;
     text-align: center;
     display: block;
     text-transform: uppercase;

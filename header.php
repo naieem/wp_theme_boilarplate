@@ -27,15 +27,31 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/main.css">
-	<?php wp_head(); ?>
+	<?php wp_head();
+    global $options; 
+    $options = get_option( 'gamiphy_settings' );
+    ?>
+    <title>
+    <?php if(isset($options['site_title'])){
+        echo $options['site_title'];
+    }else{
+      echo "Gamiphy";  
+    }
+    ?></title>
 </head>
 
 <body <?php body_class(); ?>>
 	<header id="gamiphy-header">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg bg-faded">
-                <a class="navbar-brand" href="#">
-                    <embed class="gamiphy-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" width="100%" height="100%">
+                <a class="navbar-brand" href="<?php echo home_url( '/' );?>">
+                    <?php
+                    if(isset($options['site_logo'])){
+                        echo "<img src='".$options['site_logo']."' class='gamiphy-logo'>";
+                    }else{
+                        echo '<embed class="gamiphy-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" width="100%" height="100%">';
+                    }
+                    ?>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -85,6 +101,7 @@
 						'container_id' => 'navbarSupportedContent'
 					) );
 					?>
+                    <a class="nav-link gamiphy-get-started" href="<?php echo $options['getting_started_url'];?>">Get Started</a>
             </nav>
         </div>
     </header>
@@ -92,7 +109,32 @@
         <div class="container-fluid">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <?php 
+                        $slider_query = new WP_Query( array( 'post_type' => 'slider'));
+                        $slider_count = 0;
+                        if ( $slider_query->have_posts() ) :
+                        while ( $slider_query->have_posts() ) : $slider_query->the_post(); 
+                            $slider_count++;
+                        ?>
+                        <div class="carousel-item <?php if($slider_count == 1) echo 'active';?>">
+                            <!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/intro.jpg" alt="..."> -->
+                            <?php the_post_thumbnail( 'full' );?>
+                            <div class="carousel-caption d-md-block">
+                                <p class="gamiphy-silder-main-title"><?php the_title(); ?></p>
+                                <p class="gamiphy-silder-sub-title"><?php echo get_the_excerpt(get_the_ID());?>
+                                </p>
+                                <div class="breaker"></div>
+                                <a class="watch-video" href="<?php echo $options['youtube_video_url'];?>" target="_blank">
+                                    <embed class="gamiphy-play" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/video.svg" width="40px" height="40px">
+                                    <span> watch the video </span>
+                                </a>
+                            </div>
+                        </div>
+                        <?php endwhile; ?>
+                        <?php else:  ?>
+                        <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                        <?php endif; ?>
+                    <!-- <div class="carousel-item active">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/intro.jpg" alt="...">
                         <div class="carousel-caption d-md-block">
                             <p class="gamiphy-silder-main-title">Take your customer epxeriece to the next level with incentives and rewards </p>
@@ -103,7 +145,7 @@
                                 <span> watch the video </span>
                             </a>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- <div class="carousel-item">
                         <img class="d-block w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/intro.jpg" alt="Second slide">
                     </div>
