@@ -1,0 +1,857 @@
+/************************************************** GENERAL STYLES ********************************************************/
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-Regular.woff2') format('woff2'),
+        url('Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-Medium.woff2') format('woff2'),
+        url('Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-Light.woff2') format('woff2'),
+        url('Montserrat-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+a {
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration:none;
+    color: white;
+}
+
+body {
+    font-family: Montserrat;
+    overflow-x: hidden;
+}
+/************************************************** general classes ********************************************************/
+.justify-content-center{
+    justify-content: center;
+}
+.display-flex{
+    display: flex;
+}
+
+
+/************************************************** HEADER STYLES ********************************************************/
+
+
+header {
+    /* background: url('../img/intro.jpg') no-repeat !important; */
+    padding-top: 1em;
+    /* height: 160px; */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#carousel-section{
+    position: relative;
+}
+#carousel-section .container-fluid{
+    padding: 0 !important;
+}
+.navbar {
+    z-index: 10;
+}
+
+.gamiphy-silder-main-title {
+    font-size : 20px;
+    letter-spacing : -0.1px;
+    color : #FFFFFF;
+}
+
+.gamiphy-silder-sub-title {
+    font-size : 45px;
+    letter-spacing : -0.22px;
+    color : #FFFFFF;
+}
+
+.watch-video {
+    margin-top: 10px;
+    border: solid 1px white;
+    width: 256px;
+    height: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: white;
+    text-decoration: none;
+    font-size : 13px;
+    text-transform : uppercase;
+}
+
+.gamiphy-play {
+    margin-right: 15px;
+}
+
+.carousel-caption {
+    bottom: 200px !important;
+}
+
+#carouselExampleSlidesOnly {
+    position: relative;
+    /* top: 0px; */
+}
+
+header nav .navbar-collapse .navbar-nav .nav-item a{
+    color: white;
+    font-size : 14px;
+    letter-spacing : -0.07px;
+    color : #FFFFFF !important;
+    border-color : #FFFFFF;
+    border-width : 1px;
+    margin-right: .5em;
+}
+
+header nav .navbar-collapse .navbar-nav .nav-item.active a{
+    border-color : #FFFFFF;
+    border-bottom : solid 1px white;
+}
+.navbar-toggler{
+    border-color: #FFFFFF;
+}
+
+.gamiphy-get-started {
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    background : #7F3EBA;
+    width : 149px;
+    height : 40px;
+    box-shadow : 0px 13.42px 11.63px rgba(0, 0, 0, 0.25);
+}
+.logo-container{
+    width: 30%;
+}
+.gamiphy-logo {
+    float: right;
+    width: 80%;
+}
+body{ 
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+/* .col {
+    padding: 0px !important;
+} */
+
+.slider {
+    
+    height: 1000px;
+}
+
+
+/************************************************** FIND OUT SECTION STYLES ********************************************************/
+#find-out-section, #find-out-section-2  {
+    background : #51D7ED;
+    /* height : 140px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.find-out-row {
+    margin: 0;
+    padding: 25px 0;
+}
+.find-out-row div{
+    display: flex;
+    align-items: center;
+}
+
+.find-out-text {
+    font-size : 26px;
+    letter-spacing : -0.17px;
+    color : #FFFFFF;
+    margin: 0;
+}
+
+.take-quiz-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: white;
+    background : #451EAD;
+    width : 184px;
+    height : 45px;
+    box-shadow : 5.1px 8.16px 10.2px rgba(0, 0, 0, 0.13);
+}
+
+#find-out-section .find-out-section-container,#find-out-section-2 .find-out-section-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+#find-out-section .find-out-section-container .text, #find-out-section-2 .find-out-section-container .text{
+    font-size : 34px;
+    letter-spacing : -0.17px;
+    color : #3D345F;
+    margin-top: 0.5em;
+}
+
+#find-out-section .find-out-section-container .take-quiz-btn, #find-out-section-2 .find-out-section-container .take-quiz-btn{
+    background : #51D6EE;
+    width : 184px;
+    height : 45px;
+    box-shadow : 5.1px 8.16px 10.2px rgba(0, 0, 0, 0.13);
+    color : #FFFFFF;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/************************************************** WHAT IS GAMIPHICATION SECTION STYLES ********************************************************/
+#what-is-gamiphication {
+    /* height: 780px; */
+}
+
+#what-is-gamiphication .gamiphication-intro {
+    /* height: 600px; */
+    background: white;
+}
+
+#what-is-gamiphication .left-section {
+    margin-top: 10em;
+    padding: 0 15%;
+}
+
+#what-is-gamiphication .right-section {
+    /* margin-top: 5em; */
+}
+#what-is-gamiphication .right-section embed{
+    width: 90%;
+}
+
+#what-is-gamiphication .small-title {
+    font-size : 13px;
+    letter-spacing : 1.3px;
+    color : #B6B6B6;
+    text-transform: uppercase;
+}
+
+#what-is-gamiphication .title {
+    font-size : 35px;
+    letter-spacing : -0.17px;
+    color : #3D345F;
+    margin-top: -20px;
+}
+
+#what-is-gamiphication .seperator {
+    display: block;
+    margin-top: -12px;
+}
+
+#what-is-gamiphication .content {
+    font-size : 16px;
+    line-height : 30px;
+    letter-spacing : 0.64px;
+    color : #767676;
+    margin-top: 2em;
+}
+
+#what-is-gamiphication .learn-more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size : 13px;
+    letter-spacing : 0.26px;
+    color : #5D35CF;
+    text-transform: uppercase;
+    background : #F2F5F9;
+    width : 165px;
+    height : 45px;
+    box-shadow : 5px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+#what-is-gamiphication .learn-more-btn:hover {
+    color : #5D35CF;
+}
+
+/************************************************** GAMIPHICATION FEATURES SECTION STYLES ********************************************************/
+
+#gamiphy-features-sections {
+    /* height: 750px; */
+    background : #F2F5F9;
+}
+
+.gamiphy-features-block {
+    padding-top: 8em;
+    padding-bottom: 8em;
+}
+
+.gamiphy-features-block-content>.col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gamiphy-features-block-title {
+    text-align: center;
+}
+
+#gamiphy-features-sections .gamiphy-features-block .gamiphy-features-block-title .sub-title {
+    font-size : 13px;
+    letter-spacing : 1.3px;
+    color : #B6B6B6;
+}
+
+
+#gamiphy-features-sections .gamiphy-features-block .gamiphy-features-block-title .main-title {
+    font-size : 35px;
+    letter-spacing : -0.17px;
+    color : #3D345F;
+}
+
+#gamiphy-features-sections .gamiphy-features-block .gamiphy-features-block-title .seperator {
+    margin: -10px auto;
+}
+
+.item {
+    /* width: 31.33333333%;
+    float: left;
+    margin: 0 3% 40px 200px; */
+    /* width: 17.333333%;
+    float: left; */
+    /* margin: 0 3% 40px 67px; */
+}
+
+.gamiphy-features-block-content {
+    text-align: center;
+    margin-top: 5em;
+    padding: 0 10%
+}
+
+.icon-container {
+
+}
+
+.icon {
+
+}
+
+.title-container {
+    margin-top: 3em;
+}
+
+.description-container {
+    margin-top: 2em;
+    padding: 0 20px;
+}
+
+
+.gamiphy-features-block-content .title-container .title{
+    font-size : 23px;
+    letter-spacing : 0.35px;
+    color : #3E365F;
+}
+
+.gamiphy-features-block-content .description-container .description{
+    font-size : 16px;
+    line-height : 30px;
+    letter-spacing : 0.64px;
+    color : #767676;
+}
+
+
+/************************************************** GAMIPHICATION FEATURES SECTION STYLES ********************************************************/
+
+#how-gamiphy-works-section {
+    /* height: 850px; */
+    padding: 8em 0;
+}   
+
+.how-gamiphy-works-img {
+    border-radius : 6px;
+    box-shadow : 5px 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+.seperator {
+    display: block;
+    margin-top: -12px;
+}
+.how-gamiphy-works-container .title {
+    font-size : 35px;
+    letter-spacing : -0.17px;
+    color : #3D345F;
+}
+.how-gamiphy-works-container .left-section{
+    padding: 0 10% 0 15%;
+}
+.how-gamiphy-works-container .right-section .col{
+    padding: 0;
+}
+.how-gamiphy-works-container .right-section-container{
+    display: flex;
+    align-items: center;
+}
+
+.how-gamiphy-works-icon {
+    margin-bottom: 2em;
+}
+
+.points-container {
+    margin-top: 3em;
+}
+
+.step {
+    background: #5D33CE;
+    font-size: 20px;
+    color: white;
+    border-radius: 50%;
+    height:30px;
+    width:30px;
+    text-align: center;
+}
+
+.line-breaker    {
+    border: 1px solid;
+    border-color : #E7EBEE;
+    height: 3em;
+    width: 1px;
+    margin: -16px auto;
+}
+
+.point-container {
+    padding-bottom: 2em;
+}
+
+.step-text {
+    font-size : 20px;
+    letter-spacing : 0.3px;
+    color : #3E365F;
+}
+
+/************************************************** LETS START SECTION STYLES ********************************************************/
+
+#lets-start-section {
+    /* height: 600px; */
+    padding: 8em 0;
+    color: white !important;
+    background-size:100% 120% !important;
+    -o-background-size: 100% 120% !important;
+    -webkit-background-size: 100% 120% !important;
+    background: -moz-linear-gradient(342deg, rgba(69,30,173,0.9) 0%, rgba(114,77,221,0.9) 100%), url('../img/lets-start.jpg'); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(69,30,173,0.9)), color-stop(100%, rgba(114,77,221,0.9))), url('../img/lets-start.jpg'); /* safari4+,chrome */
+    background: -webkit-linear-gradient(342deg, rgba(69,30,173,0.9) 0%, rgba(114,77,221,0.9) 100%), url('../img/lets-start.jpg'); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(342deg, rgba(69,30,173,0.9) 0%, rgba(114,77,221,0.9) 100%), url('../img/lets-start.jpg'); /* opera 11.10+ */
+    /* background: -ms-linear-gradient(342deg, rgba(69,30,173,0.9 0%, rgba(114,77,221,1) 100%), url('../img/lets-start.jpg'); /* ie10+ */
+    background: linear-gradient(108deg, rgba(69,30,173,0.9) 0%, rgba(114,77,221,0.9) 100%), url('../img/lets-start.jpg'); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#451ead', endColorstr='#724ddd',GradientType=1 ); /* ie6-9 */
+    opacity: 9;
+}
+
+.lets-start-block {
+    color: white !important;
+    /* padding-top: 8em; */
+}
+
+.lets-start-block-content>.col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lets-start-block-title {
+    text-align: center;
+}
+.lets-start-block-title .sub-title {
+    font-size: 13px;
+    letter-spacing: 1.3px;
+}
+.lets-start-block-title .main-title {
+    font-size: 35px;
+    letter-spacing: -0.17px;
+}
+
+#lets-start-section .lets-start-block .lets-start-block-title .seperator {
+    margin: -10px auto;
+}
+
+.lets-start-block-content .description-container {
+    margin-top: 4em;
+}
+
+.lets-start-block-content .description-container .description {
+    text-align: center;
+    line-height : 26px;
+    letter-spacing : 1.6px;
+    color : #FFFFFF;
+}
+
+.lets-start-block-content .take-quiz-container .col-sm-12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lets-start-block-content .take-quiz-container .take-quiz-btn {
+    background : #51D6EE;
+    width : 184px;
+    height : 45px;
+    color : #FFFFFF;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+/************************************************** PLATFORM SECTION STYLES ********************************************************/
+
+#platforms-section {
+    /* height: 710px; */
+    /* border-bottom: solid 1px #D3DAE4; */
+    padding: 8em 0;
+}
+
+.platform-section-block {
+    /* margin-top: 8em; */
+}
+
+.platform-section-block-title {
+    text-align: center;
+}
+.platform-section-block-title .sub-title{
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    color: #B6B6B6;
+}
+.platform-section-block-title  .main-title{
+    font-size: 35px;
+    letter-spacing: -0.17px;
+    color: #3D345F;
+}
+
+#platforms-section .platform-section-block .platform-section-block-title .seperator {
+    margin: -10px auto;
+}
+
+.platform-section-block-content .description-container {
+    margin-top: 4em;
+}
+
+#platforms-section .platform-section-block-content .platform-items-container .platform-item .main-icon{
+    width: 100%;
+}
+
+#platforms-section .platform-section-block-content .platform-items-container .platform-item .title-container {
+
+}
+
+#platforms-section .platform-section-block-content {
+    padding: 0 10%;
+}
+
+#platforms-section .platform-section-block-content .platform-items-container .platform-item {
+    margin-top: 3em;
+}
+
+#platforms-section .platform-section-block-content .platform-items-container .platform-item .title-container .title{
+    font-size : 23px;
+    letter-spacing : 0.35px;
+    color : #3E365F;
+}
+
+#platforms-section .platform-section-block-content .platform-items-container .platform-item .point {
+    margin-top: 0.5em;
+}
+
+#platforms-section .platform-section-block-content .platform-items-container .platform-item .point .point-text{
+    font-size : 16px;
+    letter-spacing : 1.28px;
+    color : #767676;
+}
+
+#platforms-section .platform-section-block-content .platform-items-container .platform-item .content-container {
+
+}
+
+#platforms-section .content-container {
+    
+}
+
+/************************************************** FOOTER SECTION STYLES ********************************************************/
+footer {
+    background : #F2F5F9;
+    /* height: 130px; */
+    padding: 2em 0;
+}
+
+footer .footer-container {
+    /* padding-top: 3em; */
+}
+
+footer .footer-container .left-section {
+    display: flex;
+    /* justify-content: center; */
+    padding: 0 10%;
+    align-items: center;
+    margin-top: 0px !important;
+    font-size : 13px;
+    line-height : 32px;
+    letter-spacing : 1.04px;
+    color : #9f9f9f;
+}
+
+footer .footer-container .right-section {
+    margin-top: 0px !important;
+}
+
+.social-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    background : #FFFFFF;
+    width : 49px;
+    height : 49px;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+@media (min-width: 360px) { 
+    /* #find-out-section {
+        background : #51D7ED;
+        height : 320px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 770px;
+    }
+
+    .find-out-row {
+        text-align: center;
+    }
+    
+    #find-out-section .find-out-row .col-sm{
+        margin-left: 0% !important;
+    }
+
+    .find-out-text {
+        font-size : 34px;
+        letter-spacing : -0.17px;
+        color : #FFFFFF;
+        width: 360px;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .take-quiz-button {
+        margin: 0 auto;
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        color: white;
+        background : #451EAD;
+        width : 184px;
+        height : 45px;
+        box-shadow : 5.1px 8.16px 10.2px rgba(0, 0, 0, 0.13);
+    } */
+}
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    /* #find-out-section {
+        background : #51D7ED;
+        height : 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .find-out-row {
+        
+    }
+    
+    .find-out-text {
+        font-size : 34px;
+        letter-spacing : -0.17px;
+        color : #FFFFFF;
+    }
+    
+    .take-quiz-button {
+        margin-top: -12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        color: white;
+        background : #451EAD;
+        width : 184px;
+        height : 45px;
+        box-shadow : 5.1px 8.16px 10.2px rgba(0, 0, 0, 0.13);
+    } */
+
+    
+}
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .gamiphy-logo {
+        padding-right: 35px;
+    }
+}
+
+ /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}
+
+@media all and (max-width: 991px){
+    .gamiphy-logo{
+        float: left;
+    }
+
+   
+
+}
+@media all and (max-width: 768px){
+    .gamiphy-silder-main-title{
+        font-size: 18px;
+    }
+    .gamiphy-silder-sub-title{
+        font-size: 34px;
+    }
+
+    /* find out section */
+
+    .find-out-row div{
+        justify-content: center;
+    }
+    .find-out-text{
+        padding-bottom: 25px;
+    }
+
+    /* what is gamiphy section */
+    #what-is-gamiphication .left-section{
+        padding: 0 5%;
+    }
+    #what-is-gamiphication .right-section embed{
+        width: 100%;
+    }
+
+    /* platforms section */
+    #platforms-section {
+        padding-bottom: 0;
+    }
+    #platforms-section .platform-section-block-content .platform-items-container .platform-item .left-section{
+        order: 2;
+        padding: 5em 0;
+        border-bottom: 2px solid #B6B6B6;
+    }
+    #platforms-section .platform-section-block-content .platform-items-container .platform-item .left-section:last-child{
+
+        border-bottom: unset;
+    }
+    #platforms-section .platform-section-block-content .platform-items-container .platform-item .right-section{
+        order: 1;
+       
+    }
+
+    /* find out section 2 */
+
+    #find-out-section-2{
+
+        background-color: unset;
+    }
+    #find-out-section-2 .find-out-row{
+
+        padding: 4em 0;
+    }
+    #find-out-section-2 .find-out-text{
+
+        color: #3E365F;
+    }
+    #find-out-section-2 .take-quiz-button{
+
+        background-color: #51D7ED;
+    }
+
+    /* footer */
+
+    footer .footer-container .left-section{
+        justify-content: center;
+        padding-top: 2em;
+        order: 2;
+    }
+
+    footer .footer-container .right-section{
+        display: flex;
+        justify-content: center;
+        order: 1;
+    }
+}
+
+@media all and (max-width: 576px){
+    .navbar-brand{
+        width: 50%;
+    }
+    .navbar-brand .gamiphy-logo{
+        width: 100%;
+    }
+    .gamiphy-silder-sub-title{
+        font-size: 28px;
+    }
+    .gamiphy-silder-main-title{
+        font-size: 16px;
+    }
+
+
+    /* platforms section */
+    #platforms-section .platform-section-block-content{
+        padding: 0;
+    }
+
+
+}
+
+
+/************************************************** BLOG LIST PAGE TOP SECTION STYLES ********************************************************/
+
+#top-section {
+    position: relative;
+    /* background-color: ; */
+}
+
+.top-section-container {
+    background: url('../img/head-bg.jpg'), no-repeat !important;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.top-section-container .top-section-title {
+    padding: 18em 0;
+}
+
+.top-section-container .top-section-title .title{
+    font-size : 45px;
+    letter-spacing : -0.22px;
+    color : #FFFFFF;
+    text-align: center;
+}
