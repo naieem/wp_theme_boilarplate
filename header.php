@@ -46,10 +46,10 @@
             <nav class="navbar navbar-expand-lg bg-faded">
                 <a class="navbar-brand" href="<?php echo home_url( '/' );?>">
                     <?php
-                    if(isset($options['site_logo'])){
+                    if(isset($options['site_logo']) && $options['site_logo'] !=''){
                         echo "<img src='".$options['site_logo']."' class='gamiphy-logo'>";
                     }else{
-                        echo '<embed class="gamiphy-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" width="100%" height="100%">';
+                        echo '<embed class="gamiphy-logo" src="'.get_stylesheet_directory_uri().'/assets/img/logo.svg" width="100%" height="100%">';
                     }
                     ?>
                 </a>
