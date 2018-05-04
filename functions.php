@@ -115,7 +115,7 @@ function gamiphy_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Home Page Sidebar', 'gamiphy' ),
+		'name'          => esc_html__( 'Home Page Widget Container', 'gamiphy' ),
 		'id'            => 'home-page-sidebar',
 		'description'   => esc_html__( 'Add widgets here.', 'gamiphy' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
