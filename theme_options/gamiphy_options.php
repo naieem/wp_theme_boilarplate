@@ -26,12 +26,12 @@ $gameOptions = array(
 		'model' => 'getting_started_url',
 		'description' => 'Insert Getting started Link'
 	),
-	array(
-		'type' => 'textarea',
-		'label' => 'Insert site Configuration',
-		'model' => 'site_configuration',
-		'description' => 'Insert site configuration'
-	),
+	// array(
+	// 	'type' => 'textarea',
+	// 	'label' => 'Insert site Configuration',
+	// 	'model' => 'site_configuration',
+	// 	'description' => 'Insert site configuration'
+	// ),
 	array(
 		'type' => 'media',
 		'label' => 'Select or insert site logo',
@@ -51,6 +51,12 @@ $gameOptions = array(
 		'input_field_id' => 'site__footer_logo',
 		'popWindowTitle' => 'Select Footer Logo',
 		'previewId' => 'preview_footer'
+	),
+	array(
+		'type' => 'text',
+		'label' => 'Insert calendly url',
+		'model' => 'calendly_url',
+		'description' => 'Insert calendly url'
 	)
 );
 

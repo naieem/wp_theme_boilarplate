@@ -57,40 +57,6 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-
-                    <!-- <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Product</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Industries</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Affiliates</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Careers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link gamiphy-get-started" href="#">Get Started</a>
-                        </li>
-                    </ul> -->
-                <!-- </div> -->
                 <?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',
