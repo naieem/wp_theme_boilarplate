@@ -73,7 +73,6 @@ function gamiphy_options_enqueue_scripts() {
  
         wp_enqueue_script('media-upload');
         wp_enqueue_script('wptuts-upload');
- 
 }
 add_action('admin_enqueue_scripts', 'gamiphy_options_enqueue_scripts');
 

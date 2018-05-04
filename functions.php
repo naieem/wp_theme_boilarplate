@@ -113,6 +113,16 @@ function gamiphy_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Home Page Sidebar', 'gamiphy' ),
+		'id'            => 'home-page-sidebar',
+		'description'   => esc_html__( 'Add widgets here.', 'gamiphy' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'gamiphy_widgets_init' );
 
@@ -184,6 +194,11 @@ if ( class_exists( 'WooCommerce' ) ) {
 require get_template_directory() . '/theme_options/gamiphy_options.php';
 
 /**
+ * Gamiphy widgets
+ */
+require get_template_directory() . '/gamiphy-widget/widgets.php';
+
+/**
  * Formatting comments 
  * @param  [type] $comment [comments]
  * @param  [type] $args    [argument]
@@ -240,4 +255,32 @@ function better_comments( $comment, $args, $depth ) {
 		<?php
 			break;
 		endswitch; // End comment_type check.
+}
+add_action("admin_head","load_custom_wp_tiny_mce");
+function load_custom_wp_tiny_mce() {
+
+if (function_exists('wp_tiny_mce')) {
+
+  add_filter('teeny_mce_before_init', create_function('$a', '
+    $a["theme"] = "advanced";
+    $a["skin"] = "wp_theme";
+    $a["height"] = "200";
+    $a["width"] = "800";
+    $a["onpageload"] = "";
+    $a["mode"] = "exact";
+    $a["elements"] = "intro";
+    $a["editor_selector"] = "mceEditor";
+    $a["plugins"] = "safari,inlinepopups,spellchecker";
+
+    $a["forced_root_block"] = false;
+    $a["force_br_newlines"] = true;
+    $a["force_p_newlines"] = false;
+    $a["convert_newlines_to_brs"] = true;
+
+    return $a;'));
+
+ wp_tiny_mce(true);
+}
+
+
 }
