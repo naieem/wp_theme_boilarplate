@@ -121,9 +121,9 @@ function gamiphy_styles_scripts() { ?>
 	</style>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
-			var inputFieldId='';
-			var previewId = '';
-			// uploading logo media query action
+			var inputFieldId=''; // needed for setting value to the input field
+			var previewId = ''; // needed to put preview image link in that previewcontainer
+			// uploading  media query action
 		    $('.select_media_button').click(function() {
 		    	inputFieldId = this.attributes['data-input-id'].value;
 		    	popupWindowTitle = this.attributes['data-pop-title'].value;
