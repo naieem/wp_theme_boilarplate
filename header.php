@@ -117,7 +117,6 @@
                             $slider_count++;
                         ?>
                         <div class="carousel-item <?php if($slider_count == 1) echo 'active';?>">
-                            <!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/intro.jpg" alt="..."> -->
                             <?php the_post_thumbnail( 'full' );?>
                             <div class="carousel-caption d-md-block">
                                 <p class="gamiphy-silder-main-title"><?php the_title(); ?></p>

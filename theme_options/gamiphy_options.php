@@ -6,6 +6,55 @@
 */
 
 $gamiphyset = 'gamiphy_settings';
+
+$gameOptions = array(
+	array(
+		'type' => 'text',
+		'label' => 'Website Title',
+		'model' => 'site_title',
+		'description' => 'Enter website Title'
+	),
+	array(
+		'type' => 'text',
+		'label' => 'Youtube Video url',
+		'model' => 'youtube_video_url',
+		'description' => 'Enter youtube video url'
+	),
+	array(
+		'type' => 'text',
+		'label' => 'Insert Getting started Link',
+		'model' => 'getting_started_url',
+		'description' => 'Insert Getting started Link'
+	),
+	array(
+		'type' => 'textarea',
+		'label' => 'Insert site Configuration',
+		'model' => 'site_configuration',
+		'description' => 'Insert site configuration'
+	),
+	array(
+		'type' => 'media',
+		'label' => 'Select or insert site logo',
+		'model' => 'site_logo',
+		'description' => 'Select or insert site logo',
+		'button_text' => 'select logo',
+		'input_field_id' => 'site_logo',
+		'popWindowTitle' => 'Select Logo',
+		'previewId' => 'preview'
+	),
+	array(
+		'type' => 'media',
+		'label' => 'Select or insert footer logo',
+		'model' => 'site_footer_logo',
+		'description' => 'Select or insert footer logo',
+		'button_text' => 'select footer logo',
+		'input_field_id' => 'site__footer_logo',
+		'popWindowTitle' => 'Select Footer Logo',
+		'previewId' => 'preview_footer'
+	)
+);
+
+
 // ===========================================
 // adding admin script query =================
 // ===========================================
@@ -67,9 +116,14 @@ function gamiphy_styles_scripts() { ?>
 	</style>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
+			var inputFieldId='';
+			var previewId = '';
 			// uploading logo media query action
-		    $('#upload_logo_button').click(function() {
-		        tb_show('Upload a logo', 'media-upload.php?referer=gamiphy-settings&type=image&TB_iframe=true&post_id=0', false);
+		    $('.select_media_button').click(function() {
+		    	inputFieldId = this.attributes['data-input-id'].value;
+		    	popupWindowTitle = this.attributes['data-pop-title'].value;
+		    	previewId = this.attributes['data-preview-id'].value;
+		        tb_show(popupWindowTitle, 'media-upload.php?referer=gamiphy-settings&type=image&TB_iframe=true&post_id=0', false);
 		        return false;
 		    });
 		    $(".gamiphy-container .hndle").click(function(){
@@ -79,8 +133,8 @@ function gamiphy_styles_scripts() { ?>
 			//  callback function after selecting media files
 			window.send_to_editor = function(html) {
 			    var image_url = $(html).attr('src');
-			    $('#site_logo').val(image_url);
-			    $('#logo_preview img').attr('src',image_url);
+			    $('#'+ inputFieldId).val(image_url);
+			    $('#'+previewId+' img').attr('src',image_url);
 			    tb_remove();
 			}
 		});
@@ -138,71 +192,25 @@ function theme_settings_page() {
 			<div class="inside">
 				<table class="form-table">
 					<tbody>
-						<!-- site title-->
-						<tr valign="top">
-							<th scope="row">
-								<label for="<?php echo $gamiphyset."[site_title]"; ?>">Site Title
-								</label>
-							</th>
-							<td>
-								<p>
-									<input type="text" class="full-width" name="<?php echo $gamiphyset."[site_title]"; ?>" value="<?php echo $options['site_title']; ?>"></p>
-								<p><span class="description">Enter website title.</span></p>
-							</td>
-						</tr>
-
-						<!-- <tr valign="top">
-							<th scope="row">
-								<label for="<?php echo $gamiphyset."[footer_scripts]"; ?>">Footer Scripts
-								</label>
-							</th>
-							<td>
-								<p><textarea name="<?php echo $gamiphyset."[footer_scripts]"; ?>" class="large-text" id="<?php echo $gamiphyset."[footer_scripts]"; ?>" cols="78" rows="8"><?php echo $options['footer_scripts']; ?></textarea></p>
-								<p><span class="description">Add Description here.</span></p>
-							</td>
-						</tr> -->
-
-						<!-- site logo-->
-						<tr valign="top">
-							<th scope="row">
-								<label for="<?php echo $gamiphyset."[site_logo]"; ?>">Select website logo
-								</label>
-							</th>
-							<td>
-								<p><input class="full-width" type="text" id="site_logo" name="<?php echo $gamiphyset."[site_logo]"; ?>" value="<?php echo $options['site_logo']; ?>">
-									<input id="upload_logo_button" type="button" class="button" value="<?php _e( 'Select Logo', 'gamiphy' ); ?>" />
-								</p>
-								<p id="logo_preview">
-									<img src="<?php echo $options['site_logo']; ?>">
-								</p>
-								<p><span class="description">Select Website Logo.</span></p>
-							</td>
-						</tr>
-
-						<!-- Youtube Video url-->
-						<tr valign="top">
-							<th scope="row">
-								<label for="<?php echo $gamiphyset."[youtube_video_url]"; ?>">Insert Youtube Video Url
-								</label>
-							</th>
-							<td>
-								<p><input class="full-width" type="text" name="<?php echo $gamiphyset."[youtube_video_url]"; ?>" value="<?php echo $options['youtube_video_url']; ?>">
-								</p>
-								<p><span class="description">Insert youtube video url</span></p>
-							</td>
-						</tr>
-						<!-- getting started input -->
-						<tr valign="top">
-							<th scope="row">
-								<label for="<?php echo $gamiphyset."[getting_started_url]"; ?>">Insert getting started Url
-								</label>
-							</th>
-							<td>
-								<p><input class="full-width" type="text"  name="<?php echo $gamiphyset."[getting_started_url]"; ?>" value="<?php echo $options['getting_started_url']; ?>">
-								</p>
-								<p><span class="description">Insert Getting started Link</span></p>
-							</td>
-						</tr>
+						<?php
+						foreach ($GLOBALS["gameOptions"] as $key => $option) {
+							switch ($option['type']) {
+								case 'text':
+								 echo returnTextOptionConfiguration($option,$options);
+									break;
+								case 'textarea':
+								 echo returnTextareaOptionConfiguration($option,$options);
+									break;
+								case 'media':
+								 echo returnMediaSelectionConfiguration($option,$options);
+									break;
+								
+								default:
+									# code...
+									break;
+							}
+						}
+						?>
 					</tbody>
 				</table>
 			</div>		
@@ -215,5 +223,82 @@ function theme_settings_page() {
 </div><!-- END wrap -->
 
 <?php
+}
 
+/**
+ * returning html for input type text
+ * @param  [type] $options     [inputs configuration]
+ * @param  [type] $storedValue [setting value that is registered and saved]
+ * @return [type]              [text]
+ */
+function returnTextOptionConfiguration($options,$storedValue){
+	$saved_value = $storedValue[$options["model"]];
+	$labelAndName = $GLOBALS["gamiphyset"].'['.$options["model"].']';
+	$label = $GLOBALS[$gamiphyset].$options["label"];
+	$description = $options["description"];
+	return '<tr valign="top">
+			<th scope="row">
+				<label for="'.$labelAndName.'">'.$label.'</label>
+			</th>
+			<td>
+				<p>
+					<input type="text" class="full-width" name="'.$labelAndName.'" value="'.$saved_value.'"></p>
+				<p><span class="description">'.$description.'</span></p>
+			</td>
+		</tr>';
+}
+/**
+ * returning html for input type textarea
+ * @param  [type] $options     [inputs configuration]
+ * @param  [type] $storedValue [setting value that is registered and saved]
+ * @return [type]              [textarea]
+ */
+function returnTextareaOptionConfiguration($options,$storedValue){
+	$saved_value = $storedValue[$options["model"]];
+	$labelAndName = $GLOBALS["gamiphyset"].'['.$options["model"].']';
+	$label = $GLOBALS[$gamiphyset].$options["label"];
+	$description = $options["description"];
+	return '<tr valign="top">
+			<th scope="row">
+				<label for="'.$labelAndName.'">'.$label.'</label>
+			</th>
+			<td>
+				<p>
+				<textarea name="'.$labelAndName.'" class="large-text" cols="78" rows="8">'.$saved_value.'</textarea></p>
+				<p><span class="description">'.$description.'</span></p>
+			</td>
+		</tr>';
+}
+
+/**
+ * returning html for input type file selection
+ * @param  [type] $options     [inputs configuration]
+ * @param  [type] $storedValue [setting value that is registered and saved]
+ * @return [type]              [media]
+ */
+
+function returnMediaSelectionConfiguration($options,$storedValue){
+	$saved_value = $storedValue[$options["model"]];
+	$labelAndName = $GLOBALS["gamiphyset"].'['.$options["model"].']';
+	$label = $GLOBALS[$gamiphyset].$options["label"];
+	$description = $options["description"];
+	$buttonText = $options["button_text"];
+	$inputFieldId = $options["input_field_id"];
+	$popWindowTitle = $options['popWindowTitle']; 
+	$previewId = $options['previewId'];
+	return '<tr valign="top">
+				<th scope="row">
+					<label for="'.$labelAndName.'">'.$label.'</label>
+				</th>
+				<td>
+					<p>
+					<input class="full-width" type="text" id="'.$inputFieldId.'" name="'.$labelAndName.'" value="'.$saved_value.'">
+					<input type="button" class="select_media_button button" data-pop-title="'.$popWindowTitle.'" data-input-id="'.$inputFieldId.'" data-preview-id="'.$previewId.'" value="'.$buttonText.'" />
+					</p>
+					<p id="'.$previewId.'">
+						<img src="'.$saved_value.'">
+					</p>
+					<p><span class="description">'.$description.'</span></p>
+				</td>
+			</tr>';
 }
