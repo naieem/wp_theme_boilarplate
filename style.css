@@ -10,3 +10,22 @@ License URI: LICENSE
 Text Domain: gamiphy
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
+
+/** according to wp menu class */
+header nav .navbar-collapse .navbar-nav .menu-item a{
+    color: white;
+    font-size : 14px;
+    letter-spacing : -0.07px;
+    color : #FFFFFF !important;
+    border-color : #FFFFFF;
+    border-width : 1px;
+    margin-right: .5em;
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
+header nav .navbar-collapse .navbar-nav .menu-item.current-menu-item a{
+    border-color : #FFFFFF;
+    border-bottom : solid 1px white;
+}
+/** according to wp menu class ends */
