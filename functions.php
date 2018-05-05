@@ -133,61 +133,15 @@ function gamiphy_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'gamiphy_scripts' );
 
-// Replaces the excerpt "Read More" text by a link
+/**
+ * Read more text customizing
+ * @param  [type] $more
+ */
 function new_excerpt_more($more) {
 	global $post;
 	return '… <a href="'. get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Adding Custom Post type
- */
-require get_template_directory() . '/inc/custom-post-types.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
-
-/**
- * Load WooCommerce compatibility file.
- */
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
-}
-
-/**
- * Gamiphy options panel Added
- */
-require get_template_directory() . '/theme_options/gamiphy_options.php';
-
-/**
- * Gamiphy widgets
- */
-require get_template_directory() . '/gamiphy-widget/widgets.php';
 
 /**
  * Formatting comments 
@@ -247,31 +201,62 @@ function better_comments( $comment, $args, $depth ) {
 			break;
 		endswitch; // End comment_type check.
 }
-add_action("admin_head","load_custom_wp_tiny_mce");
-function load_custom_wp_tiny_mce() {
 
-if (function_exists('wp_tiny_mce')) {
+/**
+ * customizing exverpt length
+ * @param  [type] $length
+ */
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-  add_filter('teeny_mce_before_init', create_function('$a', '
-    $a["theme"] = "advanced";
-    $a["skin"] = "wp_theme";
-    $a["height"] = "200";
-    $a["width"] = "800";
-    $a["onpageload"] = "";
-    $a["mode"] = "exact";
-    $a["elements"] = "intro";
-    $a["editor_selector"] = "mceEditor";
-    $a["plugins"] = "safari,inlinepopups,spellchecker";
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
 
-    $a["forced_root_block"] = false;
-    $a["force_br_newlines"] = true;
-    $a["force_p_newlines"] = false;
-    $a["convert_newlines_to_brs"] = true;
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
 
-    return $a;'));
+/**
+ * Functions which enhance the theme by hooking into WordPress.
+ */
+require get_template_directory() . '/inc/template-functions.php';
 
- wp_tiny_mce(true);
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Adding Custom Post type
+ */
+require get_template_directory() . '/inc/custom-post-types.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+if ( defined( 'JETPACK__VERSION' ) ) {
+	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
+/**
+ * Load WooCommerce compatibility file.
+ */
+if ( class_exists( 'WooCommerce' ) ) {
+	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Gamiphy options panel Added
+ */
+require get_template_directory() . '/theme_options/gamiphy_options.php';
+
+/**
+ * Gamiphy widgets
+ */
+require get_template_directory() . '/gamiphy-widget/widgets.php';
+
