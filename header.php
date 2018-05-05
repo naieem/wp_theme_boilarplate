@@ -76,7 +76,7 @@
                     <div class="row top-section-title">
                         <div class="col-md-12">
                             <p class="title">
-                                Read Articles and Earn Points!
+                                <?php the_title();?>
                             </p>
                         </div>
                         <div class="col-md-12">
