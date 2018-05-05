@@ -80,8 +80,11 @@
                             </p>
                         </div>
                         <div class="col-md-12">
-                            <span class="route">Home
-                                <embed class="arrow-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/arrow.svg" width="5px"> blog</span>
+                            <span class="route">
+                                <!-- Home
+                                <embed class="arrow-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/arrow.svg" width="5px"> blog -->
+                                    <?php breadcrumbs();?>
+                                </span>
                         </div>
                     </div>
                 </div>
