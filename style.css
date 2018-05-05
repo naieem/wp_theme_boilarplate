@@ -102,3 +102,6 @@ a:hover{
     color: #000;
 }
 
+.top-section-container .top-section-title .route{
+    text-transform: capitalize;
+}

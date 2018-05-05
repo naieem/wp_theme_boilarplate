@@ -6,6 +6,8 @@ function breadcrumbs() {
 	$link_EOF = '</a>';	
 	$sep = " » "; # important to put it between two spaces
 	$homelink = $link_EOS . get_bloginfo('url') . $link_CON . 'Home'  . $link_EOF;
+	global $post;
+	$post_slug=$post->post_name;
 	
 	# Category archive
 	if (is_category()) {
@@ -47,8 +49,9 @@ function breadcrumbs() {
 	elseif (is_page()) {
 		echo $homelink . $sep;
 		if ( $post->post_parent != 0) {
-			echo $link_EOS . get_page_link($post->post_parent) . $link_CON . get_the_title($post->post_parent) . $link_EOF . $sep;
+			echo $link_EOS . get_page_link($post->post_parent) . $link_CON . $post_slug . $link_EOF . $sep;
 		}
-		echo the_title();		
+		// echo the_title();
+		echo $post_slug ;		
 	} else {}
 }
