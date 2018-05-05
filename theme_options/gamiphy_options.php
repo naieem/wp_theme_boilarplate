@@ -10,15 +10,15 @@ $gamiphyset = 'gamiphy_settings';
 $gameOptions = array(
 	array(
 		'type' => 'text',
-		'label' => 'Website Title',
-		'model' => 'site_title',
-		'description' => 'Enter website Title'
-	),
-	array(
-		'type' => 'text',
 		'label' => 'Youtube Video url',
 		'model' => 'youtube_video_url',
 		'description' => 'Enter youtube video url'
+	),
+	array(
+		'type' => 'text',
+		'label' => 'Enter number of post to display in blog page',
+		'model' => 'post_per_page',
+		'description' => 'Enter number of post to display in blog page'
 	),
 	array(
 		'type' => 'text',
@@ -41,16 +41,6 @@ $gameOptions = array(
 		'input_field_id' => 'site_logo',
 		'popWindowTitle' => 'Select Logo',
 		'previewId' => 'preview'
-	),
-	array(
-		'type' => 'media',
-		'label' => 'Select or insert footer logo',
-		'model' => 'site_footer_logo',
-		'description' => 'Select or insert footer logo',
-		'button_text' => 'select footer logo',
-		'input_field_id' => 'site__footer_logo',
-		'popWindowTitle' => 'Select Footer Logo',
-		'previewId' => 'preview_footer'
 	),
 	array(
 		'type' => 'text',

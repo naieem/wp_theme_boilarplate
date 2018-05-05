@@ -1,11 +1,6 @@
 <?php
 /**
  * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
  * @package Gamiphy
  */
 
@@ -71,6 +66,32 @@
             </nav>
         </div>
     </header>
+    <?php
+    if(!is_home()){
+    ?>
+    <section id="top-section">
+        <div class="container-fluid">
+            <div class="row top-section-container">
+                <div class="col-md-12">
+                    <div class="row top-section-title">
+                        <div class="col-md-12">
+                            <p class="title">
+                                Read Articles and Earn Points!
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <span class="route">Home
+                                <embed class="arrow-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/arrow.svg" width="5px"> blog</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php
+    }
+    if(is_home()){
+    ?>
     <section id="carousel-section">
         <div class="container-fluid">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -99,25 +120,9 @@
                         <?php else:  ?>
                         <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
                         <?php endif; ?>
-                    <!-- <div class="carousel-item active">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/intro.jpg" alt="...">
-                        <div class="carousel-caption d-md-block">
-                            <p class="gamiphy-silder-main-title">Take your customer epxeriece to the next level with incentives and rewards </p>
-                            <p class="gamiphy-silder-sub-title">Improve your gamified customer journey</p>
-                            <div class="breaker"></div>
-                            <a class="watch-video" href="#">
-                                <embed class="gamiphy-play" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/video.svg" width="40px" height="40px">
-                                <span> watch the video </span>
-                            </a>
-                        </div>
-                    </div> -->
-                    <!-- <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/intro.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/intro.jpg" alt="Third slide">
-                    </div> -->
                 </div>
             </div>
         </div>
     </section>
+    <?php
+    }

@@ -29,3 +29,73 @@ header nav .navbar-collapse .navbar-nav .menu-item.current-menu-item a{
     border-bottom : solid 1px white;
 }
 /** according to wp menu class ends */
+
+.gamiphy-get-started{
+    color: #fff;
+}
+
+#blogs-section .blog-card .card-body {
+    height: auto !important;
+}
+#blogs-section .blog-card .card-body a:hover{
+    color: #007bff !important;
+}
+a:hover{
+    color:#000 !important;
+}
+.pagination-sub-section ul{
+        display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+}
+.pagination-sub-section ul li{
+    margin: 0 2px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+}
+.pagination-sub-section ul a{
+    border-color : #DAE1E9;
+    border-width : 1px;
+    font-size : 13px;
+    height: 45px;
+    line-height : 24px;
+    letter-spacing : -0.06px;
+    color : #767676;
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+.pagination-sub-section ul li .current{
+    background : #5D33CE;
+    color: #FFFFFF;
+    font-size: 13px;
+    height: 45px;
+    line-height: 24px;
+    letter-spacing: -0.06px;
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    border: 1px solid #dee2e6;
+}
+
+.pagination-sub-section ul li:first-child{
+    min-width: 45px !important;
+    width: auto;
+}
+.pagination-sub-section ul li:last-child{
+    min-width: 45px !important;
+    width: auto;
+}
+.pagination-sub-section ul li:first-child a{
+    margin-left: 0px;
+    margin-right: 1px;
+    border-top-left-radius: unset;
+    border-bottom-left-radius: unset;
+}
+
