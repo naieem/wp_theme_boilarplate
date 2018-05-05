@@ -260,3 +260,8 @@ require get_template_directory() . '/theme_options/gamiphy_options.php';
  */
 require get_template_directory() . '/gamiphy-widget/widgets.php';
 
+/**
+ * Custom breadcumb
+ */
+require get_template_directory() . '/inc/custom-breadcumb.php';
+
