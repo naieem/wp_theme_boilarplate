@@ -21,12 +21,14 @@ global $options;
 						$wp_query->query('posts_per_page=' .$number_of_posts. '&paged='.$paged);
 						while ($wp_query->have_posts()) : $wp_query->the_post(); 
 							$post = get_post( get_the_ID() );
+							// storing commnet count
 							$comment_count = $post->comment_count;
 				?>
 						<div class="blog-card col-md-6 col-lg-4">
 		                    <div class="card">
 		                        <div class="card-header">
-		                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/head-bg.jpg">
+		                            <!--<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/head-bg.jpg"> -->
+		                            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>">
 		                        </div>
 		                        <div class="card-body row">
 		                            <div class="col-md-12">
@@ -34,7 +36,11 @@ global $options;
 		                                <span class="points-number">200POINTS</span>
 		                            </div>
 		                            <div class="col-md-12">
-		                                <p class="body-title"><?php the_title(); ?></p>
+		                                <p class="body-title">
+		                                	<a href="<?php the_permalink(); ?>">
+		                                		<?php the_title(); ?>
+		                                	</a>
+		                            </p>
 		                            </div>
 		                            <div class="col-md-12">
 		                                <?php the_excerpt(); ?>

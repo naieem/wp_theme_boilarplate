@@ -98,4 +98,7 @@ a:hover{
     border-top-left-radius: unset;
     border-bottom-left-radius: unset;
 }
+.body-title a{
+    color: #000;
+}
 
