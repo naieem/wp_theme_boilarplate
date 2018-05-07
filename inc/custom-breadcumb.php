@@ -38,9 +38,15 @@ function breadcrumbs() {
 		echo $homelink . $sep . "Archives of the blog";
 	}
 	# Single post
+	// elseif (is_single()) {
+	// 	echo $homelink . $sep;
+	// 	the_category('title_li=');
+	// 	echo $sep;
+	// 	the_title();
+	// }
 	elseif (is_single()) {
 		echo $homelink . $sep;
-		the_category('title_li=');
+		echo 'Blog';
 		echo $sep;
 		the_title();
 	}

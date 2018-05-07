@@ -670,7 +670,7 @@ footer .footer-container .right-section {
     margin: 0 5px;
 }
 
-/* ********************************************** BLOG PAGE BLOG SECTION  ***************************************** */
+/* ********************************************** BLOG LIST PAGE BLOG SECTION  ***************************************** */
 #blogs-section{
     padding: 3em 10%;
 }
@@ -791,7 +791,107 @@ footer .footer-container .right-section {
 }
 
 
+/************************************************** BLOG PAGE TOP SECTION STYLES ********************************************************/
 
+#blog-content{
+    padding: 0 10%;
+    background-color: transparent;
+    margin-top: -75px;
+    margin-bottom: 5em;
+}
+#blog-content .content-card .card{
+    border-radius: unset;
+    padding-top: 4em;
+    padding-bottom: 4em;
+
+}
+#blog-content .content-card .card .brogres-bar-content{
+    text-align: center;
+    margin-bottom: 2em;
+
+}
+#blog-content .content-card .card .brogres-bar-content .points-number{
+    font-size : 13px;
+    line-height : 22px;
+    letter-spacing : -0.06px;
+    color : #293248;
+    
+}
+
+#blog-content .content-card .card .blog-title{
+    font-size : 45px;
+    letter-spacing : -0.22px;
+    color : #3D345F;
+
+}
+#blog-content .content-card .card .blog-title p{
+    width: 75%;
+    margin-bottom: 1em;
+}
+#blog-content .content-card .card .author-content   {
+    font-size: 12px;
+    line-height : 24px;
+    letter-spacing : -0.06px;
+    color : #B6B6B6;
+    margin-bottom: 5em;
+}
+
+#blog-content .content-card .card .author-content embed{
+    width: 30px;
+    margin-right: 1em;
+}
+
+#blog-content .content-card .card .author-content b{
+    color:#293248;
+}
+#blog-content .content-card .card .blog-content .reaction-content{
+    font-size : 13px;
+    line-height : 24px;
+    letter-spacing : -0.06px;
+    color : #B6B6B6;
+    
+}
+#blog-content .content-card .card .blog-content .reaction-content .reaction-div{
+    margin-bottom: 2em;
+    
+}
+#blog-content .content-card .card .blog-content .reaction-content .reaction-div span{
+    padding-left: 1em; 
+    
+}
+#blog-content .content-card .card .blog-content .reaction-content embed{
+    width: 25px;
+    /* margin-right: 1em; */
+    
+}
+#blog-content .content-card .card .blog-content .blog-details{
+    padding: 0 35px;
+}
+#blog-content .content-card .card .blog-content .blog-details .first-info{
+    font-size : 19px;
+    line-height : 28px;
+    letter-spacing : -0.09px;
+    color : #293248;
+    margin-bottom: 30px;
+}
+#blog-content .content-card .card .blog-content .blog-details .image-div{
+    margin-bottom: 30px;
+}
+#blog-content .content-card .card .blog-content .blog-details .image-div img{
+    width: 100%;
+    
+}
+#blog-content .content-card .card .blog-content .blog-details .first-info-details{
+    margin-bottom: 50px;
+    
+    
+}
+.info-details-text{
+    font-size : 19px;
+    line-height : 32px;
+    letter-spacing : -0.09px;
+    color : #767676;
+}
 
 
 

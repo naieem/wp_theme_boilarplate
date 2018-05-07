@@ -105,3 +105,8 @@ a:hover{
 .top-section-container .top-section-title .route{
     text-transform: capitalize;
 }
+
+#blog-content .content-card .card .blog-content .blog-details .info-details-text img{
+    max-width:100% !important;
+        max-height: 300px;
+}

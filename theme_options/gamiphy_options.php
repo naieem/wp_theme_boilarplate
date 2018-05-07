@@ -49,22 +49,19 @@ $gameOptions = array(
 		'description' => 'Insert calendly url'
 	)
 );
-
+global $my_menu_hook_akt;
 
 // ===========================================
 // adding admin script query =================
 // ===========================================
 function gamiphy_options_enqueue_scripts() {
- 
-        wp_enqueue_script('jquery');
- 
         wp_enqueue_script('thickbox');
         wp_enqueue_style('thickbox');
  
         wp_enqueue_script('media-upload');
-        wp_enqueue_script('wptuts-upload');
+        wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/js/uploader.js', array( 'jquery' ) );
 }
-add_action('admin_enqueue_scripts', 'gamiphy_options_enqueue_scripts');
+// add_action('admin_enqueue_scripts', 'gamiphy_options_enqueue_scripts');
 
 //Internal css and js
 add_action('admin_head', 'gamiphy_styles_scripts');
@@ -109,7 +106,7 @@ function gamiphy_styles_scripts() { ?>
   			width: 100%;
   		}
 	</style>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			var inputFieldId=''; // needed for setting value to the input field
 			var previewId = ''; // needed to put preview image link in that previewcontainer
@@ -125,15 +122,17 @@ function gamiphy_styles_scripts() { ?>
 				$(this).next().toggle();
 				$(this).parent().toggleClass("open");
 			});
+			console.log(window);
 			//  callback function after selecting media files
 			window.send_to_editor = function(html) {
-			    var image_url = $(html).attr('src');
-			    $('#'+ inputFieldId).val(image_url);
-			    $('#'+previewId+' img').attr('src',image_url);
-			    tb_remove();
+					var image_url = $(html).attr('src');
+				    $('#'+ inputFieldId).val(image_url);
+				    $('#'+previewId+' img').attr('src',image_url);
+				    clickFromOption = false;
+				    tb_remove();
 			}
 		});
-	</script>
+	</script> -->
 <?php }
 
 //register settings
@@ -145,7 +144,13 @@ function theme_settings_init(){
 
 //add settings page to menu
 function add_settings_page() {
-	add_menu_page( __( 'Theme Options' ), __( 'Theme Options' ), 'manage_options', 'settings', 'theme_settings_page');
+	global $page;
+	$page = add_menu_page( __( 'Theme Options' ), __( 'Theme Options' ), 'manage_options', 'settings', 'theme_settings_page');
+	/* Using registered $page handle to hook script load */
+	// ============================================================================
+	// Because we only want to load out custom js and css in only this page
+	// ==========================================================================
+    add_action('admin_print_scripts-' . $page, 'gamiphy_options_enqueue_scripts');
 }
 
 
