@@ -110,3 +110,40 @@ a:hover{
     max-width:100% !important;
         max-height: 300px;
 }
+.comment-div .avatar-large img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+ol.comment-list,ol.children{
+    list-style-type: none !important;
+    padding: 0px;
+}
+ol.children{
+    padding: 0px;
+}
+ol.children .comment-div{
+    padding-left: 16.33%;
+}
+.comment-text p{
+    padding: 0;
+    margin: 0;
+}
+.comments a{
+    color: #000 !important;
+}
+.comment-form button{
+    background : #451EAD;
+    font-size : 15px;
+    height: 53px;
+    line-height : 24px;
+    color : #FFFFFF;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+.comment-form textarea {
+    height: 125px;
+    resize: none;
+}

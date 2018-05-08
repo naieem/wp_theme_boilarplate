@@ -157,51 +157,69 @@ function better_comments( $comment, $args, $depth ) {
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
 		case 'trackback' :
-		// Display trackbacks differently than normal comments. ?>
-			<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
-				<div class="pingback-entry"><span class="pingback-heading"><?php esc_html_e( 'Pingback:', 'gamiphy' ); ?></span> <?php comment_author_link(); ?></div>
-			</li>
-			<?php
 				break;
 				default :
 				// Proceed with normal comments. ?>
-			<li id="li-comment-<?php comment_ID(); ?>">
-				<article id="comment-<?php comment_ID(); ?>" <?php comment_class('clr'); ?>>
-					<div class="comment-author vcard">
+			<li id="li-comment-<?php comment_ID(); ?>"  class="col-12 comment-div">
+				<div class="row" id="comment-<?php comment_ID(); ?>" <?php comment_class('clr'); ?>>
+					<div class="comment-author vcard col-md-2 hidden-md-down avatar-large">
 						<?php echo get_avatar( $comment, 45 ); ?>
 					</div><!-- .comment-author -->
-					<div class="comment-details clr">
-						<div class="comment-meta">
-							<cite class="fn"><?php comment_author_link(); ?></cite>
-							<span class="comment-date">
-							<?php printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
+					<div class="col-md-10">
+                        <div class="row">
+                            <div class="col-10  comment-title">
+                                <div class="user-name"><?php comment_author_link(); ?></div>
+                                <div class="comment-time">
+                                	<?php printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
 								esc_url( get_comment_link( $comment->comment_ID ) ),
 								get_comment_time( 'c' ),
 								sprintf( _x( '%1$s', '1: date', 'gamiphy' ), get_comment_date() )
 							); ?> <?php esc_html_e( 'at', 'gamiphy' ); ?> <?php comment_time(); ?>
-							</span><!-- .comment-date -->
-						</div><!-- .comment-meta -->
-						<?php if ( '0' == $comment->comment_approved ) : ?>
-							<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'gamiphy' ); ?></p>
-						<?php endif; ?>
-						<div class="comment-content entry clr">
-							<?php comment_text(); ?>
-						</div><!-- .comment-content -->
-						<div class="reply comment-reply-link">
+                                </div>
+                            </div>
+
+                            <div class="col-12 comment-text">
+                                <?php comment_text(); ?>
+                            </div>
+                            <div class="col-8 align-items-center comment-reactions">
+                                <embed class="like-chat-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/lol.png">
+                                <embed class="like-chat-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/like.png">
+                                <embed class="like-chat-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/cool.png">
+                                <span class="reaction-number">82</span>
+                                <span class="reaction">Reaction</span>
+                                <div class="reply comment-reply-link">
 							<?php comment_reply_link( array_merge( $args, array(
-								'reply_text' => esc_html__( 'Reply to this message', 'gamiphy' ),
+								'reply_text' => esc_html__( 'Reply', 'gamiphy' ),
 								'depth'      => $depth,
 								'max_depth'	 => $args['max_depth'] )
 							) ); ?>
-						</div><!-- .reply -->
-					</div><!-- .comment-details -->
-				</article><!-- #comment-## -->
+								</div>
+                                <span class="report">Report</span>
+                            </div>
+                        </div>
+
+                    </div>
+					
+					<!-- .comment-details -->
+				</div><!-- #comment-## -->
 			</li>
 		<?php
 			break;
 		endswitch; // End comment_type check.
 }
 
+
+/**
+* Comment form hidden fields
+*/
+function comment_form_hidden_fields()
+{
+	comment_id_fields();
+	if ( current_user_can( 'unfiltered_html' ) )
+	{
+		wp_nonce_field( 'unfiltered-html-comment_' . get_the_ID(), '_wp_unfiltered_html_comment', false );
+	}
+}
 /**
  * customizing exverpt length
  * @param  [type] $length
