@@ -167,6 +167,9 @@ function better_comments( $comment, $args, $depth ) {
 					</div><!-- .comment-author -->
 					<div class="col-md-10">
                         <div class="row">
+                        	<div class="col-2  hidden-lg-up avatar-small">
+                                   <?php echo get_avatar( $comment, 45 ); ?>
+                            </div>
                             <div class="col-10  comment-title">
                                 <div class="user-name"><?php comment_author_link(); ?></div>
                                 <div class="comment-time">

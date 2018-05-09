@@ -124,7 +124,7 @@ ol.children{
     padding: 0px;
 }
 ol.children ol.children{
-    padding-left: 16.3%;
+    padding-left: 12.3%;
 }
 ol.children .comment-div{
     padding-left: 16.33%;
@@ -149,4 +149,10 @@ ol.children .comment-div{
 .comment-form textarea {
     height: 125px;
     resize: none;
+}
+
+@media (max-width: 768px){
+    ol.children ol.children{
+        padding-left: 6.3%;
+    }
 }
