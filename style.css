@@ -123,6 +123,9 @@ ol.comment-list,ol.children{
 ol.children{
     padding: 0px;
 }
+ol.children ol.children{
+    padding-left: 16.3%;
+}
 ol.children .comment-div{
     padding-left: 16.33%;
 }
