@@ -104,11 +104,19 @@ add_action( 'after_setup_theme', 'gamiphy_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function gamiphy_widgets_init() {
-
 	register_sidebar( array(
 		'name'          => esc_html__( 'Home Page Widget Container', 'gamiphy' ),
 		'id'            => 'home-page-sidebar',
 		'description'   => esc_html__( 'Add home widgets here.', 'gamiphy' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	));
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sharable page Widget container', 'gamiphy' ),
+		'id'            => 'sharable-page-sidebar',
+		'description'   => esc_html__( 'Add Sharable page widgets here.', 'gamiphy' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -215,8 +223,7 @@ function better_comments( $comment, $args, $depth ) {
 /**
 * Comment form hidden fields
 */
-function comment_form_hidden_fields()
-{
+function comment_form_hidden_fields(){
 	comment_id_fields();
 	if ( current_user_can( 'unfiltered_html' ) )
 	{
@@ -227,10 +234,83 @@ function comment_form_hidden_fields()
  * customizing exverpt length
  * @param  [type] $length
  */
-function custom_excerpt_length( $length ) {
+function custom_excerpt_length( $length ){
 	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+function demo_request_func( $atts ) {
+    $request = shortcode_atts( array(
+        'title' => 'something',
+        'subtitle' => 'something else',
+        'type' => '' // vertical,horizontal
+    ), $atts );
+
+    ob_start();
+    ?>
+    <div class="col-md-5 request-demo-form-div">
+        <div class="row">
+            <div class="col-12 title">
+                <?php echo $request['title']; ?>
+            </div>
+            <div class="col-12 description">
+                <?php echo $request['subtitle']; ?>
+            </div>
+            <div class="col-12 request-demo-form">
+                <form class="row">
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Email Address or phone number">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Full Name">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Restaurant name">
+                    </div>
+                    <div class="col-12">
+                        <button type="button" class="form-control">REQUEST DEMO</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+     </div>
+    <?php
+	$verticalfORM= ob_get_contents();
+	ob_end_clean();
+    ob_start();
+    ?>
+    <div class="row">
+        <div class="col-12 title">
+            <?php echo $request['title']; ?>
+        </div>
+        <div class="col-12 request-demo-form">
+            <form class="row">
+                <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Email Address or phone number">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Full Name">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Restaurant name">
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="form-control">REQUEST DEMO</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <?php
+    $HorizontalFORM = ob_get_contents();
+    ob_end_clean();
+    if($request['type'] == 'horizontal')
+    	return $HorizontalFORM;
+    if($request['type'] == 'vertical')
+    	return $verticalfORM;
+}
+add_shortcode( 'demorequestform', 'demo_request_func' );
+
 
 /**
  * Implement the Custom Header feature.

@@ -1040,8 +1040,6 @@ footer .footer-container .right-section {
     border-width : 1px;
     width: 100%;
 }
-/* /////////////////////////////////////////////////////////////////// */
-
 
 #related-articles-section .blog-card .related-articles-card{
     position: relative;
@@ -1109,66 +1107,6 @@ footer .footer-container .right-section {
     height : 22px;
 }
 #related-articles-section .blog-card .related-articles-card .related-articles-card-footer .like-chat-number{
-    font-size : 13px;
-    letter-spacing : -0.06px;
-    color : #767676;
-    padding-left: 5px;
-}
-
-
-
-/* ////////////////////////////////////////////// */
-#related-articles-section .blog-card .card{
-    border-radius: 0;
-}
-#related-articles-section .blog-card .card-header{
-    padding: 0;
-}
-#related-articles-section .blog-card .card-header img{
-    width: 100%;
-    height: auto;
-    min-height: 220px;
-}
-#related-articles-section .blog-card .card-body {
-    height: 264px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-#related-articles-section .blog-card .card-body .read-and-earn{
-    font-size : 15px;
-    letter-spacing : 0.6px;
-    color : #B6B6B6;
-}
-#related-articles-section .blog-card .card-body .points-number{
-    background : #F65C34;
-    /* height : 21px; */
-    border-radius : 2px;
-    letter-spacing : -0.05px;
-    color : #FFFFFF;
-    padding: 3px 8px;
-}
-#related-articles-section .blog-card .card-body .body-title{
-    font-size: 22px;
-    letter-spacing: -0.11px;
-    color: #3D345F;
-    padding-top: 1em;
-}
-#related-articles-section .blog-card .card-body .body-text{
-    font-size: 15px;
-    line-height : 24px;
-    letter-spacing : 0.6px;
-    color : #767676;
-}
-#related-articles-section .blog-card .card-footer{
-    background-color: #FFFFFF;
-}
-#related-articles-section .blog-card .card-footer .like-chat-icon{
-    border-color : #FFFFFF;
-    border-width : 2px;
-    width : 22px;
-    height : 22px;
-}
-#related-articles-section .blog-card .card-footer .like-chat-number{
     font-size : 13px;
     letter-spacing : -0.06px;
     color : #767676;
@@ -1332,7 +1270,219 @@ footer .footer-container .right-section {
     color : #FFFFFF;
 }
 
-  
+
+/* ************************************************************************************************
+                                    LANDING PAGE
+************************************************************************************************ */
+
+/* ************************************ header ************************************************* */
+#landing-page-header{
+    padding-top: .5em;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background : #FFFFFF;
+    height : 82px;
+    box-shadow : 0px 4px 5px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+}
+#landing-page-header .navbar-toggler{
+    border-color: #000000;
+}
+
+#landing-page-header nav .navbar-collapse .navbar-nav .nav-item a{
+    color: #293248 !important;
+    font-size: 14px;
+    letter-spacing: -0.07px;
+    border-color: #293248;
+    border-width: 1px;
+    margin-right: .5em;
+}
+
+/* ************************************** request demo section *********************************** */
+#request-demo-section{
+    background-color: #FFFFFF;
+}
+#request-demo-section .request-demo-form-div{
+    padding: 8%;
+}
+#request-demo-section .request-demo-form-div .title{
+    font-size : 30px;
+    letter-spacing : -0.15px;
+    color : #3D345F;
+    margin-bottom: 25px
+}
+#request-demo-section .request-demo-form-div .description{
+    font-size : 18px;
+    letter-spacing : 0.54px;
+    color : #767676;
+    margin-bottom: 25px;
+}
+#request-demo-section .request-demo-form-div .request-demo-form input{
+    border-color : #DAE1E9;
+    height : 52px;
+    border-radius : 3px;
+    font-size : 15px;
+    letter-spacing : 0.3px;
+    color : #767676;
+    margin-bottom: 25px;
+}
+#request-demo-section .request-demo-form-div .request-demo-form button{
+    height : 52px;
+    border-radius : 3px;
+    background : #5D35CD;
+    font-size : 13px;
+    color : #FFFFFF;    
+}
+
+#request-demo-section .request-demo-image-div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 600px;
+}
+#request-demo-section .request-demo-image-div .image-text{
+    font-weight: bold;
+    font-size: 35px;
+    letter-spacing: -0.2px;
+    color: #FFFFFF;
+    /* z-index: 10; */
+    height: fit-content;
+    padding: 5% 10%;
+}
+
+/* #request-demo-section .request-demo-image-div::after{
+    content: "";
+	position: absolute;
+	background: #000000 ;
+    background: -moz-linear-gradient(top, #000000 20%, transparent 80%);
+    background: -webkit-linear-gradient(top, #000000 20%, transparent 80%);
+    background: -o-linear-gradient(top, #000000 20%, transparent 80%);
+    background: -ms-linear-gradient(top, #000000 20%, transparent 80%);
+    background: linear-gradient(to top, #000000 20%, transparent 80%);
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+} */
+
+/* *************************************** GAMIPHY BENEFITS SECTION ************************************ */
+#gamiphy-benefits-section{
+    background-color: #F2F5F9;
+    padding: 7% 10%;
+}
+#gamiphy-benefits-section .benefits-image-div{
+    width: 100%;
+}
+#gamiphy-benefits-section .benefits-image-div img{
+    width: 100%;
+}
+#gamiphy-benefits-section .benefits-div{
+    padding: 15px 0 15px 7%;
+}
+#gamiphy-benefits-section .benefits-div .benefit{
+    margin-bottom: 30px;
+    font-size : 23px;
+    letter-spacing : 0.35px;
+    color : #3E365F;
+}
+#gamiphy-benefits-section .benefits-div .benefit div{
+    margin-bottom: 10px;
+}
+#gamiphy-benefits-section .benefits-div .benefit img{
+    width: 15%;
+    
+}
+/* *********************************************** FEATURES SECTION ****************************************************** */
+#features-section{
+    padding: 5% 10%;
+    border-bottom: 1px solid #E6EAED;
+}
+#features-section .features-title{
+    text-align: center;
+    margin-bottom: 100px;
+}
+#features-section .features-title .sub-title{
+    font-size : 13px;
+    letter-spacing : 1.3px;
+    color : #B6B6B6;
+}
+#features-section .features-title .main-title{
+    font-size : 35px; 
+    letter-spacing : -0.17px;
+    color : #3D345F;
+}
+#features-section .features-title .seperator{
+    margin: -10px auto;
+}
+#features-section .features-div{
+    margin-bottom: 80px
+}
+#features-section .features-div .image-div img{
+    width: 90%;
+    height: 150px;
+}
+#features-section .features-div.image-right .image-div img{
+    width: 90%;
+    height: 150px;
+    float: right;
+}
+
+#features-section .features-div .description-div .title{
+    font-weight : bold;
+    font-size : 26px;
+    color : #293248;
+}
+#features-section .features-div .description-div hr{
+    width: 100px;
+    margin-left: 0;
+    border-color: #000000;
+    margin-top: .5rem;
+    border: 1px;
+    border-style: dashed;
+    margin-bottom: .5rem;
+}
+#features-section .features-div .description-div .description{
+    font-size : 23px;
+    letter-spacing : 0.35px;
+    color : #3E365F;
+}
+
+/* **************************************************** request demo form two section */
+#request-demo-form-two-section{
+    padding: 5% 10%;
+}
+#request-demo-form-two-section .title{
+    font-size : 28px;
+    letter-spacing : -0.15px;
+    color : #3D345F;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#request-demo-form-two-section .request-demo-form {
+    font-size : 30px;
+    letter-spacing : -0.15px;
+    color : #3D345F;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#request-demo-form-two-section .request-demo-form input{
+    border-color : #DAE1E9;
+    height : 52px;
+    border-radius : 3px;
+    font-size : 13px;
+    letter-spacing : 0.3px;
+    color : #767676;
+    margin-bottom: 25px;
+}
+#request-demo-form-two-section .request-demo-form  button{
+    height : 52px;
+    border-radius : 3px;
+    background : #5D35CD;
+    font-size : 12px;
+    color : #FFFFFF;    
+}
 
 /* ******************************************************  MEDIA QUERES  ********************************************** */
  /* Medium devices (tablets, 768px and up) */
@@ -1542,6 +1692,29 @@ footer .footer-container .right-section {
     }
 
 
+    /* LANDING PAGE  */
+    #gamiphy-benefits-section .benefits-image-div{
+        display: flex;
+        order: 2;
+    }
+
+    #gamiphy-benefits-section .benefits-div{
+        display: flex;
+        order: 1;
+        text-align: center;
+        padding: 50px 10%;
+    }
+    #features-section .features-div .image-div{
+        order: 2;
+        margin-top: 50px;
+    }
+
+    #features-section .features-div .image-div img{
+        width: 100%;
+    }
+    #features-section .features-div.image-right .image-div img{
+        width: 100%;
+    }
 }
 
 @media all and (max-width: 576px){
