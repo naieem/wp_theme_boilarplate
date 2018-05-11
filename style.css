@@ -150,6 +150,32 @@ ol.children .comment-div{
     height: 125px;
     resize: none;
 }
+.descriptiion{
+    -webkit-transition: all 2s; /* Safari */
+    transition: all 2s;
+}
+
+.demo_registration2 label{
+    font-size: 16px;
+    margin: 0;
+    position: absolute;
+    top: -28px;
+    width: 100%;
+    left: -10px;
+    color: red;
+}
+.demo_registration1 label{
+    margin: 0;
+    position: relative;
+    top: -15px;
+    color: red;
+}
+
+#request-demo-form-two-section .request-demo-form button,#request-demo-section .request-demo-form-div .request-demo-form button{
+    cursor: pointer;
+}
+
+/* media query related coding */
 
 @media (max-width: 768px){
     ol.children ol.children{
