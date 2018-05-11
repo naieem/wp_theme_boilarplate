@@ -83,6 +83,29 @@ if ( ! function_exists( 'gamiphy_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'gamiphy_setup' );
 
+// ==============================================
+// setup database table at initial stage
+// ==============================================
+add_action( 'init', 'setupDatabaseTable' , 10, 1 );
+function setupDatabaseTable(){
+	global $wpdb;
+	$table_name = $wpdb->prefix . "demo_request";
+	$my_products_db_version = '1.0.0';
+	$charset_collate = $wpdb->get_charset_collate();
+	if ( $wpdb->get_var( "SHOW TABLES LIKE '{$table_name}'" ) != $table_name ) {
+		$sql = "CREATE TABLE $table_name (
+			id int(20) NOT NULL AUTO_INCREMENT,
+			name varchar(200) NOT NULL,
+			email varchar(200)NOT NULL,
+			restaurant_name varchar(200) NOT NULL,
+			created_date  datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
+			UNIQUE KEY id (id)
+		) $charset_collate;";
+
+		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+		dbDelta( $sql );
+	}
+}
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -133,11 +156,20 @@ function gamiphy_scripts() {
 
 	wp_enqueue_script( 'gamiphy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'gamiphy-main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '20151215989889', true );
+
+	wp_enqueue_script( 'gamiphy-form-validator', get_template_directory_uri() . '/js/form-validator.js', array('jquery'), '20151215989889', true );
+
 	wp_enqueue_script( 'gamiphy-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	// use from javascript file wil be like
+	// site.ajax_url
+	wp_localize_script( 'jquery', 'site', array(
+		'ajax_url' => admin_url( 'admin-ajax.php' )
+	));
 }
 add_action( 'wp_enqueue_scripts', 'gamiphy_scripts' );
 
@@ -244,9 +276,12 @@ function demo_request_func( $atts ) {
     $request = shortcode_atts( array(
         'title' => 'something',
         'subtitle' => 'something else',
+        'button_text' => '',
         'type' => '' // vertical,horizontal
     ), $atts );
 
+    // for vertical form
+    // representation
     ob_start();
     ?>
     <div class="col-md-5 request-demo-form-div">
@@ -257,19 +292,20 @@ function demo_request_func( $atts ) {
             <div class="col-12 description">
                 <?php echo $request['subtitle']; ?>
             </div>
+            <div id='vertical' class="col-12 description"></div>
             <div class="col-12 request-demo-form">
-                <form class="row">
+                <form class="row demo-request-form" data-response-id='vertical'>
                     <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Email Address or phone number">
+                        <input type="text" class="form-control" name="emailOrPhone" required="required" placeholder="Email Address or phone number">
                     </div>
                     <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Full Name">
+                        <input type="text" class="form-control" name="name"  required="required"placeholder="Full Name">
                     </div>
                     <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Restaurant name">
+                        <input type="text" class="form-control" name="restaurantName"  required="required" placeholder="Restaurant name">
                     </div>
                     <div class="col-12">
-                        <button type="button" class="form-control">REQUEST DEMO</button>
+                        <button type="submit" class="form-control"><?php echo $request['button_text']; ?></button>
                     </div>
                 </form>
             </div>
@@ -278,25 +314,28 @@ function demo_request_func( $atts ) {
     <?php
 	$verticalfORM= ob_get_contents();
 	ob_end_clean();
+	// for Horizontal form
+    // representation
     ob_start();
     ?>
     <div class="row">
         <div class="col-12 title">
             <?php echo $request['title']; ?>
         </div>
+        <div id='horizontal' class="col-12 description"></div>
         <div class="col-12 request-demo-form">
-            <form class="row">
+            <form class="row demo-request-form"  data-response-id='horizontal'>
                 <div class="col-md-3">
-                    <input type="text" class="form-control" placeholder="Email Address or phone number">
+                    <input type="text" class="form-control"  required="required" name="emailOrPhone"  placeholder="Email Address or phone number">
                 </div>
                 <div class="col-md-3">
-                    <input type="text" class="form-control" placeholder="Full Name">
+                    <input type="text" class="form-control"  required="required" name="name" placeholder="Full Name">
                 </div>
                 <div class="col-md-3">
-                    <input type="text" class="form-control" placeholder="Restaurant name">
+                    <input type="text" class="form-control"  required="required" name="restaurantName" placeholder="Restaurant name">
                 </div>
                 <div class="col-md-3">
-                    <button type="button" class="form-control">REQUEST DEMO</button>
+                    <button type="submit" class="form-control"><?php echo $request['button_text']; ?></button>
                 </div>
             </form>
         </div>
@@ -311,6 +350,92 @@ function demo_request_func( $atts ) {
 }
 add_shortcode( 'demorequestform', 'demo_request_func' );
 
+
+/**
+ * Demo request endpoint handling from ajax call
+ */
+add_action("wp_ajax_add_demo_request", "add_demo_request");
+add_action("wp_ajax_nopriv_add_demo_request", "add_demo_request");
+
+function add_demo_request() {
+	global $wpdb;
+   	$email = $_POST['emailOrPhone'];
+   	$name = $_POST['name'];
+   	$restaurantName = $_POST['restaurantName'];
+	$table = $wpdb->prefix.'demo_request';
+	$data = array('email' => $email, 'name' => $name,'restaurant_name' => $restaurantName);
+	$format = array('%s','%s', '%s');
+	$wpdb->insert($table,$data,$format);
+	$id = $wpdb->insert_id;
+	if(isset($id)){
+		echo 'We have recieved your request.We will get back to you soon.';
+	}else{
+		echo 'error saving data';
+	}
+   	die();
+}
+
+
+// =======================================================
+// demo regustration page initialization
+// =======================================================
+
+add_action( 'admin_menu', 'register_demo_registration_page' );
+function register_demo_registration_page() {
+  // add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
+  add_menu_page( 'List of Registered Demo', 'Demo Registration', 'manage_options', 'demo-registration', 'list_of_registered_demo', 'dashicons-welcome-widgets-menus', 90 );
+}
+
+function list_of_registered_demo(){
+	?>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+  
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(document).ready( function () {
+		    	$('#request_table').DataTable();
+			});	
+		});
+	</script>
+	<div class="wrap">
+		<h1>Demo registration information list</h1>
+		<p></p>
+		<?php
+			global $wpdb;
+			$table = $wpdb->prefix.'demo_request';
+			$querystr = 
+			"SELECT * FROM ".$table." ORDER BY id ASC";
+			$get_all_demo = $wpdb->get_results($querystr, OBJECT);
+			// echo $wpdb->prefix.'demo_request';
+		?>
+		<table id="request_table" class="display" style="width:100%">
+	        <thead>
+	            <tr>
+	                <th>Email/Phone</th>
+	                <th>Name</th>
+	                <th>Restaurant Name</th>
+	                <th>Request Created On</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	        	<?php
+	        	foreach ( $get_all_demo as $row ) {
+					?>
+					<tr>
+		                <td><?php echo $row->email;?></td>
+		                <td><?php echo $row->name;?></td>
+		                <td><?php echo $row->restaurant_name;?></td>
+		                <td><?php echo $row->created_date;?></td>
+	            	</tr>
+					<?php
+				}
+	        	?>
+	        </tbody>
+    	</table>
+	</div>
+	<?php
+}
 
 /**
  * Implement the Custom Header feature.
