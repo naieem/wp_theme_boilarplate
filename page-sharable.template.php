@@ -10,7 +10,14 @@ global $options;
     $options = get_option( 'gamiphy_settings' );
 ?>
 
-<?php dynamic_sidebar( 'sharable-page-sidebar' ); ?>
+<?php //dynamic_sidebar( 'sharable-page-sidebar' ); ?>
+<?php
+				while ( have_posts() ) :
+					the_post();
+					the_content();
+
+				endwhile; // End of the loop.
+				?>
 
 <?php
 // get_sidebar();
