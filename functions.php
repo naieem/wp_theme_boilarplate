@@ -6,6 +6,8 @@
  *
  * @package Gamiphy
  */
+global $options; 
+$options = get_option( 'gamiphy_settings' );
 
 if ( ! function_exists( 'gamiphy_setup' ) ) :
 	/**
@@ -300,13 +302,13 @@ function demo_request_func( $atts ) {
             <div class="col-12 request-demo-form">
                 <form class="row demo-request-form" data-response-id='vertical'>
                     <div class="col-12">
-                        <input type="text" class="form-control" name="emailOrPhone" placeholder="Email Address or phone number">
+                        <input type="text" class="form-control" required="required" name="emailOrPhone" placeholder="Email Address or phone number">
                     </div>
                     <div class="col-12">
-                        <input type="text" class="form-control" name="name"  placeholder="Full Name">
+                        <input type="text" class="form-control"  required="required" name="name"  placeholder="Full Name">
                     </div>
                     <div class="col-12">
-                        <input type="text" class="form-control" name="restaurantName"   placeholder="Restaurant name">
+                        <input type="text" class="form-control"  required="required" name="restaurantName"   placeholder="Restaurant name">
                     </div>
                     <div class="col-12">
                         <button type="submit" class="form-control"><?php echo $request['button_text']; ?></button>
@@ -363,6 +365,7 @@ add_action("wp_ajax_nopriv_add_demo_request", "add_demo_request");
 
 function add_demo_request() {
 	global $wpdb;
+	global $options;
    	$email = $_POST['emailOrPhone'];
    	$name = $_POST['name'];
    	$restaurantName = $_POST['restaurantName'];
@@ -375,7 +378,7 @@ function add_demo_request() {
 		if(isset($id)){
 			echo json_encode(array(
 				'status' => true,
-				'message' => 'We have recieved your request.We will get back to you soon.'
+				'message' => $options['demo_request_success']
 			));
 		}else{
 			echo json_encode(array(
@@ -386,7 +389,7 @@ function add_demo_request() {
    	}else{
    		echo json_encode(array(
 				'status' => false,
-				'message' => 'Please fill the required fields.'
+				'message' => $options['demo_request_error']
 			));
    	}
    	die();

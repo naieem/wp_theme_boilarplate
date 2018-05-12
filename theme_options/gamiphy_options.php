@@ -47,6 +47,18 @@ $gameOptions = array(
 		'label' => 'Insert calendly url',
 		'model' => 'calendly_url',
 		'description' => 'Insert calendly url'
+	),
+	array(
+		'type' => 'text',
+		'label' => 'Demo request success message',
+		'model' => 'demo_request_success',
+		'description' => 'Insert demo request success message'
+	),
+	array(
+		'type' => 'text',
+		'label' => 'Demo request error message',
+		'model' => 'demo_request_error',
+		'description' => 'Insert demo request error message'
 	)
 );
 global $my_menu_hook_akt;
