@@ -22,11 +22,19 @@ jQuery(document).ready(function($) {
 			type : 'post',
 			data : data + "&action=add_demo_request",
 			success : function( response ) {
-				currentForm.trigger("reset");
-				resultContainer.html(response);
-				setTimeout(function(){
-					resultContainer.html('')
-				}, 3000);
+				response = JSON.parse(response);
+				if(response.status){
+					currentForm.trigger("reset");
+					resultContainer.html(response.message);
+					setTimeout(function(){
+						resultContainer.html('')
+					}, 3000);
+				}else{
+					resultContainer.html(response.message);
+					setTimeout(function(){
+						resultContainer.html('')
+					}, 3000);
+				}
 			}
 		});
 	});
