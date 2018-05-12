@@ -263,7 +263,7 @@ function comment_form_hidden_fields(){
 	}
 }
 /**
- * customizing exverpt length
+ * customizing excerpt length
  * @param  [type] $length
  */
 function custom_excerpt_length( $length ){
@@ -272,6 +272,10 @@ function custom_excerpt_length( $length ){
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
+/**
+ * shortcode function for demo request form
+ * @param  [type] $attributes
+ */
 function demo_request_func( $atts ) {
     $request = shortcode_atts( array(
         'title' => 'something',
@@ -296,13 +300,13 @@ function demo_request_func( $atts ) {
             <div class="col-12 request-demo-form">
                 <form class="row demo-request-form" data-response-id='vertical'>
                     <div class="col-12">
-                        <input type="text" class="form-control" name="emailOrPhone" required="required" placeholder="Email Address or phone number">
+                        <input type="text" class="form-control" name="emailOrPhone" placeholder="Email Address or phone number">
                     </div>
                     <div class="col-12">
-                        <input type="text" class="form-control" name="name"  required="required"placeholder="Full Name">
+                        <input type="text" class="form-control" name="name"  placeholder="Full Name">
                     </div>
                     <div class="col-12">
-                        <input type="text" class="form-control" name="restaurantName"  required="required" placeholder="Restaurant name">
+                        <input type="text" class="form-control" name="restaurantName"   placeholder="Restaurant name">
                     </div>
                     <div class="col-12">
                         <button type="submit" class="form-control"><?php echo $request['button_text']; ?></button>
@@ -362,16 +366,29 @@ function add_demo_request() {
    	$email = $_POST['emailOrPhone'];
    	$name = $_POST['name'];
    	$restaurantName = $_POST['restaurantName'];
-	$table = $wpdb->prefix.'demo_request';
-	$data = array('email' => $email, 'name' => $name,'restaurant_name' => $restaurantName);
-	$format = array('%s','%s', '%s');
-	$wpdb->insert($table,$data,$format);
-	$id = $wpdb->insert_id;
-	if(isset($id)){
-		echo 'We have recieved your request.We will get back to you soon.';
-	}else{
-		echo 'error saving data';
-	}
+   	if($email !=='' && $name !=='' && $restaurantName !==''){
+   		$table = $wpdb->prefix.'demo_request';
+		$data = array('email' => $email, 'name' => $name,'restaurant_name' => $restaurantName);
+		$format = array('%s','%s', '%s');
+		$wpdb->insert($table,$data,$format);
+		$id = $wpdb->insert_id;
+		if(isset($id)){
+			echo json_encode(array(
+				'status' => true,
+				'message' => 'We have recieved your request.We will get back to you soon.'
+			));
+		}else{
+			echo json_encode(array(
+				'status' => true,
+				'message' => 'error saving data.'
+			));
+		}
+   	}else{
+   		echo json_encode(array(
+				'status' => false,
+				'message' => 'Please fill the required fields.'
+			));
+   	}
    	die();
 }
 
