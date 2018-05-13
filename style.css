@@ -34,8 +34,11 @@ header nav .navbar-collapse .navbar-nav .menu-item.current-menu-item a{
     color: #fff;
 }
 
-#blogs-section .blog-card .card-body {
-    height: auto !important;
+/*#blogs-section .blog-card .card-body {*/
+    /*height: auto !important;*/
+/*}*/
+#blogs-section .blog-card .card-footer{
+    margin-top:15px;
 }
 #blogs-section .blog-card .card-body a:hover{
     color: #007bff !important;
