@@ -28,19 +28,20 @@ a {
 }
 
 a:hover {
-    text-decoration:none;
+    text-decoration: none;
     color: white;
 }
 
 body {
     font-family: Montserrat;
     overflow-x: hidden;
+    font-weight: 300;
 }
 /************************************************** general classes ********************************************************/
-.justify-content-center{
+.justify-content-center {
     justify-content: center;
 }
-.display-flex{
+.display-flex {
     display: flex;
 }
 
@@ -59,10 +60,11 @@ header {
     right: 0;
 }
 
-#carousel-section{
+#carousel-section {
     position: relative;
 }
-#carousel-section .container-fluid{
+
+#carousel-section .container-fluid {
     padding: 0 !important;
 }
 .navbar {
@@ -79,6 +81,7 @@ header {
     font-size : 45px;
     letter-spacing : -0.22px;
     color : #FFFFFF;
+    font-weight: 500;
 }
 
 .watch-video {
@@ -109,21 +112,21 @@ header {
     /* top: 0px; */
 }
 
-header nav .navbar-collapse .navbar-nav .nav-item a{
+header nav .navbar-collapse .navbar-nav .nav-item a {
     color: white;
-    font-size : 14px;
-    letter-spacing : -0.07px;
-    color : #FFFFFF !important;
-    border-color : #FFFFFF;
-    border-width : 1px;
+    font-size: 14px;
+    letter-spacing: -0.07px;
+    color: #FFFFFF !important;
+    border-color: #FFFFFF;
+    border-width: 1px;
     margin-right: .5em;
 }
 
-header nav .navbar-collapse .navbar-nav .nav-item.active a{
-    border-color : #FFFFFF;
-    border-bottom : solid 1px white;
+header nav .navbar-collapse .navbar-nav .nav-item.active a {
+    border-color: #FFFFFF;
+    border-bottom: solid 1px white;
 }
-.navbar-toggler{
+.navbar-toggler {
     border-color: #FFFFFF;
 }
 
@@ -135,15 +138,17 @@ header nav .navbar-collapse .navbar-nav .nav-item.active a{
     width : 149px;
     height : 40px;
     box-shadow : 0px 13.42px 11.63px rgba(0, 0, 0, 0.25);
+    padding-top: 10px;
 }
-.logo-container{
+
+.logo-container {
     width: 30%;
 }
 .gamiphy-logo {
     float: right;
-    width: 80%;
+    width: 173px;
 }
-body{ 
+body { 
     margin: 0px !important;
     padding: 0px !important;
 }
@@ -159,8 +164,8 @@ body{
 
 
 /************************************************** FIND OUT SECTION STYLES ********************************************************/
-#find-out-section, #find-out-section-2  {
-    background : #51D7ED;
+#find-out-section, #find-out-section-2 {
+    background: #51D7ED;
     /* height : 140px; */
     display: flex;
     justify-content: center;
@@ -171,7 +176,7 @@ body{
     margin: 0;
     padding: 25px 0;
 }
-.find-out-row div{
+.find-out-row div {
     display: flex;
     align-items: center;
 }
@@ -195,26 +200,26 @@ body{
     box-shadow : 5.1px 8.16px 10.2px rgba(0, 0, 0, 0.13);
 }
 
-#find-out-section .find-out-section-container,#find-out-section-2 .find-out-section-container{
+#find-out-section .find-out-section-container, #find-out-section-2 .find-out-section-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2em;
 }
 
-#find-out-section .find-out-section-container .text, #find-out-section-2 .find-out-section-container .text{
-    font-size : 34px;
-    letter-spacing : -0.17px;
-    color : #3D345F;
+#find-out-section .find-out-section-container .text, #find-out-section-2 .find-out-section-container .text {
+    font-size: 34px;
+    letter-spacing: -0.17px;
+    color: #3D345F;
     margin-top: 0.5em;
 }
 
-#find-out-section .find-out-section-container .take-quiz-btn, #find-out-section-2 .find-out-section-container .take-quiz-btn{
-    background : #51D6EE;
-    width : 184px;
-    height : 45px;
-    box-shadow : 5.1px 8.16px 10.2px rgba(0, 0, 0, 0.13);
-    color : #FFFFFF;
+#find-out-section .find-out-section-container .take-quiz-btn, #find-out-section-2 .find-out-section-container .take-quiz-btn {
+    background: #51D6EE;
+    width: 184px;
+    height: 45px;
+    box-shadow: 5.1px 8.16px 10.2px rgba(0, 0, 0, 0.13);
+    color: #FFFFFF;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
@@ -239,21 +244,21 @@ body{
 #what-is-gamiphication .right-section {
     /* margin-top: 5em; */
 }
-#what-is-gamiphication .right-section embed{
+#what-is-gamiphication .right-section embed {
     width: 90%;
 }
 
 #what-is-gamiphication .small-title {
-    font-size : 13px;
-    letter-spacing : 1.3px;
-    color : #B6B6B6;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    color: #B6B6B6;
     text-transform: uppercase;
 }
 
 #what-is-gamiphication .title {
-    font-size : 35px;
-    letter-spacing : -0.17px;
-    color : #3D345F;
+    font-size: 35px;
+    letter-spacing: -0.17px;
+    color: #3D345F;
     margin-top: -20px;
 }
 
@@ -263,10 +268,10 @@ body{
 }
 
 #what-is-gamiphication .content {
-    font-size : 16px;
-    line-height : 30px;
-    letter-spacing : 0.64px;
-    color : #767676;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.64px;
+    color: #767676;
     margin-top: 2em;
 }
 
@@ -274,18 +279,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size : 13px;
-    letter-spacing : 0.26px;
-    color : #5D35CF;
+    font-size: 13px;
+    letter-spacing: 0.26px;
+    color: #5D35CF;
     text-transform: uppercase;
-    background : #F2F5F9;
-    width : 165px;
-    height : 45px;
-    box-shadow : 5px 8px 8px rgba(0, 0, 0, 0.1);
+    background: #F2F5F9;
+    width: 165px;
+    height: 45px;
+    box-shadow: 5px 8px 8px rgba(0, 0, 0, 0.1);
 }
 
 #what-is-gamiphication .learn-more-btn:hover {
-    color : #5D35CF;
+    color: #5D35CF;
 }
 
 .what-is-gamification-img {
@@ -297,15 +302,15 @@ body{
 
 #gamiphy-features-sections {
     /* height: 750px; */
-    background : #F2F5F9;
+    background: #F2F5F9;
 }
 
 .gamiphy-features-block {
-    padding-top: 8em;
-    padding-bottom: 8em;
+    padding-top: 6.5em;
+    padding-bottom: 6.5em;
 }
 
-.gamiphy-features-block-content>.col{
+.gamiphy-features-block-content > .col {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,16 +321,17 @@ body{
 }
 
 #gamiphy-features-sections .gamiphy-features-block .gamiphy-features-block-title .sub-title {
-    font-size : 13px;
-    letter-spacing : 1.3px;
-    color : #B6B6B6;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    color: #B6B6B6;
 }
 
 
 #gamiphy-features-sections .gamiphy-features-block .gamiphy-features-block-title .main-title {
-    font-size : 35px;
-    letter-spacing : -0.17px;
-    color : #3D345F;
+    font-size: 35px;
+    letter-spacing: -0.17px;
+    color: #3D345F;
+    font-weight: normal;
 }
 
 #gamiphy-features-sections .gamiphy-features-block .gamiphy-features-block-title .seperator {
@@ -365,17 +371,17 @@ body{
 }
 
 
-.gamiphy-features-block-content .title-container .title{
-    font-size : 23px;
-    letter-spacing : 0.35px;
-    color : #3E365F;
+.gamiphy-features-block-content .title-container .title {
+    font-size: 23px;
+    letter-spacing: 0.35px;
+    color: #3E365F;
 }
 
-.gamiphy-features-block-content .description-container .description{
-    font-size : 16px;
-    line-height : 30px;
-    letter-spacing : 0.64px;
-    color : #767676;
+.gamiphy-features-block-content .description-container .description {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.64px;
+    color: #767676;
 }
 
 
@@ -383,12 +389,14 @@ body{
 
 #how-gamiphy-works-section {
     /* height: 850px; */
-    padding: 8em 0;
+    padding: 7.5em 0;
 }   
 
 .how-gamiphy-works-img {
-    border-radius : 6px;
-    box-shadow : 5px 5px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+    width: 980px;
+    height: auto;
 }
 
 .seperator {
@@ -396,23 +404,23 @@ body{
     margin-top: -12px;
 }
 .how-gamiphy-works-container .title {
-    font-size : 35px;
-    letter-spacing : -0.17px;
-    color : #3D345F;
+    font-size: 35px;
+    letter-spacing: -0.17px;
+    color: #3D345F;
 }
-.how-gamiphy-works-container .left-section{
+.how-gamiphy-works-container .left-section {
     padding: 0 10% 0 15%;
 }
-.how-gamiphy-works-container .right-section .col{
+.how-gamiphy-works-container .right-section .col {
     padding: 0;
 }
-.how-gamiphy-works-container .right-section-container{
+.how-gamiphy-works-container .right-section-container {
     display: flex;
     align-items: center;
 }
 
 .how-gamiphy-works-icon {
-    margin-bottom: 2em;
+    margin-bottom: 4px;
 }
 
 .points-container {
@@ -424,14 +432,14 @@ body{
     font-size: 20px;
     color: white;
     border-radius: 50%;
-    height:30px;
-    width:30px;
+    height: 30px;
+    width: 30px;
     text-align: center;
 }
 
-.line-breaker    {
+.line-breaker {
     border: 1px solid;
-    border-color : #E7EBEE;
+    border-color: #E7EBEE;
     height: 3em;
     width: 1px;
     margin: -16px auto;
@@ -442,9 +450,9 @@ body{
 }
 
 .step-text {
-    font-size : 20px;
-    letter-spacing : 0.3px;
-    color : #3E365F;
+    font-size: 20px;
+    letter-spacing: 0.3px;
+    color: #3E365F;
 }
 
 .how-gamiphy-works-img {
@@ -476,7 +484,7 @@ body{
     /* padding-top: 8em; */
 }
 
-.lets-start-block-content>.col{
+.lets-start-block-content > .col {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -488,10 +496,12 @@ body{
 .lets-start-block-title .sub-title {
     font-size: 13px;
     letter-spacing: 1.3px;
+    font-weight: normal;
 }
 .lets-start-block-title .main-title {
     font-size: 35px;
     letter-spacing: -0.17px;
+    font-weight: normal;
 }
 
 #lets-start-section .lets-start-block .lets-start-block-title .seperator {
@@ -504,22 +514,22 @@ body{
 
 .lets-start-block-content .description-container .description {
     text-align: center;
-    line-height : 26px;
-    letter-spacing : 1.6px;
-    color : #FFFFFF;
+    line-height: 26px;
+    letter-spacing: 1.6px;
+    color: #FFFFFF;
 }
 
-.lets-start-block-content .take-quiz-container .col-sm-12{
+.lets-start-block-content .take-quiz-container .col-sm-12 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .lets-start-block-content .take-quiz-container .take-quiz-btn {
-    background : #51D6EE;
-    width : 184px;
-    height : 45px;
-    color : #FFFFFF;
+    background: #51D6EE;
+    width: 184px;
+    height: 45px;
+    color: #FFFFFF;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
@@ -542,15 +552,16 @@ body{
 .platform-section-block-title {
     text-align: center;
 }
-.platform-section-block-title .sub-title{
+.platform-section-block-title .sub-title {
     font-size: 13px;
     letter-spacing: 1.3px;
     color: #B6B6B6;
 }
-.platform-section-block-title  .main-title{
+.platform-section-block-title .main-title {
     font-size: 35px;
     letter-spacing: -0.17px;
     color: #3D345F;
+    font-weight: normal;
 }
 
 #platforms-section .platform-section-block .platform-section-block-title .seperator {
@@ -561,7 +572,7 @@ body{
     margin-top: 4em;
 }
 
-#platforms-section .platform-section-block-content .platform-items-container .platform-item .main-icon{
+#platforms-section .platform-section-block-content .platform-items-container .platform-item .main-icon {
     width: 100%;
 }
 
@@ -577,20 +588,21 @@ body{
     margin-top: 3em;
 }
 
-#platforms-section .platform-section-block-content .platform-items-container .platform-item .title-container .title{
-    font-size : 23px;
-    letter-spacing : 0.35px;
-    color : #3E365F;
+#platforms-section .platform-section-block-content .platform-items-container .platform-item .title-container .title {
+    font-size: 23px;
+    letter-spacing: 0.35px;
+    color: #3E365F;
 }
 
 #platforms-section .platform-section-block-content .platform-items-container .platform-item .point {
     margin-top: 0.5em;
 }
 
-#platforms-section .platform-section-block-content .platform-items-container .platform-item .point .point-text{
-    font-size : 16px;
-    letter-spacing : 1.28px;
-    color : #767676;
+#platforms-section .platform-section-block-content .platform-items-container .platform-item .point .point-text {
+    font-size: 16px;
+    letter-spacing: 1.28px;
+    color: #767676;
+    font-weight: 300;
 }
 
 #platforms-section .platform-section-block-content .platform-items-container .platform-item .content-container {
@@ -603,9 +615,9 @@ body{
 
 /************************************************** FOOTER SECTION STYLES ********************************************************/
 footer {
-    background : #F2F5F9;
+    background: #F2F5F9;
     /* height: 130px; */
-    padding: 2em 0;
+    padding: 1em 0;
 }
 
 footer .footer-container {
@@ -618,10 +630,10 @@ footer .footer-container .left-section {
     padding: 0 10%;
     align-items: center;
     margin-top: 0px !important;
-    font-size : 13px;
-    line-height : 32px;
-    letter-spacing : 1.04px;
-    color : #9f9f9f;
+    font-size: 13px;
+    line-height: 32px;
+    letter-spacing: 1.04px;
+    color: #9f9f9f;
 }
 
 footer .footer-container .right-section {
@@ -633,9 +645,9 @@ footer .footer-container .right-section {
     justify-content: center;
     align-items: center;
     float: left;
-    background : #FFFFFF;
-    width : 49px;
-    height : 49px;
+    background: #FFFFFF;
+    width: 49px;
+    height: 49px;
     border-radius: 100%;
     margin-right: 20px;
 }
@@ -666,35 +678,34 @@ footer .footer-container .right-section {
     text-align: center;
 }
 
-.top-section-container .top-section-title .title{
-    font-size : 45px;
-    letter-spacing : -0.22px;
-    color : #FFFFFF;
+.top-section-container .top-section-title .title {
+    font-size: 45px;
+    letter-spacing: -0.22px;
+    color: #FFFFFF;
 }
-.top-section-container .top-section-title .route{
-    font-size : 15px;
-    letter-spacing : -0.07px;
-    color : #FFFFFF;
+.top-section-container .top-section-title .route {
+    font-size: 15px;
+    letter-spacing: -0.07px;
+    color: #FFFFFF;
 }
-.top-section-container .top-section-title .route .arrow-icon{
+.top-section-container .top-section-title .route .arrow-icon {
     margin: 0 5px;
 }
 
 /* ********************************************** BLOG LIST PAGE BLOG SECTION  ***************************************** */
-#blogs-section{
+#blogs-section {
     padding: 3em 10%;
 }
-#blogs-section .blog-card{
-    margin: 15px 0px;
-    
+#blogs-section .blog-card {
+    margin: 15px 0px;   
 }
-#blogs-section .blog-card .card{
+#blogs-section .blog-card .card {
     border-radius: 0;
 }
-#blogs-section .blog-card .card-header{
+#blogs-section .blog-card .card-header {
     padding: 0;
 }
-#blogs-section .blog-card .card-header img{
+#blogs-section .blog-card .card-header img {
     width: 100%;
     height: auto;
     min-height: 220px;
@@ -704,75 +715,75 @@ footer .footer-container .right-section {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-#blogs-section .blog-card .card-body .read-and-earn{
-    font-size : 15px;
-    letter-spacing : 0.6px;
-    color : #B6B6B6;
+#blogs-section .blog-card .card-body .read-and-earn {
+    font-size: 15px;
+    letter-spacing: 0.6px;
+    color: #B6B6B6;
 }
-#blogs-section .blog-card .card-body .points-number{
-    background : #F65C34;
+#blogs-section .blog-card .card-body .points-number {
+    background: #F65C34;
     /* height : 21px; */
-    border-radius : 2px;
-    letter-spacing : -0.05px;
-    color : #FFFFFF;
+    border-radius: 2px;
+    letter-spacing: -0.05px;
+    color: #FFFFFF;
     padding: 3px 8px;
 }
-#blogs-section .blog-card .card-body .body-title{
+#blogs-section .blog-card .card-body .body-title {
     font-size: 22px;
     letter-spacing: -0.11px;
     color: #3D345F;
     padding-top: 1em;
 }
-#blogs-section .blog-card .card-body .body-text{
+#blogs-section .blog-card .card-body .body-text {
     font-size: 15px;
-    line-height : 24px;
-    letter-spacing : 0.6px;
-    color : #767676;
+    line-height: 24px;
+    letter-spacing: 0.6px;
+    color: #767676;
 }
-#blogs-section .blog-card .card-footer{
+#blogs-section .blog-card .card-footer {
     background-color: #FFFFFF;
 }
-#blogs-section .blog-card .card-footer .like-chat-icon{
-    border-color : #FFFFFF;
-    border-width : 2px;
-    width : 22px;
-    height : 22px;
+#blogs-section .blog-card .card-footer .like-chat-icon {
+    border-color: #FFFFFF;
+    border-width: 2px;
+    width: 22px;
+    height: 22px;
 }
-#blogs-section .blog-card .card-footer .like-chat-number{
-    font-size : 13px;
-    letter-spacing : -0.06px;
-    color : #767676;
+#blogs-section .blog-card .card-footer .like-chat-number {
+    font-size: 13px;
+    letter-spacing: -0.06px;
+    color: #767676;
     padding-left: 5px;
 }
 
-#blogs-section .pagination-sub-section{
+#blogs-section .pagination-sub-section {
     padding-top: 4em;
 }
-#blogs-section .pagination .page-item{
+#blogs-section .pagination .page-item {
     margin: 0 2px;
     width: 45px;
     height: 45px;
     text-align: center;
 }
-#blogs-section .pagination .page-link{
-    border-color : #DAE1E9;
-    border-width : 1px;
-    font-size : 13px;
+#blogs-section .pagination .page-link {
+    border-color: #DAE1E9;
+    border-width: 1px;
+    font-size: 13px;
     height: 45px;
-    line-height : 24px;
-    letter-spacing : -0.06px;
-    color : #767676;
+    line-height: 24px;
+    letter-spacing: -0.06px;
+    color: #767676;
 }
-#blogs-section .pagination .page-item.active .page-link{
-    background : #5D33CE;
+#blogs-section .pagination .page-item.active .page-link {
+    background: #5D33CE;
 
     color: #FFFFFF;
 }
 
-.page-item:first-child{
+.page-item:first-child {
     width: auto !important;
 }
-.page-item:first-child .page-link{
+.page-item:first-child .page-link {
     margin-left: 0px;
     margin-right: 1px;
     border-top-left-radius: unset;
@@ -781,7 +792,7 @@ footer .footer-container .right-section {
 .page-item:last-child {
     width: auto !important;
 }
-.page-item:last-child .page-link{
+.page-item:last-child .page-link {
     margin-left: 1px;
     margin-right: 0px;
     border-top-right-radius: unset;
@@ -791,11 +802,11 @@ footer .footer-container .right-section {
 
 
 
-.align-items-center{
+.align-items-center {
     display: flex;
     align-items: center;
 }
-.justify-content-flex-end{
+.justify-content-flex-end {
     display: flex;
     justify-content: flex-end;
 }
@@ -803,166 +814,151 @@ footer .footer-container .right-section {
 
 /************************************************** BLOG PAGE TOP SECTION STYLES ********************************************************/
 
-#blog-content{
+#blog-content {
     padding: 0 10%;
     background-color: transparent;
     margin-top: -75px;
     margin-bottom: 5em;
 }
-#blog-content .content-card .card{
+#blog-content .content-card .card {
     border-radius: unset;
     padding-top: 4em;
     padding-bottom: 2em;
 
 }
-#blog-content .content-card .card .brogres-bar-content{
+#blog-content .content-card .card .brogres-bar-content {
     text-align: center;
     margin-bottom: 2em;
-
 }
-#blog-content .content-card .card .brogres-bar-content .points-number{
-    font-size : 13px;
-    line-height : 22px;
-    letter-spacing : -0.06px;
-    color : #293248;
-    
+#blog-content .content-card .card .brogres-bar-content .points-number {
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: -0.06px;
+    color: #293248;
 }
 
-#blog-content .content-card .card .blog-title{
-    font-size : 45px;
-    letter-spacing : -0.22px;
-    color : #3D345F;
-
+#blog-content .content-card .card .blog-title {
+    font-size: 45px;
+    letter-spacing: -0.22px;
+    color: #3D345F;
 }
-#blog-content .content-card .card .blog-title p{
+#blog-content .content-card .card .blog-title p {
     width: 75%;
     margin-bottom: 1em;
 }
-#blog-content .content-card .card .author-content   {
+#blog-content .content-card .card .author-content {
     font-size: 12px;
-    line-height : 24px;
-    letter-spacing : -0.06px;
-    color : #B6B6B6;
+    line-height: 24px;
+    letter-spacing: -0.06px;
+    color: #B6B6B6;
     margin-bottom: 5em;
 }
 
-#blog-content .content-card .card .author-content embed{
+#blog-content .content-card .card .author-content embed {
     width: 30px;
     margin-right: 1em;
 }
 
-#blog-content .content-card .card .author-content b{
-    color:#293248;
+#blog-content .content-card .card .author-content b {
+    color: #293248;
 }
-#blog-content .content-card .card .blog-content .reaction-content{
-    font-size : 13px;
-    line-height : 24px;
-    letter-spacing : -0.06px;
-    color : #B6B6B6;
-    
+#blog-content .content-card .card .blog-content .reaction-content {
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: -0.06px;
+    color: #B6B6B6;
 }
-#blog-content .content-card .card .blog-content .reaction-content .reaction-div{
+#blog-content .content-card .card .blog-content .reaction-content .reaction-div {
     position: relative;
     width: 100%;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
     margin-bottom: 2em;
-    
-}
-#blog-content .content-card .card .blog-content .reaction-content .reaction-div span{
+    }
+#blog-content .content-card .card .blog-content .reaction-content .reaction-div span {
     padding-left: 1em; 
-    
 }
-#blog-content .content-card .card .blog-content .reaction-content embed{
+#blog-content .content-card .card .blog-content .reaction-content embed {
     width: 25px;
     /* margin-right: 1em; */
-    
 }
-#blog-content .content-card .card .blog-content .blog-details{
+#blog-content .content-card .card .blog-content .blog-details {
     padding: 0 35px;
 }
-#blog-content .content-card .card .blog-content .blog-details .first-info{
-    font-size : 19px;
-    line-height : 28px;
-    letter-spacing : -0.09px;
-    color : #293248;
+#blog-content .content-card .card .blog-content .blog-details .first-info {
+    font-size: 19px;
+    line-height: 28px;
+    letter-spacing: -0.09px;
+    color: #293248;
     margin-bottom: 30px;
 }
-#blog-content .content-card .card .blog-content .blog-details .image-div{
+#blog-content .content-card .card .blog-content .blog-details .image-div {
     margin-bottom: 30px;
 }
-#blog-content .content-card .card .blog-content .blog-details .image-div img{
+#blog-content .content-card .card .blog-content .blog-details .image-div img {
     width: 100%;
-    
 }
-#blog-content .content-card .card .blog-content .blog-details .first-info-details{
-    margin-bottom: 50px;
-    
-    
+#blog-content .content-card .card .blog-content .blog-details .first-info-details {
+    margin-bottom: 50px;  
 }
-.info-details-text{
-    font-size : 19px;
-    line-height : 32px;
-    letter-spacing : -0.09px;
-    color : #767676;
+.info-details-text {
+    font-size: 19px;
+    line-height: 32px;
+    letter-spacing: -0.09px;
+    color: #767676;
 }
 
-#blog-content .content-card .card .blog-content .blog-details .second-info-title{
-    font-size : 35px;
-    letter-spacing : -0.17px;
-    color : #3D345F;
+#blog-content .content-card .card .blog-content .blog-details .second-info-title {
+    font-size: 35px;
+    letter-spacing: -0.17px;
+    color: #3D345F;
     margin-bottom: 25px;
-    
 }
-#blog-content .content-card .card .blog-content .blog-details .second-info-details{
+#blog-content .content-card .card .blog-content .blog-details .second-info-details {
     margin-bottom: 50px;
-    
 }
-#blog-content .content-card .card .blog-content .blog-details .quote-div{
+#blog-content .content-card .card .blog-content .blog-details .quote-div {
     margin-bottom: 50px;
-    
 }
-#blog-content .content-card .card .blog-content .blog-details .quote-div .first{
+#blog-content .content-card .card .blog-content .blog-details .quote-div .first {
     border-left: 3px solid orangered;
     padding-left: 10%;
     width: 80%;
     font-size: 28px;
     color: gray;
-    font-weight: lighter;
-
-    
+    font-weight: lighter;    
 }
-#blog-content .content-card .card .blog-content .blog-details .quote-div .second{
+#blog-content .content-card .card .blog-content .blog-details .quote-div .second {
     padding-top: 25px;
     width: 100%;
-    
 }
-#blog-content .content-card .card .blog-content .blog-details .quote-div .second div{
+#blog-content .content-card .card .blog-content .blog-details .quote-div .second div {
     width: 100%;
     padding-left: 10%;
     color: #000000;
 }
-#blog-content .content-card .card .blog-content .blog-details .quote-div .second div:last-child{
+
+#blog-content .content-card .card .blog-content .blog-details .quote-div .second div:last-child {
     width: 100%;
     color: gray;
 }
 
-#blog-content .content-card .card .social-reaction-div hr{
+#blog-content .content-card .card .social-reaction-div hr {
     color: #DAE1E9;
     width: 90%;
 }  
-#blog-content .content-card .card .social-reaction-div hr.sex{
+
+#blog-content .content-card .card .social-reaction-div hr.sex {
     display: none;
 }  
 
-#blog-content .content-card .card .social-reaction-div{
+#blog-content .content-card .card .social-reaction-div {
     /* border-top: 1px solid #DAE1E9; */
     /* border-bottom: 1px solid #DAE1E9; */
     padding: 15px 0;
-    
 }   
-#blog-content .content-card .card .social-reaction-div .reaction-div{
+#blog-content .content-card .card .social-reaction-div .reaction-div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -970,41 +966,41 @@ footer .footer-container .right-section {
     height: 150px;
     border-right: 1px solid #DAE1E9;
 } 
-#blog-content .content-card .card .social-reaction-div .reaction-div .reaction-text{
-    font-size : 14px;
-    line-height : 22px;
-    letter-spacing : -0.07px;
-    color : #293248;
+#blog-content .content-card .card .social-reaction-div .reaction-div .reaction-text {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.07px;
+    color: #293248;
     margin-bottom: 25px;
 } 
-#blog-content .content-card .card .social-reaction-div .reaction-div .reaction-icons embed{
+#blog-content .content-card .card .social-reaction-div .reaction-div .reaction-icons embed {
     width: 30px;
 }
 
-#blog-content .content-card .card .social-reaction-div .social-div{
+#blog-content .content-card .card .social-reaction-div .social-div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
     height: 150px;
 }   
-#blog-content .content-card .card .social-reaction-div .social-div .social-text{
-    font-size : 14px;
-    line-height : 22px;
-    letter-spacing : -0.07px;
-    color : #293248;
+#blog-content .content-card .card .social-reaction-div .social-div .social-text {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.07px;
+    color: #293248;
     margin-bottom: 25px;
 }   
-#blog-content .content-card .card .social-reaction-div .social-div .social-text span{
+#blog-content .content-card .card .social-reaction-div .social-div .social-text span {
     background-color: red;
     border-radius: 5px;
     color: #FFFFFF;
     padding: 0 2px;
 }   
-#blog-content .content-card .card .social-reaction-div .social-div .social-icons{
+#blog-content .content-card .card .social-reaction-div .social-div .social-icons {
     display: flex;
 }   
-#blog-content .content-card .card .social-reaction-div .social-div .social-icons i{
+#blog-content .content-card .card .social-reaction-div .social-div .social-icons i {
     color: white;
     /* padding: 15px; */
     border-radius: 50%;
@@ -1015,43 +1011,42 @@ footer .footer-container .right-section {
     height: 30px;
     margin: 0 2px;
 }  
-#blog-content .content-card .card .social-reaction-div .social-div .social-icons .fa-facebook{
-    background : blue;
+#blog-content .content-card .card .social-reaction-div .social-div .social-icons .fa-facebook {
+    background: blue;
 }
-#blog-content .content-card .card .social-reaction-div .social-div .social-icons .fa-whatsapp{
-    background : #2ECC71;
+#blog-content .content-card .card .social-reaction-div .social-div .social-icons .fa-whatsapp {
+    background: #2ECC71;
 }
-#blog-content .content-card .card .social-reaction-div .social-div .social-icons .fa-twitter{
-    background : darkturquoise;
+#blog-content .content-card .card .social-reaction-div .social-div .social-icons .fa-twitter {
+    background: darkturquoise;
 }
 
 /* ************************************************ related articles section  ***************************************** */
-#related-articles-section{
+#related-articles-section {
     padding: 0 10%;
     margin-bottom: 50px;
-
 }
-#related-articles-section .section-title{
-    font-size : 22px;
-    letter-spacing : -0.11px;
-    color : #293248;
+#related-articles-section .section-title {
+    font-size: 22px;
+    letter-spacing: -0.11px;
+    color: #293248;
     padding-bottom: 50px;
 }
-#related-articles-section .section-title .one{
+#related-articles-section .section-title .one {
     /* border-color : ; */
     border: 1px solid #724DDD;
-    border-width : 1px;
-    width : 127px;
+    border-width: 1px;
+    width: 127px;
 }
-#related-articles-section .section-title .two{
+#related-articles-section .section-title .two {
     /* border-color : #DAE1E9; */
     border: 1px solid #DAE1E9;
 
-    border-width : 1px;
+    border-width: 1px;
     width: 100%;
 }
 
-#related-articles-section .blog-card .related-articles-card{
+#related-articles-section .blog-card .related-articles-card {
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -1064,10 +1059,10 @@ footer .footer-container .right-section {
     margin-left: -10px;
 }
 
-#related-articles-section .blog-card .related-articles-card .related-articles-card-header{
+#related-articles-section .blog-card .related-articles-card .related-articles-card-header {
     padding: 0;
 }
-#related-articles-section .blog-card .related-articles-card .related-articles-card-header img{
+#related-articles-section .blog-card .related-articles-card .related-articles-card-header img {
     width: 100%;
     height: auto;
     min-height: 220px;
@@ -1080,94 +1075,94 @@ footer .footer-container .right-section {
     flex: 1 1 auto;
     padding: 1.25rem;
 }
-#related-articles-section .blog-card .related-articles-card .related-articles-card-body .read-and-earn{
-    font-size : 15px;
-    letter-spacing : 0.6px;
-    color : #B6B6B6;
+#related-articles-section .blog-card .related-articles-card .related-articles-card-body .read-and-earn {
+    font-size: 15px;
+    letter-spacing: 0.6px;
+    color: #B6B6B6;
 }
-#related-articles-section .blog-card .related-articles-card .related-articles-card-body .points-number{
-    background : #F65C34;
+#related-articles-section .blog-card .related-articles-card .related-articles-card-body .points-number {
+    background: #F65C34;
     /* height : 21px; */
-    border-radius : 2px;
-    letter-spacing : -0.05px;
-    color : #FFFFFF;
+    border-radius: 2px;
+    letter-spacing: -0.05px;
+    color: #FFFFFF;
     padding: 3px 8px;
 }
-#related-articles-section .blog-card .related-articles-card .related-articles-card-body .body-title{
+#related-articles-section .blog-card .related-articles-card .related-articles-card-body .body-title {
     font-size: 22px;
     letter-spacing: -0.11px;
     color: #3D345F;
     padding-top: 1em;
 }
-#related-articles-section .blog-card .related-articles-card .related-articles-card-body .body-text{
+#related-articles-section .blog-card .related-articles-card .related-articles-card-body .body-text {
     font-size: 15px;
-    line-height : 24px;
-    letter-spacing : 0.6px;
-    color : #767676;
+    line-height: 24px;
+    letter-spacing: 0.6px;
+    color: #767676;
 }
-#related-articles-section .blog-card .related-articles-card .related-articles-card-footer{
+#related-articles-section .blog-card .related-articles-card .related-articles-card-footer {
     background-color: #FFFFFF;
     padding: .75rem 1.25rem;
     border-top: 1px solid rgba(0,0,0,.125);
 }
-#related-articles-section .blog-card .related-articles-card .related-articles-card-footer .like-chat-icon{
-    border-color : #FFFFFF;
-    border-width : 2px;
-    width : 22px;
-    height : 22px;
+#related-articles-section .blog-card .related-articles-card .related-articles-card-footer .like-chat-icon {
+    border-color: #FFFFFF;
+    border-width: 2px;
+    width: 22px;
+    height: 22px;
 }
-#related-articles-section .blog-card .related-articles-card .related-articles-card-footer .like-chat-number{
-    font-size : 13px;
-    letter-spacing : -0.06px;
-    color : #767676;
+#related-articles-section .blog-card .related-articles-card .related-articles-card-footer .like-chat-number {
+    font-size: 13px;
+    letter-spacing: -0.06px;
+    color: #767676;
     padding-left: 5px;
 }
 
 
 /* ***************************************************** comments section ********************************************* */
-#comments-section{
+#comments-section {
     padding: 0 10%;
     margin-bottom: 100px;
 }
-#comments-section .section-title{
-    font-size : 22px;
-    letter-spacing : -0.11px;
-    color : #293248;
+#comments-section .section-title {
+    font-size: 22px;
+    letter-spacing: -0.11px;
+    color: #293248;
     padding-bottom: 30px;
 }
-#comments-section .section-title .one{
+#comments-section .section-title .one {
     /* border-color : ; */
     border: 1px solid #724DDD;
-    border-width : 1px;
-    width : 127px;
+    border-width: 1px;
+    width: 127px;
 }
-#comments-section .section-title .two{
+#comments-section .section-title .two {
     /* border-color : #DAE1E9; */
     border: 1px solid #DAE1E9;
 
-    border-width : 1px;
+    border-width: 1px;
     width: 100%;
 }
-#comments-section .invite-to-comment{
-    font-size : 18px;
-    letter-spacing : 0.72px;
-    color : #3E365F;
+#comments-section .invite-to-comment {
+    font-size: 18px;
+    letter-spacing: 0.72px;
+    color: #3E365F;
     display: flex;
     align-items: center;
 }
-#comments-section .invite-to-comment embed{
+#comments-section .invite-to-comment embed {
     margin-left: 15px;
 }
 
 /* comments */
-#comments-section .comments .comment-div{
+#comments-section .comments .comment-div {
     padding-top: 30px;
     border-bottom: 1px solid #DAE1E9;
     padding-bottom: 30px;
 }
 
 
-#comments-section .comments .avatar-large, #comments-section .comments .avatar-small{
+#comments-section .comments .avatar-large, #comments-section .comments .avatar-small {
     justify-content: center;
     display: flex;
 }   
@@ -1177,65 +1172,65 @@ footer .footer-container .right-section {
     height: 80px;
     border-radius: 50%;
 }
-#comments-section .comments .avatar-small img{
+#comments-section .comments .avatar-small img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
-#comments-section .comments .comment-title{
-    font-size : 16px;
-    letter-spacing : 0.64px;
-    color : #293248;
+#comments-section .comments .comment-title {
+    font-size: 16px;
+    letter-spacing: 0.64px;
+    color: #293248;
 }
-#comments-section .comments .comment-time{
-    font-size : 13px;
-    line-height : 24px;
-    letter-spacing : 0.52px;
-    color : #B6B6B6;
+#comments-section .comments .comment-time {
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.52px;
+    color: #B6B6B6;
 }
-#comments-section .comments .comment-text{
-    font-size : 16px;
-    line-height : 18px;
-    letter-spacing : 0.64px;
-    color : #767676;
+#comments-section .comments .comment-text {
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.64px;
+    color: #767676;
     padding: 25px 15px;
 }
-#comments-section .comments .comment-reactions .reaction-number{
+#comments-section .comments .comment-reactions .reaction-number {
     padding-left: 10px;   
-    font-size : 13px;
-    line-height : 18px;
-    letter-spacing : 0.52px;
-    color : #767676;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.52px;
+    color: #767676;
 }
-#comments-section .comments .comment-reactions .reaction{
+#comments-section .comments .comment-reactions .reaction {
     padding-left: 10px; 
     padding-right: 10px;    
-    font-size : 13px;
-    line-height : 18px;
-    letter-spacing : 0.52px;
-    color : #293248;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.52px;
+    color: #293248;
 }
-#comments-section .comments .comment-reactions .report{
+#comments-section .comments .comment-reactions .report {
     padding-left: 10px; 
     padding-right: 10px;    
-    font-size : 13px;
-    line-height : 18px;
-    letter-spacing : 0.52px;
-    color : #767676;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.52px;
+    color: #767676;
     border-left: 1px solid #DAE1E9;
 }
-#comments-section .comments .comment-reactions .reply{
+#comments-section .comments .comment-reactions .reply {
     padding-left: 10px; 
     padding-right: 10px;   
-    font-size : 13px;
-    line-height : 18px;
-    letter-spacing : 0.52px;
-    color : #767676;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.52px;
+    color: #767676;
     border-left: 1px solid #DAE1E9;
 }
 
 /* comments */
-#comments-section .comments .sub-comment-div{
+#comments-section .comments .sub-comment-div {
     padding-top: 30px;
     border-bottom: 1px solid #DAE1E9;
     padding-bottom: 30px;
@@ -1244,40 +1239,40 @@ footer .footer-container .right-section {
 
 
 /* right comment section */
-#write-comment-section{
+#write-comment-section {
     padding: 0 10%;
     margin-bottom: 100px;
 }
 
-#write-comment-section .section-title{
-    font-size : 22px;
-    letter-spacing : -0.11px;
-    color : #293248;
+#write-comment-section .section-title {
+    font-size: 22px;
+    letter-spacing: -0.11px;
+    color: #293248;
     padding-bottom: 30px;
 }
-#write-comment-section .section-title .one{
+#write-comment-section .section-title .one {
     /* border-color : ; */
     border: 1px solid #724DDD;
-    border-width : 1px;
-    width : 127px;
+    border-width: 1px;
+    width: 127px;
 }
-#write-comment-section .section-title .two{
+#write-comment-section .section-title .two {
     /* border-color : #DAE1E9; */
     border: 1px solid #DAE1E9;
 
-    border-width : 1px;
+    border-width: 1px;
     width: 100%;
 }
-#write-comment-section .comment-form textarea{
+#write-comment-section .comment-form textarea {
     height: 125px;
     resize: none;
 }
-#write-comment-section .comment-form button{
-    background : #451EAD;
-    font-size : 15px;
+#write-comment-section .comment-form button {
+    background: #451EAD;
+    font-size: 15px;
     height: 53px;
-    line-height : 24px;
-    color : #FFFFFF;
+    line-height: 24px;
+    color: #FFFFFF;
 }
 
 
@@ -1286,23 +1281,23 @@ footer .footer-container .right-section {
 ************************************************************************************************ */
 
 /* ************************************ header ************************************************* */
-#landing-page-header{
+#landing-page-header {
     padding-top: .5em;
     width: 100%;
     position: relative;
     top: 0;
     left: 0;
     right: 0;
-    background : #FFFFFF;
-    height : 82px;
-    box-shadow : 0px 4px 5px rgba(0, 0, 0, 0.12);
+    background: #FFFFFF;
+    height: 82px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.12);
     z-index: 10;
 }
-#landing-page-header .navbar-toggler{
+#landing-page-header .navbar-toggler {
     border-color: #000000;
 }
 
-#landing-page-header nav .navbar-collapse .navbar-nav .nav-item a{
+#landing-page-header nav .navbar-collapse .navbar-nav .nav-item a {
     color: #293248 !important;
     font-size: 14px;
     letter-spacing: -0.07px;
@@ -1312,48 +1307,48 @@ footer .footer-container .right-section {
 }
 
 /* ************************************** request demo section *********************************** */
-#request-demo-section{
+#request-demo-section {
     background-color: #FFFFFF;
 }
-#request-demo-section .request-demo-form-div{
+#request-demo-section .request-demo-form-div {
     padding: 8%;
 }
-#request-demo-section .request-demo-form-div .title{
-    font-size : 30px;
-    letter-spacing : -0.15px;
-    color : #3D345F;
+#request-demo-section .request-demo-form-div .title {
+    font-size: 30px;
+    letter-spacing: -0.15px;
+    color: #3D345F;
     margin-bottom: 25px
 }
-#request-demo-section .request-demo-form-div .description{
-    font-size : 18px;
-    letter-spacing : 0.54px;
-    color : #767676;
+#request-demo-section .request-demo-form-div .description {
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    color: #767676;
     margin-bottom: 25px;
 }
-#request-demo-section .request-demo-form-div .request-demo-form input{
-    border-color : #DAE1E9;
-    height : 52px;
-    border-radius : 3px;
-    font-size : 15px;
-    letter-spacing : 0.3px;
-    color : #767676;
+#request-demo-section .request-demo-form-div .request-demo-form input {
+    border-color: #DAE1E9;
+    height: 52px;
+    border-radius: 3px;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    color: #767676;
     margin-bottom: 25px;
 }
-#request-demo-section .request-demo-form-div .request-demo-form button{
-    height : 52px;
-    border-radius : 3px;
-    background : #5D35CD;
-    font-size : 13px;
-    color : #FFFFFF;    
+#request-demo-section .request-demo-form-div .request-demo-form button {
+    height: 52px;
+    border-radius: 3px;
+    background: #5D35CD;
+    font-size: 13px;
+    color: #FFFFFF;    
 }
 
-#request-demo-section .request-demo-image-div{
+#request-demo-section .request-demo-image-div {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     min-height: 600px;
 }
-#request-demo-section .request-demo-image-div .image-text{
+#request-demo-section .request-demo-image-div .image-text {
     font-weight: bold;
     font-size: 35px;
     letter-spacing: -0.2px;
@@ -1378,73 +1373,73 @@ footer .footer-container .right-section {
 } */
 
 /* *************************************** GAMIPHY BENEFITS SECTION ************************************ */
-#gamiphy-benefits-section{
+#gamiphy-benefits-section {
     background-color: #F2F5F9;
     padding: 7% 10%;
 }
-#gamiphy-benefits-section .benefits-image-div{
+#gamiphy-benefits-section .benefits-image-div {
     width: 100%;
 }
-#gamiphy-benefits-section .benefits-image-div img{
+#gamiphy-benefits-section .benefits-image-div img {
     width: 100%;
 }
-#gamiphy-benefits-section .benefits-div{
+#gamiphy-benefits-section .benefits-div {
     padding: 15px 0 15px 7%;
 }
-#gamiphy-benefits-section .benefits-div .benefit{
+#gamiphy-benefits-section .benefits-div .benefit {
     margin-bottom: 30px;
-    font-size : 23px;
-    letter-spacing : 0.35px;
-    color : #3E365F;
+    font-size: 23px;
+    letter-spacing: 0.35px;
+    color: #3E365F;
 }
-#gamiphy-benefits-section .benefits-div .benefit div{
+#gamiphy-benefits-section .benefits-div .benefit div {
     margin-bottom: 10px;
 }
-#gamiphy-benefits-section .benefits-div .benefit img{
+#gamiphy-benefits-section .benefits-div .benefit img {
     width: 15%;
     
 }
 /* *********************************************** FEATURES SECTION ****************************************************** */
-#features-section{
+#features-section {
     padding: 5% 10%;
     border-bottom: 1px solid #E6EAED;
 }
-#features-section .features-title{
+#features-section .features-title {
     text-align: center;
     margin-bottom: 100px;
 }
-#features-section .features-title .sub-title{
-    font-size : 13px;
-    letter-spacing : 1.3px;
-    color : #B6B6B6;
+#features-section .features-title .sub-title {
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    color: #B6B6B6;
 }
-#features-section .features-title .main-title{
-    font-size : 35px; 
-    letter-spacing : -0.17px;
-    color : #3D345F;
+#features-section .features-title .main-title {
+    font-size: 35px; 
+    letter-spacing: -0.17px;
+    color: #3D345F;
 }
-#features-section .features-title .seperator{
+#features-section .features-title .seperator {
     margin: -10px auto;
 }
-#features-section .features-div{
+#features-section .features-div {
     margin-bottom: 80px
 }
-#features-section .features-div .image-div img{
+#features-section .features-div .image-div img {
     width: 90%;
     height: 150px;
 }
-#features-section .features-div.image-right .image-div img{
+#features-section .features-div.image-right .image-div img {
     width: 90%;
     height: 150px;
     float: right;
 }
 
-#features-section .features-div .description-div .title{
-    font-weight : bold;
-    font-size : 26px;
-    color : #293248;
+#features-section .features-div .description-div .title {
+    font-weight: bold;
+    font-size: 26px;
+    color: #293248;
 }
-#features-section .features-div .description-div hr{
+#features-section .features-div .description-div hr {
     width: 100px;
     margin-left: 0;
     border-color: #000000;
@@ -1453,52 +1448,52 @@ footer .footer-container .right-section {
     border-style: dashed;
     margin-bottom: .5rem;
 }
-#features-section .features-div .description-div .description{
-    font-size : 23px;
-    letter-spacing : 0.35px;
-    color : #3E365F;
+#features-section .features-div .description-div .description {
+    font-size: 23px;
+    letter-spacing: 0.35px;
+    color: #3E365F;
 }
 
 /* **************************************************** request demo form two section */
-#request-demo-form-two-section{
+#request-demo-form-two-section {
     padding: 5% 10%;
 }
-#request-demo-form-two-section .title{
-    font-size : 28px;
-    letter-spacing : -0.15px;
-    color : #3D345F;
+#request-demo-form-two-section .title {
+    font-size: 28px;
+    letter-spacing: -0.15px;
+    color: #3D345F;
     text-align: center;
     margin-bottom: 50px;
 }
 #request-demo-form-two-section .request-demo-form {
-    font-size : 30px;
-    letter-spacing : -0.15px;
-    color : #3D345F;
+    font-size: 30px;
+    letter-spacing: -0.15px;
+    color: #3D345F;
     text-align: center;
     margin-bottom: 50px;
 }
-#request-demo-form-two-section .request-demo-form input{
-    border-color : #DAE1E9;
-    height : 52px;
-    border-radius : 3px;
-    font-size : 13px;
-    letter-spacing : 0.3px;
-    color : #767676;
+#request-demo-form-two-section .request-demo-form input {
+    border-color: #DAE1E9;
+    height: 52px;
+    border-radius: 3px;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    color: #767676;
     margin-bottom: 25px;
 }
-#request-demo-form-two-section .request-demo-form  button{
-    height : 52px;
-    border-radius : 3px;
-    background : #5D35CD;
-    font-size : 12px;
-    color : #FFFFFF;    
+#request-demo-form-two-section .request-demo-form button {
+    height: 52px;
+    border-radius: 3px;
+    background: #5D35CD;
+    font-size: 12px;
+    color: #FFFFFF;    
 }
 
 /* ******************************************************  MEDIA QUERES  ********************************************** */
  /* Medium devices (tablets, 768px and up) */
 @media (min-width: 769px) {
 
-    .avatar-small{
+    .avatar-small {
         display: none !important;
     }
 }
@@ -1515,45 +1510,45 @@ footer .footer-container .right-section {
 
 }
 
-@media all and (max-width: 991px){
-    .gamiphy-logo{
+@media all and (max-width: 991px) {
+    .gamiphy-logo {
         float: left;
     }
 
-    #related-articles-section .blog-card .card{
+    #related-articles-section .blog-card .card {
         margin-bottom: 30px;
     }
 
-    #related-articles-section .blog-card .related-articles-card{
+    #related-articles-section .blog-card .related-articles-card {
         margin-bottom: 30px;
     }
 
    
 
 }
-@media all and (max-width: 768px){
+@media all and (max-width: 768px) {
 
-    .gamiphy-silder-main-title{
+    .gamiphy-silder-main-title {
         font-size: 18px;
     }
-    .gamiphy-silder-sub-title{
+    .gamiphy-silder-sub-title {
         font-size: 34px;
     }
 
     /* find out section */
 
-    .find-out-row div{
+    .find-out-row div {
         justify-content: center;
     }
-    .find-out-text{
+    .find-out-text {
         padding-bottom: 25px;
     }
 
     /* what is gamiphy section */
-    #what-is-gamiphication .left-section{
+    #what-is-gamiphication .left-section {
         padding: 0 5%;
     }
-    #what-is-gamiphication .right-section embed{
+    #what-is-gamiphication .right-section embed {
         width: 100%;
     }
 
@@ -1561,48 +1556,45 @@ footer .footer-container .right-section {
     #platforms-section {
         padding-bottom: 0;
     }
-    #platforms-section .platform-section-block-content .platform-items-container .platform-item .left-section{
+    #platforms-section .platform-section-block-content .platform-items-container .platform-item .left-section {
         order: 2;
         padding: 5em 0;
         border-bottom: 2px solid #B6B6B6;
     }
-    #platforms-section .platform-section-block-content .platform-items-container .platform-item .left-section:last-child{
+    #platforms-section .platform-section-block-content .platform-items-container .platform-item .left-section:last-child {
 
         border-bottom: unset;
     }
-    #platforms-section .platform-section-block-content .platform-items-container .platform-item .right-section{
+    #platforms-section .platform-section-block-content .platform-items-container .platform-item .right-section {
         order: 1;
        
     }
 
     /* find out section 2 */
 
-    #find-out-section-2{
+    #find-out-section-2 {
 
         background-color: unset;
     }
-    #find-out-section-2 .find-out-row{
-
+    #find-out-section-2 .find-out-row {
         padding: 4em 0;
     }
-    #find-out-section-2 .find-out-text{
-
+    #find-out-section-2 .find-out-text {
         color: #3E365F;
     }
-    #find-out-section-2 .take-quiz-button{
-
+    #find-out-section-2 .take-quiz-button {
         background-color: #51D7ED;
     }
 
     /* footer */
 
-    footer .footer-container .left-section{
+    footer .footer-container .left-section {
         justify-content: center;
         padding-top: 2em;
         order: 2;
     }
 
-    footer .footer-container .right-section{
+    footer .footer-container .right-section {
         display: flex;
         justify-content: center;
         order: 1;
@@ -1610,155 +1602,155 @@ footer .footer-container .right-section {
 
 
     /* blog section */
-    #blogs-section{
+    #blogs-section {
         padding: 3em 0;
     }
 
-    #blogs-section .container-fluid{
+    #blogs-section .container-fluid {
         padding: 0;
     }
 
     /***************** BLOG VIEW PAGE BLOG CONTENT SECTION ****************/
-    #blog-content{
+    #blog-content {
         padding: 0;
         margin-bottom: 0;
     }
-    #blog-content .content-card .card{
+    #blog-content .content-card .card {
         border: 0;
     }
 
-    #blog-content .content-card .card .blog-title{
+    #blog-content .content-card .card .blog-title {
         font-size: 38px;
     }
-    #blog-content .content-card .card .blog-title p{
+    #blog-content .content-card .card .blog-title p {
         width: 100%;
     }
-    #blog-content .content-card .card .blog-content .blog-details{
+    #blog-content .content-card .card .blog-content .blog-details {
         padding: 0;
     }
-    #blog-content .content-card .card .blog-content .blog-details .image-div{
+    #blog-content .content-card .card .blog-content .blog-details .image-div {
         padding: 0;
     }
     
-    #blog-content .content-card .card .blog-content .reaction-content .reaction-div{
+    #blog-content .content-card .card .blog-content .reaction-content .reaction-div {
         width: 20%;
     }
     
-    #blog-content .content-card .card .social-reaction-div .reaction-div{
+    #blog-content .content-card .card .social-reaction-div .reaction-div {
         border-right: unset;
         /* border-bottom: 1px solid #DAE1E9; */
     } 
 
-    #blog-content .content-card .card .social-reaction-div hr.sex{
+    #blog-content .content-card .card .social-reaction-div hr.sex {
         display: block;
     } 
 
 
     /* related artical */
-    #related-articles-section{
+    #related-articles-section {
         padding: 0;
     }
-    #related-articles-section .blog-card .related-articles-card{
+    #related-articles-section .blog-card .related-articles-card {
         margin: 0;
         margin-bottom: 30px;
         border-left: 0;
         border-right: 0;
     }
-    #related-articles-section .blog-card .related-articles-card .related-articles-card-header{
+    #related-articles-section .blog-card .related-articles-card .related-articles-card-header {
         padding: 15px;
     }
-    #related-articles-section .blog-card .related-articles-card .related-articles-card-header img{
+    #related-articles-section .blog-card .related-articles-card .related-articles-card-header img {
         min-height: 170px;
     }
-    #related-articles-section .blog-card .related-articles-card .related-articles-card-body{
+    #related-articles-section .blog-card .related-articles-card .related-articles-card-body {
         height: auto;
         display: flex;
         align-items: center;
     }
-    #related-articles-section .blog-card .related-articles-card .related-articles-card-footer{
+    #related-articles-section .blog-card .related-articles-card .related-articles-card-footer {
         display: none;
     }
-    #related-articles-section .blog-card .related-articles-card .related-articles-card-body .body-text{
+    #related-articles-section .blog-card .related-articles-card .related-articles-card-body .body-text {
         display: none;
     }
 
 
     /* comments section */
-    #comments-section{
+    #comments-section {
         padding: 0;
     }
-    #comments-section .comments .sub-comment-div{
+    #comments-section .comments .sub-comment-div {
         padding-left: 8.333%;
     }
 
-    .avatar-large{
+    .avatar-large {
         display: none !important;
     }
 
 
     /* write comment section */
-    #write-comment-section{
+    #write-comment-section {
         padding: 0;
     }
 
 
     /* LANDING PAGE  */
-    #gamiphy-benefits-section .benefits-image-div{
+    #gamiphy-benefits-section .benefits-image-div {
         display: flex;
         order: 2;
     }
 
-    #gamiphy-benefits-section .benefits-div{
+    #gamiphy-benefits-section .benefits-div {
         display: flex;
         order: 1;
         text-align: center;
         padding: 50px 10%;
     }
-    #features-section .features-div .image-div{
+    #features-section .features-div .image-div {
         order: 2;
         margin-top: 50px;
     }
 
-    #features-section .features-div .image-div img{
+    #features-section .features-div .image-div img {
         width: 100%;
     }
-    #features-section .features-div.image-right .image-div img{
+    #features-section .features-div.image-right .image-div img {
         width: 100%;
     }
 }
 
-@media all and (max-width: 576px){
-    .navbar-brand{
+@media all and (max-width: 576px) {
+    .navbar-brand {
         width: 50%;
     }
-    .navbar-brand .gamiphy-logo{
+    .navbar-brand .gamiphy-logo {
         width: 100%;
     }
-    .gamiphy-silder-sub-title{
+    .gamiphy-silder-sub-title {
         font-size: 28px;
     }
-    .gamiphy-silder-main-title{
+    .gamiphy-silder-main-title {
         font-size: 16px;
     }
 
 
     /* platforms section */
-    #platforms-section .platform-section-block-content{
+    #platforms-section .platform-section-block-content {
         padding: 0;
     }
 
     /* BLOG VIEW PAGE BLOG CONTENT SECTION */
 
-    #blog-content .content-card .card .blog-title{
+    #blog-content .content-card .card .blog-title {
         font-size: 35px;
     }
-    #blog-content .content-card .card .blog-content .reaction-content .reaction-div{
+    #blog-content .content-card .card .blog-content .reaction-content .reaction-div {
         width: 25%;
     }
 
 
     #blog-content .content-card .card .social-reaction-div .reaction-div,
-    #blog-content .content-card .card .social-reaction-div .social-div{
+    #blog-content .content-card .card .social-reaction-div .social-div {
         height: unset;
 
     } 
