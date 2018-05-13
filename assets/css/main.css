@@ -1584,13 +1584,13 @@ footer .footer-container .right-section {
     #find-out-section-2 .find-out-row {
         padding: 4em 0;
     }
-    #find-out-section-2 .find-out-text {
+    #find-out-section-2 .find-out-row .find-out-text {
         font-size : 34px;
         letter-spacing : -0.17px;
         color : #3D345F;
     }
 
-    #find-out-section-2 .take-quiz-button {
+    #find-out-section-2 .find-out-row .take-quiz-button {
         background-color: #51D7ED !important;
     }
 
