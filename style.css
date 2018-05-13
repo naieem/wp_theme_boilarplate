@@ -38,7 +38,7 @@ header nav .navbar-collapse .navbar-nav .menu-item.current-menu-item a{
     /*height: auto !important;*/
 /*}*/
 #blogs-section .blog-card .card-footer{
-    margin-top:15px;
+    margin-top:0px;
 }
 #blogs-section .blog-card .card-body a:hover{
     color: #007bff !important;

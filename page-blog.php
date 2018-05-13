@@ -49,10 +49,10 @@ global $options;
 		                        <div class="card-footer">
 		                            <div class="row">
 		                                <div class="col-8 align-items-center">
-		                                    <embed class="like-chat-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/lol.png">
-		                                    <embed class="like-chat-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/like.png">
-		                                    <embed class="like-chat-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/cool.png">
-		                                    <span class="like-chat-number">82</span>
+<!--		                                    <embed class="like-chat-icon" src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/assets/img/lol.png">-->
+<!--		                                    <embed class="like-chat-icon" src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/assets/img/like.png">-->
+<!--		                                    <embed class="like-chat-icon" src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/assets/img/cool.png">-->
+<!--		                                    <span class="like-chat-number">82</span>-->
 		                                </div>
 		                                <div class="col-4 align-items-center justify-content-flex-end">
 		                                    <embed class="like-chat-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/chat.svg">
