@@ -164,7 +164,7 @@ body {
 
 
 /************************************************** FIND OUT SECTION STYLES ********************************************************/
-#find-out-section, #find-out-section-2 {
+#find-out-section {
     background: #51D7ED;
     /* height : 140px; */
     display: flex;
@@ -207,14 +207,14 @@ body {
     margin-top: 2em;
 }
 
-#find-out-section .find-out-section-container .text, #find-out-section-2 .find-out-section-container .text {
+#find-out-section .find-out-section-container .text {
     font-size: 34px;
     letter-spacing: -0.17px;
     color: #3D345F;
     margin-top: 0.5em;
 }
 
-#find-out-section .find-out-section-container .take-quiz-btn, #find-out-section-2 .find-out-section-container .take-quiz-btn {
+#find-out-section .find-out-section-container .take-quiz-btn {
     background: #51D6EE;
     width: 184px;
     height: 45px;
@@ -1577,6 +1577,9 @@ footer .footer-container .right-section {
 
         background-color: #51D7ED;
         border-top: solid 1px #D3DAE4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #find-out-section-2 .find-out-row {
         padding: 4em 0;
