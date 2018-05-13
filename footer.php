@@ -59,5 +59,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script src="https://static.gamiphy.co/js/api.min.js"></script>
+    <script>
+        function openGamiphyQuiz() {
+            Gamiphy.openInPopup("https://static-test.gamiphy.co/gamiphy-quiz/index.html", 600, 600);
+        }
+    </script>
 </body>
 </html>
