@@ -62,7 +62,7 @@
     <script src="https://static.gamiphy.co/js/api.min.js"></script>
     <script>
         function openGamiphyQuiz() {
-            Gamiphy.openInPopup("https://static-test.gamiphy.co/gamiphy-quiz/index.html", 600, 600);
+            Gamiphy.openInPopup("https://static-test.gamiphy.co/gamiphy-quiz/index.html", 1000, 1000);
         }
     </script>
 </body>
