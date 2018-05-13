@@ -324,6 +324,7 @@ body {
     font-size: 13px;
     letter-spacing: 1.3px;
     color: #B6B6B6;
+    text-transform: uppercase;
 }
 
 
@@ -1574,16 +1575,20 @@ footer .footer-container .right-section {
 
     #find-out-section-2 {
 
-        background-color: unset;
+        background-color: #51D7ED;
+        border-top: solid 1px #D3DAE4;
     }
     #find-out-section-2 .find-out-row {
         padding: 4em 0;
     }
     #find-out-section-2 .find-out-text {
-        color: #3E365F;
+        font-size : 34px;
+        letter-spacing : -0.17px;
+        color : #3D345F;
     }
+
     #find-out-section-2 .take-quiz-button {
-        background-color: #51D7ED;
+        background-color: #51D7ED !important;
     }
 
     /* footer */
