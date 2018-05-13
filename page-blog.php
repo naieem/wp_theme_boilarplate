@@ -31,10 +31,10 @@ global $options;
 		                            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>">
 		                        </div>
 		                        <div class="card-body row">
-		                            <div class="col-md-12">
-		                                <span class="read-and-earn">Read and earn</span>
-		                                <span class="points-number">200POINTS</span>
-		                            </div>
+<!--		                            <div class="col-md-12">-->
+<!--		                                <span class="read-and-earn">Read and earn</span>-->
+<!--		                                <span class="points-number">200POINTS</span>-->
+<!--		                            </div>-->
 		                            <div class="col-md-12">
 		                                <p class="body-title">
 		                                	<a href="<?php the_permalink(); ?>">
