@@ -181,6 +181,25 @@ ol.children .comment-div{
     color: #fff;
 }
 
+#related-articles-section .blog-card .related-articles-card .related-articles-card-header{
+    height: 225px;
+    overflow: hidden;
+}
+
+#landing-page-header nav .navbar-collapse .navbar-nav a{
+    color: #293248 !important;
+    font-size: 14px;
+    letter-spacing: -0.07px;
+    border-color: #293248;
+    border-width: 1px;
+    margin-right: .5em;
+}
+.gamiphy-logo{
+    max-height: 30px;
+}
+#customSlider .carousel-caption{
+    bottom:300px !important;
+}
 /* media query related coding */
 
 @media (max-width: 768px){

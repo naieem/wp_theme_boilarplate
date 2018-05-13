@@ -36,7 +36,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<header id="gamiphy-header">
+    <?php
+        global $post;
+        $custom_header = get_post_meta($post->ID, 'custom_header', true);
+        $hide_banner_section = get_post_meta($post->ID, 'hide_banner_section', true);
+        $banner_image_url = get_post_meta($post->ID, 'banner_image_url', true);
+    ?>
+	<header <?php if($custom_header) echo 'id="landing-page-header"'; else 'id="gamiphy-header"';?> >
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg bg-faded">
                 <a class="navbar-brand" href="<?php echo home_url( '/' );?>">
@@ -62,36 +68,45 @@
 						'container_id' => 'navbarSupportedContent'
 					) );
 					?>
-                    <a class="nav-link gamiphy-get-started" href="<?php echo $options['getting_started_url'];?>">Get Started</a>
+                <?php
+                if(!$custom_header) {
+                    ?>
+                    <a class="nav-link gamiphy-get-started" href="<?php echo $options['getting_started_url']; ?>">Get
+                        Started</a>
+                    <?php
+                    }
+                ?>
             </nav>
         </div>
     </header>
     <?php
-    if(!is_home() || (!is_home() && !is_page( array( 72, 'restaurant' )))){
-    ?>
-    <section id="top-section">
-        <div class="container-fluid">
-            <div class="row top-section-container">
-                <div class="col-md-12">
-                    <div class="row top-section-title">
+    if(!is_home()){
+        if(!$hide_banner_section) {
+            ?>
+            <section id="top-section">
+                <div class="container-fluid">
+                    <div class="row top-section-container" <?php if($banner_image_url !=''){?>style="background-image: url('<?php echo $banner_image_url; }?>')">
                         <div class="col-md-12">
-                            <p class="title">
-                                <?php the_title();?>
-                            </p>
-                        </div>
-                        <div class="col-md-12">
+                            <div class="row top-section-title">
+                                <div class="col-md-12">
+                                    <p class="title">
+                                        <?php the_title(); ?>
+                                    </p>
+                                </div>
+                                <div class="col-md-12">
                             <span class="route">
                                 <!-- Home
                                 <embed class="arrow-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/arrow.svg" width="5px"> blog -->
-                                    <?php breadcrumbs();?>
+                                <?php breadcrumbs(); ?>
                                 </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <?php
+            </section>
+            <?php
+        }
     }
     if(is_home()){
     ?>

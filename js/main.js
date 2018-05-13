@@ -23,6 +23,7 @@ jQuery(document).ready(function($) {
 			data : data + "&action=add_demo_request",
 			success : function( response ) {
 				response = JSON.parse(response);
+				debugger;
 				if(response.status){
 					currentForm.trigger("reset");
 					resultContainer.html(response.message);

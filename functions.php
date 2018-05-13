@@ -108,6 +108,7 @@ function setupDatabaseTable(){
 		dbDelta( $sql );
 	}
 }
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -275,89 +276,6 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 /**
- * shortcode function for demo request form
- * @param  [type] $attributes
- */
-function demo_request_func( $atts ) {
-    $request = shortcode_atts( array(
-        'title' => 'something',
-        'subtitle' => 'something else',
-        'button_text' => '',
-        'type' => '' // vertical,horizontal
-    ), $atts );
-
-    // for vertical form
-    // representation
-    ob_start();
-    ?>
-    <div class="col-md-5 request-demo-form-div">
-        <div class="row">
-            <div class="col-12 title">
-                <?php echo $request['title']; ?>
-            </div>
-            <div class="col-12 description">
-                <?php echo $request['subtitle']; ?>
-            </div>
-            <div id='vertical' class="col-12 description"></div>
-            <div class="col-12 request-demo-form">
-                <form class="row demo-request-form" data-response-id='vertical'>
-                    <div class="col-12">
-                        <input type="text" class="form-control" required="required" name="emailOrPhone" placeholder="Email Address or phone number">
-                    </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control"  required="required" name="name"  placeholder="Full Name">
-                    </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control"  required="required" name="restaurantName"   placeholder="Restaurant name">
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="form-control"><?php echo $request['button_text']; ?></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-     </div>
-    <?php
-	$verticalfORM= ob_get_contents();
-	ob_end_clean();
-	// for Horizontal form
-    // representation
-    ob_start();
-    ?>
-    <div class="row">
-        <div class="col-12 title">
-            <?php echo $request['title']; ?>
-        </div>
-        <div id='horizontal' class="col-12 description"></div>
-        <div class="col-12 request-demo-form">
-            <form class="row demo-request-form"  data-response-id='horizontal'>
-                <div class="col-md-3">
-                    <input type="text" class="form-control"  required="required" name="emailOrPhone"  placeholder="Email Address or phone number">
-                </div>
-                <div class="col-md-3">
-                    <input type="text" class="form-control"  required="required" name="name" placeholder="Full Name">
-                </div>
-                <div class="col-md-3">
-                    <input type="text" class="form-control"  required="required" name="restaurantName" placeholder="Restaurant name">
-                </div>
-                <div class="col-md-3">
-                    <button type="submit" class="form-control"><?php echo $request['button_text']; ?></button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <?php
-    $HorizontalFORM = ob_get_contents();
-    ob_end_clean();
-    if($request['type'] == 'horizontal')
-    	return $HorizontalFORM;
-    if($request['type'] == 'vertical')
-    	return $verticalfORM;
-}
-add_shortcode( 'demorequestform', 'demo_request_func' );
-
-
-/**
  * Demo request endpoint handling from ajax call
  */
 add_action("wp_ajax_add_demo_request", "add_demo_request");
@@ -369,21 +287,23 @@ function add_demo_request() {
    	$email = $_POST['emailOrPhone'];
    	$name = $_POST['name'];
    	$restaurantName = $_POST['restaurantName'];
+    $business_type = $_POST['business_type'];
    	if($email !=='' && $name !=='' && $restaurantName !==''){
    		$table = $wpdb->prefix.'demo_request';
-		$data = array('email' => $email, 'name' => $name,'restaurant_name' => $restaurantName);
-		$format = array('%s','%s', '%s');
+		$data = array('email' => $email, 'name' => $name,'restaurant_name' => $restaurantName,'business' => $business_type);
+		$format = array('%s','%s', '%s','%s');
 		$wpdb->insert($table,$data,$format);
 		$id = $wpdb->insert_id;
-		if(isset($id)){
+		if($id){
 			echo json_encode(array(
 				'status' => true,
-				'message' => $options['demo_request_success']
-			));
+				'message' => $options['demo_request_success'],
+                'type' =>$business_type
+            ));
 		}else{
 			echo json_encode(array(
 				'status' => true,
-				'message' => 'error saving data.'
+				'message' => $wpdb->last_error
 			));
 		}
    	}else{
@@ -434,7 +354,8 @@ function list_of_registered_demo(){
 	            <tr>
 	                <th>Email/Phone</th>
 	                <th>Name</th>
-	                <th>Restaurant Name</th>
+	                <th>Type of the Business</th>
+                    <th>Name of the institution</th>
 	                <th>Request Created On</th>
 	            </tr>
 	        </thead>
@@ -445,6 +366,7 @@ function list_of_registered_demo(){
 					<tr>
 		                <td><?php echo $row->email;?></td>
 		                <td><?php echo $row->name;?></td>
+                        <td><?php echo $row->business;?></td>
 		                <td><?php echo $row->restaurant_name;?></td>
 		                <td><?php echo $row->created_date;?></td>
 	            	</tr>
@@ -511,3 +433,12 @@ require get_template_directory() . '/gamiphy-widget/widgets.php';
  */
 require get_template_directory() . '/inc/custom-breadcumb.php';
 
+/**
+ * Custom psot meta
+ */
+require get_template_directory() . '/inc/custom-post-meta.php';
+
+/**
+ * Custom shortcodes
+ */
+require get_template_directory() . '/inc/custom-shortcodes.php';
