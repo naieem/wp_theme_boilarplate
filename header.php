@@ -38,6 +38,13 @@
       echo "Gamiphy";  
     }
     ?></title>
+    <script src="https://static.gamiphy.co/js/api.min.js"></script>
+    <script>
+        function openGamiphyQuiz() {
+            Gamiphy.openInPopup("https://static-test.gamiphy.co/gamiphy-quiz/index.html", 900, 900);
+        }
+    </script>
+    <script>var _c = new Date().getTime();document.write('<script src="//static-test.gamiphy.co/gamiphy-bot/5af8ce3e263dd800153a9b81.js?cb='+ _c +'"\>\<\/script>');</script>
 </head>
 
 <body <?php body_class(); ?>>
