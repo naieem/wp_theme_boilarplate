@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <?php 
-    if(!is_home() { ?>
+    if(!is_home()) { ?>
         <meta name="title" content="Gamiphy | Complete Gamification Solutions for Customer Journeys">
         <meta name="desciption" content="Gamiphy is a user engagement and retention platform that equips brands in different industries with tools proven to increase customers reach and loyalty.">
     <?php 
