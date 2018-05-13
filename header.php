@@ -67,7 +67,7 @@
         </div>
     </header>
     <?php
-    if(!is_home() || (!is_home() && !is_page( 'restaurant' ))){
+    if(!is_home() || (!is_home() && !is_page( array( 72, 'restaurant' )))){
     ?>
     <section id="top-section">
         <div class="container-fluid">
