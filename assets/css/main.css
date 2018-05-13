@@ -288,6 +288,11 @@ body{
     color : #5D35CF;
 }
 
+.what-is-gamification-img {
+    width: 100%;
+    height: auto;
+}
+
 /************************************************** GAMIPHICATION FEATURES SECTION STYLES ********************************************************/
 
 #gamiphy-features-sections {
@@ -440,6 +445,11 @@ body{
     font-size : 20px;
     letter-spacing : 0.3px;
     color : #3E365F;
+}
+
+.how-gamiphy-works-img {
+    width: 100%;
+    height: auto;
 }
 
 /************************************************** LETS START SECTION STYLES ********************************************************/
