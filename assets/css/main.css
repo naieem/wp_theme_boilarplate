@@ -1353,7 +1353,7 @@ footer .footer-container .right-section {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    min-height: 600px;
+    min-height: 700px;
     order: 1;
 }
 
