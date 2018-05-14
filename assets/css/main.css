@@ -1349,6 +1349,14 @@ footer .footer-container .right-section {
     align-items: flex-end;
     min-height: 600px;
 }
+#request-demo-section .request-demo-image-mobile-div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 600px;
+    order: 1;
+}
+
 #request-demo-section .request-demo-image-div .image-text {
     font-weight: bold;
     font-size: 35px;
@@ -1359,19 +1367,6 @@ footer .footer-container .right-section {
     padding: 5% 10%;
 }
 
-/* #request-demo-section .request-demo-image-div::after{
-    content: "";
-	position: absolute;
-	background: #000000 ;
-    background: -moz-linear-gradient(top, #000000 20%, transparent 80%);
-    background: -webkit-linear-gradient(top, #000000 20%, transparent 80%);
-    background: -o-linear-gradient(top, #000000 20%, transparent 80%);
-    background: -ms-linear-gradient(top, #000000 20%, transparent 80%);
-    background: linear-gradient(to top, #000000 20%, transparent 80%);
-    opacity: 0.8;
-    width: 100%;
-    height: 100%;
-} */
 
 /* *************************************** GAMIPHY BENEFITS SECTION ************************************ */
 #gamiphy-benefits-section {
@@ -1496,6 +1491,10 @@ footer .footer-container .right-section {
 @media (min-width: 769px) {
 
     .avatar-small {
+        display: none !important;
+    }
+
+    #request-demo-section .request-demo-image-mobile-div{
         display: none !important;
     }
 }
@@ -1707,6 +1706,11 @@ footer .footer-container .right-section {
     #gamiphy-benefits-section .benefits-image-div {
         display: flex;
         order: 2;
+        padding: 0;
+    }
+    #gamiphy-benefits-section .benefits-image-div img{
+        width: 100%;
+        height: 100%;
     }
 
     #gamiphy-benefits-section .benefits-div {
@@ -1725,6 +1729,24 @@ footer .footer-container .right-section {
     }
     #features-section .features-div.image-right .image-div img {
         width: 100%;
+    }
+
+
+    /* *************** Landing page ********************** */
+
+    #request-demo-section .request-demo-image-div{
+        display: none;
+    }
+    #request-demo-section .request-demo-image-mobile-div{
+        display: flex !important;
+    }
+    #request-demo-section .request-demo-form-div{
+        display: flex;
+        order: 2;
+    }
+
+    #gamiphy-benefits-section{
+        padding: 7% 0;
     }
 }
 
