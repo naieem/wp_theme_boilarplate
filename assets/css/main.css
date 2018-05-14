@@ -1573,6 +1573,7 @@ footer .footer-container .right-section {
 
     .find-out-row div {
         justify-content: center;
+        text-align: center;
     }
     .find-out-text {
         padding-bottom: 25px;
