@@ -1412,6 +1412,7 @@ footer .footer-container .right-section {
 #features-section .features-title .sub-title {
     font-size: 13px;
     letter-spacing: 1.3px;
+    text-transform: uppercase;
     color: #B6B6B6;
 }
 #features-section .features-title .main-title {
