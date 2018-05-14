@@ -42,6 +42,16 @@ $gameOptions = array(
 		'popWindowTitle' => 'Select Logo',
 		'previewId' => 'preview'
 	),
+    array(
+        'type' => 'media',
+        'label' => 'Select Image for slider',
+        'model' => 'slider_bg',
+        'description' => 'Select or insert slider background image',
+        'button_text' => 'Select Background Image',
+        'input_field_id' => 'site_background_image',
+        'popWindowTitle' => 'Slider Background Image',
+        'previewId' => 'preview_slider_bg'
+    ),
 	array(
 		'type' => 'text',
 		'label' => 'Insert calendly url',
@@ -117,6 +127,9 @@ function gamiphy_styles_scripts() { ?>
   		.full-width{
   			width: 100%;
   		}
+        img{
+            max-width:100%;
+        }
 	</style>
 	<!-- <script type="text/javascript">
 		jQuery(document).ready(function($) {
