@@ -60,6 +60,6 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <div id="gamiphy-bot"></div>
-    <script>var _c = new Date().getTime();document.write('<script src="//static-test.gamiphy.co/gamiphy-bot/5af8ce3e263dd800153a9b81.js?cb='+ _c +'"\>\<\/script>');</script>
+    <script>var _c = new Date().getTime();document.write('<script src="//static-test.gamiphy.co/gamiphy-bot/5af8d6ca5c654900153e8918.js?cb='+ _c +'"\>\<\/script>');</script>
 </body>
 </html>
