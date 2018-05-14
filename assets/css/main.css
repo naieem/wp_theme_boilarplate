@@ -200,7 +200,7 @@ body {
     box-shadow : 5.1px 8.16px 10.2px rgba(0, 0, 0, 0.13);
 }
 
-#find-out-section .find-out-section-container, #find-out-section-2 .find-out-section-container {
+#find-out-section .find-out-section-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,6 +225,39 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+
+#find-out-section-2{
+    /* height : 140px; */
+    display: flex;
+    border-top: 1px solid #B6B6B6;
+    justify-content: center;
+    align-items: center;
+}
+#find-out-section-2 .find-out-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+#find-out-section-2 .find-out-text {
+    font-size : 26px;
+    letter-spacing : -0.17px;
+    color : #3E365F;
+    margin: 0;
+}
+#find-out-section-2 .take-quiz-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: white;
+    background : #51D7ED;
+    width : 184px;
+    height : 45px;
+    box-shadow : 5.1px 8.16px 10.2px rgba(0, 0, 0, 0.13);
+}
+
 
 /************************************************** WHAT IS GAMIPHICATION SECTION STYLES ********************************************************/
 #what-is-gamiphication {
@@ -816,7 +849,7 @@ footer .footer-container .right-section {
 /************************************************** BLOG PAGE TOP SECTION STYLES ********************************************************/
 
 #blog-content {
-    padding: 0 10%;
+    padding: 0 15%;
     background-color: transparent;
     margin-top: -75px;
     margin-bottom: 5em;
@@ -1024,7 +1057,7 @@ footer .footer-container .right-section {
 
 /* ************************************************ related articles section  ***************************************** */
 #related-articles-section {
-    padding: 0 10%;
+    padding: 0 15%;
     margin-bottom: 50px;
 }
 #related-articles-section .section-title {
@@ -1122,7 +1155,7 @@ footer .footer-container .right-section {
 
 /* ***************************************************** comments section ********************************************* */
 #comments-section {
-    padding: 0 10%;
+    padding: 0 15%;
     margin-bottom: 100px;
 }
 #comments-section .section-title {
@@ -1241,7 +1274,7 @@ footer .footer-container .right-section {
 
 /* right comment section */
 #write-comment-section {
-    padding: 0 10%;
+    padding: 0 15%;
     margin-bottom: 100px;
 }
 
@@ -1575,8 +1608,8 @@ footer .footer-container .right-section {
 
     #find-out-section-2 {
 
-        background-color: #51D7ED;
-        border-top: solid 1px #D3DAE4;
+        background-color: unset;
+        border-top: unset;
         display: flex;
         justify-content: center;
         align-items: center;
