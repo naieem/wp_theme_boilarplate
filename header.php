@@ -159,7 +159,7 @@ if (is_home()) {
                                     <p class="gamiphy-silder-sub-title"><?php echo get_the_excerpt(get_the_ID()); ?>
                                     </p>
                                     <div class="breaker"></div>
-                                    <a class="watch-video video-btn"  data-toggle="modal" data-src="<?php echo $options['youtube_video_url']; ?>" data-target="#myModal" href="#">
+                                    <a class="watch-video video-btn"  data-toggle="modal" data-src="<?php echo $options['youtube_video_url']; ?>" data-target="#videoModal" href="#">
                                         <embed class="gamiphy-play"
                                                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/video.svg"
                                                width="40px" height="40px">
@@ -180,7 +180,7 @@ if (is_home()) {
 ?>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="video showing url" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body">

@@ -11,12 +11,11 @@ jQuery(document).ready(function () {
         $videoSrc = $(this).data("src");
     });
 
-    jQuery(document).on('hide.bs.modal','#myModal', function (ev) {
+    jQuery(document).on('hide.bs.modal','#videoModal', function (ev) {
         jQuery("#video").attr('src', '');
         console.log('modal closed');
     });
-    jQuery(document).on('show.bs.modal','#myModal', function () {
-        console.log($videoSrc);
+    jQuery(document).on('show.bs.modal','#videoModal', function () {
         console.log('modal opened');
         $("#video").attr('src', $videoSrc);
     });
