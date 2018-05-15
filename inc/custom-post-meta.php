@@ -10,13 +10,16 @@
 
 function add_embed_tweet_meta_box()
 {
-    add_meta_box(
-        'custom_header', // $id
-        'Select Settings for the page', // $title
-        'show_embed_meta_box', // $callback
-        'page', // $page
-        'normal', // $context
-        'high'); // $priority
+    $types = array('page', 'post');
+    foreach ($types as $postType) {
+        add_meta_box(
+            'custom_header', // $id
+            'Select Settings for the page', // $title
+            'show_embed_meta_box', // $callback
+            $postType, // $page
+            'normal', // $context
+            'high'); // $priority
+    }
 }
 
 add_action('add_meta_boxes', 'add_embed_tweet_meta_box');

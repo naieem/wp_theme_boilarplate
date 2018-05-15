@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1227a67-2fd8-42a1-8f5a-62b8e1f3a5c2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/custom-breadcumb.php" afterPath="$PROJECT_DIR$/inc/custom-breadcumb.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/custom-post-meta.php" afterPath="$PROJECT_DIR$/inc/custom-post-meta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theme_options/gamiphy_options.php" afterPath="$PROJECT_DIR$/theme_options/gamiphy_options.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom-breadcumb.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="custom-breadcumb.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/custom-breadcumb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="49" column="48" lean-forward="false" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+            <state relative-caret-position="260">
+              <caret line="55" column="24" lean-forward="true" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -67,44 +63,34 @@
             <state relative-caret-position="342">
               <caret line="75" column="33" lean-forward="false" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="33" />
               <folding>
-                <marker date="1526395498567" expanded="true" signature="8116:8391" ph="..." />
-                <marker date="1526395498567" expanded="true" signature="8136:8199" ph="..." />
-                <marker date="1526395498567" expanded="true" signature="8207:8383" ph="..." />
-                <marker date="1526395498567" expanded="true" signature="8215:8313" ph="..." />
-                <marker date="1526395498567" expanded="true" signature="8919:9205" ph="..." />
-                <marker date="1526395498567" expanded="true" signature="8939:9002" ph="..." />
-                <marker date="1526395498567" expanded="true" signature="9010:9197" ph="..." />
-                <marker date="1526395498567" expanded="true" signature="9018:9127" ph="..." />
-                <marker date="1526395498567" expanded="true" signature="9908:10486" ph="..." />
-                <marker date="1526395498567" expanded="true" signature="9929:9994" ph="..." />
-                <marker date="1526395498567" expanded="true" signature="10003:10477" ph="..." />
-                <marker date="1526395498567" expanded="true" signature="10012:10331" ph="..." />
-                <marker date="1526395498567" expanded="true" signature="10360:10405" ph="..." />
+                <marker date="1526395842298" expanded="true" signature="8116:8391" ph="..." />
+                <marker date="1526395842298" expanded="true" signature="8136:8199" ph="..." />
+                <marker date="1526395842298" expanded="true" signature="8207:8383" ph="..." />
+                <marker date="1526395842298" expanded="true" signature="8215:8313" ph="..." />
+                <marker date="1526395842298" expanded="true" signature="8919:9205" ph="..." />
+                <marker date="1526395842298" expanded="true" signature="8939:9002" ph="..." />
+                <marker date="1526395842298" expanded="true" signature="9010:9197" ph="..." />
+                <marker date="1526395842298" expanded="true" signature="9018:9127" ph="..." />
+                <marker date="1526395842298" expanded="true" signature="9908:10486" ph="..." />
+                <marker date="1526395842298" expanded="true" signature="9929:9994" ph="..." />
+                <marker date="1526395842298" expanded="true" signature="10003:10477" ph="..." />
+                <marker date="1526395842298" expanded="true" signature="10012:10331" ph="..." />
+                <marker date="1526395842298" expanded="true" signature="10360:10405" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom-shortcodes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inc/custom-shortcodes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="49" column="26" lean-forward="false" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
-              <folding>
-                <element signature="e#6#130#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom-post-meta.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="custom-post-meta.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inc/custom-post-meta.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="120" column="111" lean-forward="false" selection-start-line="120" selection-start-column="111" selection-end-line="120" selection-end-column="111" />
+            <state relative-caret-position="200">
+              <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
               <folding>
                 <element signature="e#6#130#0#PHP" expanded="true" />
-                <marker date="1526395174732" expanded="true" signature="2616:2717" ph="..." />
+                <element signature="n#show_embed_meta_box#0;n#!!top" expanded="false" />
+                <element signature="e#2550#2717#0#HTML" expanded="false" />
+                <marker date="1526396429399" expanded="false" signature="2725:2826" ph="..." />
               </folding>
             </state>
           </provider>
@@ -134,10 +120,10 @@
         <option value="$PROJECT_DIR$/inc/custom-shortcodes.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/functions.php" />
-        <option value="$PROJECT_DIR$/inc/custom-post-meta.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/theme_options/gamiphy_options.php" />
         <option value="$PROJECT_DIR$/inc/custom-breadcumb.php" />
+        <option value="$PROJECT_DIR$/inc/custom-post-meta.php" />
       </list>
     </option>
   </component>
@@ -287,15 +273,15 @@
       <updated>1526223664483</updated>
       <workItem from="1526224273196" duration="15176000" />
       <workItem from="1526308996305" duration="3836000" />
-      <workItem from="1526394451001" duration="1250000" />
+      <workItem from="1526394451001" duration="1978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20262000" />
+    <option name="totallyTimeSpent" value="20990000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -362,19 +348,19 @@
         <state relative-caret-position="860">
           <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="29" />
           <folding>
-            <marker date="1526395498567" expanded="true" signature="8116:8391" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="8136:8199" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="8207:8383" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="8215:8313" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="8919:9205" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="8939:9002" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="9010:9197" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="9018:9127" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="9908:10486" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="9929:9994" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="10003:10477" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="10012:10331" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="10360:10405" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="8116:8391" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="8136:8199" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="8207:8383" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="8215:8313" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="8919:9205" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="8939:9002" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="9010:9197" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="9018:9127" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="9908:10486" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="9929:9994" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="10003:10477" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="10012:10331" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="10360:10405" ph="..." />
           </folding>
         </state>
       </provider>
@@ -403,7 +389,9 @@
           <caret line="70" column="4" lean-forward="true" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="59" />
           <folding>
             <element signature="e#6#130#0#PHP" expanded="true" />
-            <marker date="1526395174732" expanded="true" signature="2616:2717" ph="..." />
+            <element signature="n#show_embed_meta_box#0;n#!!top" expanded="false" />
+            <element signature="e#2550#2717#0#HTML" expanded="false" />
+            <marker date="1526396429399" expanded="false" signature="2725:2826" ph="..." />
           </folding>
         </state>
       </provider>
@@ -468,7 +456,9 @@
           <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="75" />
           <folding>
             <element signature="e#6#130#0#PHP" expanded="true" />
-            <marker date="1526395174732" expanded="true" signature="2616:2717" ph="..." />
+            <element signature="n#show_embed_meta_box#0;n#!!top" expanded="false" />
+            <element signature="e#2550#2717#0#HTML" expanded="false" />
+            <marker date="1526396429399" expanded="false" signature="2725:2826" ph="..." />
           </folding>
         </state>
       </provider>
@@ -583,17 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/custom-post-meta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="120" column="111" lean-forward="false" selection-start-line="120" selection-start-column="111" selection-end-line="120" selection-end-column="111" />
-          <folding>
-            <element signature="e#6#130#0#PHP" expanded="true" />
-            <marker date="1526395174732" expanded="true" signature="2616:2717" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/custom-shortcodes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -609,28 +588,41 @@
         <state relative-caret-position="342">
           <caret line="75" column="33" lean-forward="false" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="33" />
           <folding>
-            <marker date="1526395498567" expanded="true" signature="8116:8391" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="8136:8199" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="8207:8383" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="8215:8313" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="8919:9205" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="8939:9002" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="9010:9197" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="9018:9127" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="9908:10486" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="9929:9994" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="10003:10477" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="10012:10331" ph="..." />
-            <marker date="1526395498567" expanded="true" signature="10360:10405" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="8116:8391" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="8136:8199" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="8207:8383" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="8215:8313" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="8919:9205" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="8939:9002" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="9010:9197" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="9018:9127" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="9908:10486" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="9929:9994" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="10003:10477" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="10012:10331" ph="..." />
+            <marker date="1526395842298" expanded="true" signature="10360:10405" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/custom-breadcumb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="49" column="48" lean-forward="false" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+        <state relative-caret-position="260">
+          <caret line="55" column="24" lean-forward="true" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/custom-post-meta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding>
+            <element signature="e#6#130#0#PHP" expanded="true" />
+            <element signature="n#show_embed_meta_box#0;n#!!top" expanded="false" />
+            <element signature="e#2550#2717#0#HTML" expanded="false" />
+            <marker date="1526396429399" expanded="false" signature="2725:2826" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
