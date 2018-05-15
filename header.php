@@ -50,13 +50,14 @@
     </head>
 
 <body <?php body_class(); ?>>
-    <?php
-    global $post;
-    $custom_header = get_post_meta($post->ID, 'custom_header', true);
-    $hide_banner_section = get_post_meta($post->ID, 'hide_banner_section', true);
-    $banner_image_url = get_post_meta($post->ID, 'banner_image_url', true);
-    $logo_url = get_post_meta($post->ID, 'logo_url', true);
-    ?>
+<?php
+global $post;
+$custom_header = get_post_meta($post->ID, 'custom_header', true);
+$hide_banner_section = get_post_meta($post->ID, 'hide_banner_section', true);
+$banner_image_url = get_post_meta($post->ID, 'banner_image_url', true);
+$logo_url = get_post_meta($post->ID, 'logo_url', true);
+$hide_page_title = get_post_meta($post->ID, 'hide_title', true);
+?>
     <header <?php if ($custom_header) echo 'id="landing-page-header"'; else 'id="gamiphy-header"'; ?> >
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg bg-faded">
@@ -65,9 +66,9 @@
                     // checking page logo url first
                     // then checking theme options logo
                     // at last embed default logo
-                    if(isset($logo_url) && $logo_url !=''){
+                    if (isset($logo_url) && $logo_url != '') {
                         echo "<img src='" . $logo_url . "' class='gamiphy-logo'>";
-                    }elseif(isset($options['site_logo']) && $options['site_logo'] != '') {
+                    } elseif (isset($options['site_logo']) && $options['site_logo'] != '') {
                         echo "<img src='" . $options['site_logo'] . "' class='gamiphy-logo'>";
                     } else {
                         echo '<embed class="gamiphy-logo" src="' . get_stylesheet_directory_uri() . '/assets/img/logo.svg" width="100%" height="100%">';
@@ -112,9 +113,15 @@ if (!is_home()) {
                     <div class="col-md-12">
                         <div class="row top-section-title">
                             <div class="col-md-12">
-                                <p class="title">
-                                    <?php the_title(); ?>
-                                </p>
+                                <?php
+                                if (!$hide_page_title) {
+                                    ?>
+                                    <p class="title">
+                                        <?php the_title(); ?>
+                                    </p>
+                                    <?php
+                                }
+                                ?>
                             </div>
                             <div class="col-md-12">
                             <span class="route">

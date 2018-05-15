@@ -1,6 +1,7 @@
 <?php
 function breadcrumbs() {
-
+    global $options;
+    $options = get_option( 'gamiphy_settings' );
 	$link_EOS = '<a href="';
 	$link_CON = '">';
 	$link_EOF = '</a>';	
@@ -46,7 +47,7 @@ function breadcrumbs() {
 	// }
 	elseif (is_single()) {
 		echo $homelink . $sep;
-		echo 'Blog';
+		echo '<a href="'.$options["blog_page_url"].'">Blog</a>';
 		echo $sep;
 		the_title();
 	}
