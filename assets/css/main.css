@@ -38,10 +38,6 @@ body {
     font-weight: 300;
 }
 
-.dropdown-item {
-    color: black !important;
-}
-
 /************************************************** general classes ********************************************************/
 .justify-content-center {
     justify-content: center;
