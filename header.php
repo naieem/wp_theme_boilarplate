@@ -88,7 +88,8 @@ $hide_page_title = get_post_meta($post->ID, 'hide_title', true);
                 'menu_class' => 'navbar-nav ml-auto',
                 'container' => 'div',
                 'container_class' => 'collapse navbar-collapse',
-                'container_id' => 'navbarSupportedContent'
+                'container_id' => 'navbarSupportedContent',
+                'walker' => new WP_Bootstrap_Navwalker(),
             ));
             ?>
             <?php
