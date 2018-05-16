@@ -83,6 +83,7 @@ $hide_page_title = get_post_meta($post->ID, 'hide_title', true);
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'menu-1',
+                'depth' => 2,
                 'menu_id' => 'primary-menu',
                 'menu_class' => 'navbar-nav ml-auto',
                 'container' => 'div',
