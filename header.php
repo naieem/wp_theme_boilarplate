@@ -80,7 +80,7 @@ $hide_page_title = get_post_meta($post->ID, 'hide_title', true);
                     aria-expanded="false" aria-label="Toggle navigation">
                 <!-- <span class="navbar-toggler-icon"></span> -->
                 <?php
-                    echo '<embed class="navbar-toggler-custom-button" src="' . get_stylesheet_directory_uri() . '/assets/img/burger.svg" width="35px">';
+                    echo '<img class="navbar-toggler-custom-button" src="' . get_stylesheet_directory_uri() . '/assets/img/burger.svg" width="35px">';
                 ?>
 
             </button>

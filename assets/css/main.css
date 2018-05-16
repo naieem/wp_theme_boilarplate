@@ -83,6 +83,7 @@ header {
     letter-spacing : -0.22px;
     color : #FFFFFF;
     font-weight: 500;
+    margin-bottom: 22px;
 }
 
 .watch-video {
@@ -105,7 +106,7 @@ header {
 }
 
 .carousel-caption {
-    bottom: 200px !important;
+    bottom: 170px !important;
 }
 
 #carouselExampleSlidesOnly {
@@ -278,6 +279,7 @@ body {
 /************************************************** WHAT IS GAMIPHICATION SECTION STYLES ********************************************************/
 #what-is-gamiphication {
     /* height: 780px; */
+    padding: 8% 0;
 }
 
 #what-is-gamiphication .gamiphication-intro {
@@ -500,6 +502,7 @@ body {
 }
 
 .step-text {
+    padding-left: 20px;
     font-size: 20px;
     letter-spacing: 0.3px;
     color: #3E365F;
@@ -527,6 +530,8 @@ body {
     background: linear-gradient(108deg, rgba(69,30,173,0.9) 0%, rgba(114,77,221,0.9) 100%), url('../img/lets-start.jpg'); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#451ead', endColorstr='#724ddd',GradientType=1 ); /* ie6-9 */
     opacity: 9;
+    background-size: cover !important;
+    background-position: center !important;
 }
 
 .lets-start-block {
@@ -1565,6 +1570,13 @@ footer .footer-container .right-section {
 
 }
 
+@media (max-width: 1125px){
+    .line-breaker{
+        height: 5em;
+    }
+}
+
+
 @media all and (max-width: 991px) {
     .gamiphy-logo {
         float: left;
@@ -1581,6 +1593,10 @@ footer .footer-container .right-section {
     .gamiphy-get-started{
         display: none;
     }
+
+    .carousel-caption {
+        bottom: 100px !important;
+    }
    
 
 }
@@ -1595,6 +1611,10 @@ footer .footer-container .right-section {
 
     /* find out section */
 
+    .find-out-row {
+        padding: 60px 0;
+    }
+
     .find-out-row div {
         justify-content: center;
         text-align: center;
@@ -1603,15 +1623,35 @@ footer .footer-container .right-section {
         padding-bottom: 25px;
     }
 
+    .line-breaker{
+        height: 3em;
+    }
+
+    .how-gamiphy-works-img {
+        width: 96%;
+        float: right;
+        height: auto;
+    }
+
     /* what is gamiphy section */
+
+    #what-is-gamiphication{
+        padding: 20% 0;
+    }
     #what-is-gamiphication .left-section {
         padding: 0 5%;
+        margin-top: 0;
+        margin-bottom: 5%;
     }
     #what-is-gamiphication .right-section embed {
         width: 100%;
     }
 
     /* platforms section */
+    .gamiphy-features-block{
+        padding-top: 8.5em;
+        padding-bottom: 8.5em;
+    }
     #platforms-section {
         padding-bottom: 0;
     }
@@ -1619,6 +1659,12 @@ footer .footer-container .right-section {
         order: 2;
         padding: 5em 0;
         border-bottom: 2px solid #B6B6B6;
+        display: flex;
+    }
+    #platforms-section .platform-section-block-content .platform-items-container .platform-item .main-icon {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
     #platforms-section .platform-section-block-content .platform-items-container .platform-item .left-section:last-child {
 
@@ -1627,6 +1673,10 @@ footer .footer-container .right-section {
     #platforms-section .platform-section-block-content .platform-items-container .platform-item .right-section {
         order: 1;
        
+    }
+
+    #lets-start-section{
+        padding: 6em 0;
     }
 
     /* find out section 2 */
@@ -1653,7 +1703,9 @@ footer .footer-container .right-section {
     }
 
     /* footer */
-
+    footer{
+        padding: 4em 0;
+    }
     footer .footer-container .left-section {
         justify-content: center;
         padding-top: 2em;
@@ -1808,6 +1860,12 @@ footer .footer-container .right-section {
     }
 }
 
+@media (max-width: 621px){
+    .line-breaker{
+        height: 5em;
+    }
+}
+
 @media all and (max-width: 576px) {
     .navbar-brand {
         width: 50%;
@@ -1828,6 +1886,13 @@ footer .footer-container .right-section {
         font-size: 16px;
     }
 
+
+    .line-breaker{
+        height: 7em;
+    }
+    .line-breaker-last{
+        height: 5em;
+    }
 
     /* platforms section */
     #platforms-section .platform-section-block-content {
@@ -1854,3 +1919,11 @@ footer .footer-container .right-section {
     
 }
 
+@media (max-width: 344px){
+    .line-breaker{
+        height: 6em;
+    }
+    .line-breaker-last{
+        height: 6em;
+    }
+}
