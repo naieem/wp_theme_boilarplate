@@ -8,7 +8,7 @@
  */
 global $options; 
 $options = get_option( 'gamiphy_settings' );
-require_once( ABSPATH . 'class-wp-bootstrap-navwalker.php' );
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 if ( ! function_exists( 'gamiphy_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
