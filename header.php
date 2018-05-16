@@ -85,7 +85,7 @@ $hide_page_title = get_post_meta($post->ID, 'hide_title', true);
                 'theme_location' => 'menu-1',
                 'menu_id' => 'primary-menu',
                 'menu_class' => 'navbar-nav ml-auto',
-                'container' => 'ul',
+                'container' => 'div',
                 'container_class' => 'collapse navbar-collapse',
                 'container_id' => 'navbarSupportedContent'
             ));
