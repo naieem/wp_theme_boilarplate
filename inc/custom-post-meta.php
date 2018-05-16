@@ -10,13 +10,16 @@
 
 function add_embed_tweet_meta_box()
 {
-    add_meta_box(
-        'custom_header', // $id
-        'Select Settings for the page', // $title
-        'show_embed_meta_box', // $callback
-        'page', // $page
-        'normal', // $context
-        'high'); // $priority
+    $types = array('page', 'post');
+    foreach ($types as $postType) {
+        add_meta_box(
+            'custom_header', // $id
+            'Select Settings for the page', // $title
+            'show_embed_meta_box', // $callback
+            $postType, // $page
+            'normal', // $context
+            'high'); // $priority
+    }
 }
 
 add_action('add_meta_boxes', 'add_embed_tweet_meta_box');
@@ -45,16 +48,12 @@ function save_embed_tweet_meta($post_id)
     $hide_banner = $_POST['hide_banner_section'];
     $banner_image_url = $_POST['banner_image_url'];
     $logo_url = $_POST['logo_url'];
-    //if(isset($custom_header)){
+    $hide_title = $_POST['hide_title'];
     update_post_meta($post_id, "custom_header", $custom_header);
-    //}
-    //if(isset($hide_banner)){
     update_post_meta($post_id, "hide_banner_section", $hide_banner);
-    //}
-    //if(isset($banner_image_url)){
     update_post_meta($post_id, "banner_image_url", $banner_image_url);
     update_post_meta($post_id, "logo_url", $logo_url);
-    //}
+    update_post_meta($post_id, "hide_title", $hide_title);
 }
 
 add_action('save_post', 'save_embed_tweet_meta');
@@ -69,6 +68,7 @@ function show_embed_meta_box()
     $hide_banner = get_post_meta($post->ID, 'hide_banner_section', true);
     $banner_image_url = get_post_meta($post->ID, 'banner_image_url', true);
     $logo_url = get_post_meta($post->ID, 'logo_url', true);
+    $hide_page_title = get_post_meta($post->ID, 'hide_title', true);
 
     // Use nonce for verification
     echo '<input type="hidden" name="custom_meta_box_nonce" value="' . wp_create_nonce(basename(__FILE__)) . '" />';
@@ -115,6 +115,13 @@ function show_embed_meta_box()
         <td>
             <input type="text" value="<?php echo $logo_url; ?>" name="logo_url">
             <!--		    <span class="description">Use to add custom header.</span>-->
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <label for="">Hide Page Title:</label></th>
+        <td>
+            <input type="checkbox" value="1" <?php checked($hide_page_title, true, true); ?> name="hide_title">
         </td>
     </tr>
     <?php

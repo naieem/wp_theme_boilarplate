@@ -59,7 +59,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script> 
+        $(document).ready(function() {
+            $('.dropdown > a').append('<b class="caret"></b>').dropdown();
+            $('.dropdown .sub-menu').addClass('dropdown-menu');
+        });
+    </script>
     <div id="gamiphy-bot"></div>
-    <script>var _c = new Date().getTime();document.write('<script src="//static-test.gamiphy.co/gamiphy-bot/5af8d6ca5c654900153e8918.js?cb='+ _c +'"\>\<\/script>');</script>
+    <script>var _c = new Date().getTime();document.write('<script src="//static-test.gamiphy.co/gamiphy-bot/5afb84525dc1df001524a919.js?cb='+ _c +'"\>\<\/script>');</script>
 </body>
 </html>

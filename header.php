@@ -5,104 +5,104 @@
  */
 
 ?>
-    <!doctype html>
+<!doctype html>
 <html <?php language_attributes(); ?>>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <?php
+    if (!is_home()) { ?>
+        <meta name="title" content="Gamiphy | Complete Gamification Solutions for Customer Journeys">
+        <meta name="desciption"
+              content="Gamiphy is a user engagement and retention platform that equips brands in different industries with tools proven to increase customers reach and loyalty.">
         <?php
-        if (!is_home()) { ?>
-            <meta name="title" content="Gamiphy | Complete Gamification Solutions for Customer Journeys">
-            <meta name="desciption"
-                  content="Gamiphy is a user engagement and retention platform that equips brands in different industries with tools proven to increase customers reach and loyalty.">
-            <?php
+    }
+    ?>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <!-- <link rel="icon" href="assets/img/favicon.ico"> -->
+    <link rel="stylesheet"
+          href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/main.css">
+    <?php wp_head();
+    global $options;
+    $options = get_option('gamiphy_settings');
+    ?>
+    <title>
+        <?php if (isset($options['site_title'])) {
+            echo $options['site_title'];
+        } else {
+            echo "Gamiphy";
         }
-        ?>
-        <meta charset="<?php bloginfo('charset'); ?>">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="profile" href="http://gmpg.org/xfn/11">
-        <!-- <link rel="icon" href="assets/img/favicon.ico"> -->
-        <link rel="stylesheet"
-              href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/font-awesome/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-              integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-              crossorigin="anonymous">
-        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/main.css">
-        <?php wp_head();
-        global $options;
-        $options = get_option('gamiphy_settings');
-        ?>
-        <title>
-            <?php if (isset($options['site_title'])) {
-                echo $options['site_title'];
-            } else {
-                echo "Gamiphy";
-            }
-            ?></title>
-        <script src="https://static.gamiphy.co/js/api.min.js"></script>
-        <script>
-            function openGamiphyQuiz() {
-                Gamiphy.openInPopup("https://static-test.gamiphy.co/gamiphy-quiz/index.html", 900, 900);
-            }
-        </script>
-    </head>
+        ?></title>
+    <script src="https://static.gamiphy.co/js/api.min.js"></script>
+    <script>
+        function openGamiphyQuiz() {
+            Gamiphy.openInPopup("https://static-test.gamiphy.co/gamiphy-quiz/index.html", 900, 900);
+        }
+    </script>
+</head>
 
 <body <?php body_class(); ?>>
-    <?php
-    global $post;
-    $custom_header = get_post_meta($post->ID, 'custom_header', true);
-    $hide_banner_section = get_post_meta($post->ID, 'hide_banner_section', true);
-    $banner_image_url = get_post_meta($post->ID, 'banner_image_url', true);
-    $logo_url = get_post_meta($post->ID, 'logo_url', true);
-    ?>
-    <header <?php if ($custom_header) echo 'id="landing-page-header"'; else 'id="gamiphy-header"'; ?> >
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg bg-faded">
-                <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
-                    <?php
-                    // checking page logo url first
-                    // then checking theme options logo
-                    // at last embed default logo
-                    if(isset($logo_url) && $logo_url !=''){
-                        echo "<img src='" . $logo_url . "' class='gamiphy-logo'>";
-                    }elseif(isset($options['site_logo']) && $options['site_logo'] != '') {
-                        echo "<img src='" . $options['site_logo'] . "' class='gamiphy-logo'>";
-                    } else {
-                        echo '<embed class="gamiphy-logo" src="' . get_stylesheet_directory_uri() . '/assets/img/logo.svg" width="100%" height="100%">';
-                    }
-                    ?>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <?php
-                            echo '<embed class="navbar-toggler-custom-button" src="' . get_stylesheet_directory_uri() . '/assets/img/burger.svg" width="35px">';
-                        ?>
-                    <!-- <span class="navbar-toggler-icon"></span> -->
-                </button>
+<?php
+global $post;
+$custom_header = get_post_meta($post->ID, 'custom_header', true);
+$hide_banner_section = get_post_meta($post->ID, 'hide_banner_section', true);
+$banner_image_url = get_post_meta($post->ID, 'banner_image_url', true);
+$logo_url = get_post_meta($post->ID, 'logo_url', true);
+$hide_page_title = get_post_meta($post->ID, 'hide_title', true);
+?>
+<header <?php if ($custom_header) echo 'id="landing-page-header"'; else 'id="gamiphy-header"'; ?> >
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-faded">
+            <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
                 <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'menu-1',
-                    'menu_id' => 'primary-menu',
-                    'menu_class' => 'navbar-nav ml-auto',
-                    'container' => 'div',
-                    'container_class' => 'collapse navbar-collapse',
-                    'container_id' => 'navbarSupportedContent'
-                ));
-                ?>
-                <?php
-                if (!$custom_header) {
-                    ?>
-                    <a class="nav-link gamiphy-get-started" href="<?php echo $options['getting_started_url']; ?>">Get
-                        Started</a>
-                    <?php
+                // checking page logo url first
+                // then checking theme options logo
+                // at last embed default logo
+                if (isset($logo_url) && $logo_url != '') {
+                    echo "<img src='" . $logo_url . "' class='gamiphy-logo'>";
+                } elseif (isset($options['site_logo']) && $options['site_logo'] != '') {
+                    echo "<img src='" . $options['site_logo'] . "' class='gamiphy-logo'>";
+                } else {
+                    echo '<embed class="gamiphy-logo" src="' . get_stylesheet_directory_uri() . '/assets/img/logo.svg" width="100%" height="100%">';
                 }
                 ?>
-            </nav>
-        </div>
-    </header>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'menu-1',
+                'depth' => 2,
+                'menu_id' => 'primary-menu',
+                'menu_class' => 'navbar-nav ml-auto',
+                'container' => 'div',
+                'container_class' => 'collapse navbar-collapse',
+                'container_id' => 'navbarSupportedContent',
+                'walker' => new WP_Bootstrap_Navwalker(),
+            ));
+            ?>
+            <?php
+            if (!$custom_header) {
+                ?>
+                <a class="nav-link gamiphy-get-started" href="<?php echo $options['getting_started_url']; ?>">Get
+                    Started</a>
+                <?php
+            }
+            ?>
+        </nav>
+    </div>
+</header>
 <?php
 if (!is_home()) {
     if (!$hide_banner_section) {
@@ -115,9 +115,15 @@ if (!is_home()) {
                     <div class="col-md-12">
                         <div class="row top-section-title">
                             <div class="col-md-12">
-                                <p class="title">
-                                    <?php the_title(); ?>
-                                </p>
+                                <?php
+                                if (!$hide_page_title) {
+                                    ?>
+                                    <p class="title">
+                                        <?php the_title(); ?>
+                                    </p>
+                                    <?php
+                                }
+                                ?>
                             </div>
                             <div class="col-md-12">
                             <span class="route">
@@ -155,8 +161,7 @@ if (is_home()) {
                                     <p class="gamiphy-silder-sub-title"><?php echo get_the_excerpt(get_the_ID()); ?>
                                     </p>
                                     <div class="breaker"></div>
-                                    <a class="watch-video" href="<?php echo $options['youtube_video_url']; ?>"
-                                       target="_blank">
+                                    <a class="watch-video video-btn"  data-toggle="modal" data-src="<?php echo $options['youtube_video_url']; ?>" data-target="#videoModal" href="#">
                                         <embed class="gamiphy-play"
                                                src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/video.svg"
                                                width="40px" height="40px">
@@ -175,3 +180,25 @@ if (is_home()) {
     </section>
     <?php
 }
+?>
+
+<!-- Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="video showing url" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"></iframe>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

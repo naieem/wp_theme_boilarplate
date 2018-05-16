@@ -69,7 +69,13 @@ $gameOptions = array(
 		'label' => 'Demo request error message',
 		'model' => 'demo_request_error',
 		'description' => 'Insert demo request error message'
-	)
+	),
+    array(
+        'type' => 'text',
+        'label' => 'Enter Blog page url for using in breadcrumb',
+        'model' => 'blog_page_url',
+        'description' => 'Insert blog page url'
+    )
 );
 global $my_menu_hook_akt;
 

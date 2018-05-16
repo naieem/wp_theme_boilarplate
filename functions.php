@@ -8,7 +8,7 @@
  */
 global $options; 
 $options = get_option( 'gamiphy_settings' );
-
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 if ( ! function_exists( 'gamiphy_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -164,6 +164,7 @@ function gamiphy_scripts() {
 	wp_enqueue_script( 'gamiphy-form-validator', get_template_directory_uri() . '/js/form-validator.js', array('jquery'), '20151215989889', true );
 
 	wp_enqueue_script( 'gamiphy-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+    wp_enqueue_script( 'gamiphy-video-popup-player', get_template_directory_uri() . '/js/video-player.js', array('jquery'), '20181505', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

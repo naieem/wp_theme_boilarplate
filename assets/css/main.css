@@ -37,6 +37,7 @@ body {
     overflow-x: hidden;
     font-weight: 300;
 }
+
 /************************************************** general classes ********************************************************/
 .justify-content-center {
     justify-content: center;
