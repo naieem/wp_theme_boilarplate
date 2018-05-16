@@ -128,7 +128,7 @@ header nav .navbar-collapse .navbar-nav .nav-item.active a {
     border-bottom: solid 1px white;
 }
 .navbar-toggler {
-    border-color: #FFFFFF;
+    /* border-color: #FFFFFF; */
 }
 
 .gamiphy-get-started {
@@ -1344,7 +1344,7 @@ footer .footer-container .right-section {
     z-index: 10;
 }
 #landing-page-header .navbar-toggler {
-    border-color: #000000;
+    /* border-color: #000000; */
 }
 
 #landing-page-header nav .navbar-collapse .navbar-nav .nav-item a {
