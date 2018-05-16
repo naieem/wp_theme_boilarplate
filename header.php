@@ -77,7 +77,10 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                        <?php
+                            echo '<embed class="navbar-toggler-custom-button" src="' . get_stylesheet_directory_uri() . '/assets/img/burger.svg" width="35px">';
+                        ?>
+                    <!-- <span class="navbar-toggler-icon"></span> -->
                 </button>
                 <?php
                 wp_nav_menu(array(
@@ -159,6 +162,7 @@ if (is_home()) {
                                                width="40px" height="40px">
                                             <span> watch the video </span>
                                     </a>
+                                    <a class="nav-link gamiphy-get-started-mobile" href="<?php echo $options['getting_started_url']; ?>">Get Started</a>
                                 </div>
                             </div>
                         <?php endwhile; ?>
