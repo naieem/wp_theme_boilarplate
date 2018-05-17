@@ -43,8 +43,12 @@
         ?></title>
     <script src="https://static.gamiphy.co/js/api.min.js"></script>
     <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        w = w * 80 / 100;
+        h = h * 60 / 100;
         function openGamiphyQuiz() {
-            Gamiphy.openInPopup("https://static-test.gamiphy.co/gamiphy-quiz/index.html", 900, 900);
+            Gamiphy.openInPopup("https://static-test.gamiphy.co/gamiphy-quiz/index.html", w, h);
         }
     </script>
 </head>
