@@ -379,6 +379,18 @@ function list_of_registered_demo(){
 	</div>
 	<?php
 }
+/**
+ * checking if bot can be shown to this page
+ * @param postid
+ * @return boolen (true, false)
+ */
+function isBotShowingValid($postId){
+	global $options;
+	$allowedPostIdsArr = $options['bot_showing_page_ids'];
+	$postIdsArr = explode(',', $allowedPostIdsArr);
+	$keyExists = in_array($postId, $postIdsArr);
+	return $keyExists;
+}
 
 /**
  * Implement the Custom Header feature.

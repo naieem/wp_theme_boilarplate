@@ -81,6 +81,12 @@ $gameOptions = array(
         'label' => 'Enter home slider static title',
         'model' => 'home_slider_title',
         'description' => 'Insert home page slider title'
+    ),
+    array(
+        'type' => 'text',
+        'label' => 'Enter page ids for showing bot',
+        'model' => 'bot_showing_page_ids',
+        'description' => 'Insert in comma seperated form(ex: 14,87,59)'
     )
 );
 global $my_menu_hook_akt;

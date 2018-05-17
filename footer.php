@@ -48,10 +48,15 @@
 
     <div></div>
 
-<?php wp_footer(); ?>
+<?php wp_footer(); 
+    global $options;
+    global $post;
+    $options = get_option('gamiphy_settings');
+    // var_dump($options)
+    ?>
 <!-- Bootstrap core javascript-->
-    <!-- <script src="<?php echo get_stylesheet_directory_uri(); ?>///ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery-3.3.1.min.js"></script> -->
+    <!-- <script src="<?php //echo get_stylesheet_directory_uri(); ?>///ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="<?php //echo get_stylesheet_directory_uri(); ?>/assets/js/jquery-3.3.1.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
@@ -66,6 +71,12 @@
         });
     </script>
     <div id="gamiphy-bot"></div>
-    <script>var _c = new Date().getTime();document.write('<script src="//static-test.gamiphy.co/gamiphy-bot/5afcd67677d805001546c549.js?cb='+ _c +'"\>\<\/script>');</script>
+    <?php
+    if(isBotShowingValid($post->ID)){
+        ?>
+        <script>var _c = new Date().getTime();document.write('<script src="//static-test.gamiphy.co/gamiphy-bot/5afcd67677d805001546c549.js?cb='+ _c +'"\>\<\/script>');</script>
+    <?php
+}
+    ?>
 </body>
 </html>
