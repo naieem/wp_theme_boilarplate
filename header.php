@@ -151,6 +151,7 @@ if (is_home()) {
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <img src="<?php echo $options['slider_bg']; ?>">
+                    <span class="slider_custom_title gamiphy-silder-main-title"><?php echo $options['home_slider_title'];?></span>
                     <?php
                     $slider_query = new WP_Query(array('post_type' => 'slider'));
                     $slider_count = 0;
@@ -161,7 +162,7 @@ if (is_home()) {
                             <div class="carousel-item <?php if ($slider_count == 1) echo 'active'; ?>">
                                 <?php //the_post_thumbnail( 'full' );?>
                                 <div class="carousel-caption d-md-block">
-                                    <p class="gamiphy-silder-main-title"><?php the_title(); ?></p>
+                                    <!-- <p class="gamiphy-silder-main-title"><?php //echo get_the_excerpt(get_the_ID()); ?></p> -->
                                     <p class="gamiphy-silder-sub-title"><?php echo get_the_excerpt(get_the_ID()); ?>
                                     </p>
                                     <div class="breaker"></div>

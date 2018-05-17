@@ -75,6 +75,12 @@ $gameOptions = array(
         'label' => 'Enter Blog page url for using in breadcrumb',
         'model' => 'blog_page_url',
         'description' => 'Insert blog page url'
+    ),
+    array(
+        'type' => 'text',
+        'label' => 'Enter home slider static title',
+        'model' => 'home_slider_title',
+        'description' => 'Insert home page slider title'
     )
 );
 global $my_menu_hook_akt;
