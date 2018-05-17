@@ -389,7 +389,11 @@ function isBotShowingValid($postId){
 	$allowedPostIdsArr = $options['bot_showing_page_ids'];
 	$postIdsArr = explode(',', $allowedPostIdsArr);
 	$keyExists = in_array($postId, $postIdsArr);
-	return $keyExists;
+	if(is_home()){
+		return true;
+	}else{
+		return $keyExists;
+	}
 }
 
 /**
