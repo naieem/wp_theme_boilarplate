@@ -45,8 +45,8 @@
     <script>
         var w = window.innerWidth;
         var h = window.innerHeight;
-        w = w * 80 / 100;
-        h = h * 60 / 100;
+        w = w * 90 / 100;
+        h = h * 70 / 100;
         function openGamiphyQuiz() {
             Gamiphy.openInPopup("https://static-test.gamiphy.co/gamiphy-quiz/index.html", w, h);
         }
