@@ -72,6 +72,13 @@ header {
     z-index: 10;
 }
 
+
+#customSlider .gamiphy-silder-main-title {
+    font-size : 45px;
+    line-height : 52px;
+    color : #FFFFFF;
+}
+
 .gamiphy-silder-main-title {
     font-size : 20px;
     letter-spacing : -0.1px;
