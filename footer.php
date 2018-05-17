@@ -66,6 +66,6 @@
         });
     </script>
     <div id="gamiphy-bot"></div>
-    <script>var _c = new Date().getTime();document.write('<script src="//static-test.gamiphy.co/gamiphy-bot/5afb84525dc1df001524a919.js?cb='+ _c +'"\>\<\/script>');</script>
+    <script>var _c = new Date().getTime();document.write('<script src="//static-test.gamiphy.co/gamiphy-bot/5afcd67677d805001546c549.js?cb='+ _c +'"\>\<\/script>');</script>
 </body>
 </html>
