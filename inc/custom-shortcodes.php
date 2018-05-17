@@ -94,16 +94,22 @@ add_shortcode( 'demorequestform', 'demo_request_func' );
 
 
 /**
- * shortcode function for demo request form
+ * shortcode function for content slider function
  * @param  [type] $attributes
  */
 function content_slider_func( $atts ) {
     $request = shortcode_atts( array(
         'background_image' => '',
         'text_contents' => '',
+        'button' => '', // true or false
+        'button_text' => '',
+        'button_link' =>''
     ), $atts );
 
     $background_image = $atts['background_image'];
+    $isButtonExists = $atts['button'];
+    $button_text = $atts['button_text'];
+    $button_link = $atts['button_link'];
     $text_contents = explode(',', $atts['text_contents']);
     $counter = 0;
     ?>
@@ -126,7 +132,14 @@ function content_slider_func( $atts ) {
                                     <div class="breaker"></div>
                                 </div>
                             </div>
-                    <?php } ?>
+                    <?php } 
+                    if(isset($isButtonExists) && $isButtonExists == 'true'){?>
+                    <div class="slider_request_demo">
+                        <a  class="btn" href="<?php echo $button_link;?>"><?php echo $button_text;?></a>
+                    </div>
+                    <?php
+                }
+                ?>
                 </div>
             </div>
         </div>

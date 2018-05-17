@@ -229,6 +229,18 @@ ol.children .comment-div{
     opacity:1;
 }
 
+.slider_request_demo{
+        position: absolute;
+    top: 30%;
+    left: 45%;
+}
+.slider_request_demo a{
+font-size: 17px;
+    background: #51D7ED;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 40px;
+}
 /* media query related coding */
 
 @media (max-width: 768px){
