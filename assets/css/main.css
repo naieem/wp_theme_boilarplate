@@ -1638,7 +1638,9 @@ footer .footer-container .right-section {
     }
     header nav .navbar-collapse .navbar-nav .menu-item a{
         color: #000 !important;
-
+    }
+    header nav .navbar-collapse .navbar-nav .menu-item.current-menu-item a {
+        border-bottom: solid 1px #000 !important;
     }
    
 
