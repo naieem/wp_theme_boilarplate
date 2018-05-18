@@ -1635,12 +1635,29 @@ footer .footer-container .right-section {
         height: 100%;
         background-color: #ffffff;
         z-index: 103;
+        padding: 5% 8%;
     }
+    .navbar-nav li{
+        margin-bottom: 20px;
+    }
+
     header nav .navbar-collapse .navbar-nav .menu-item a{
         color: #000 !important;
+        font-size: 17px !important;
     }
     header nav .navbar-collapse .navbar-nav .menu-item.current-menu-item a {
         border-bottom: solid 1px #000 !important;
+    }
+
+    .dropdown-menu{
+        border: unset !important;
+    }
+    .dropdown-toggle::after{
+        float: right !important;
+    }
+
+    .dropdown-menu li{
+        padding-left: 15px !important;
     }
    
 
