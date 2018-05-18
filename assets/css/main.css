@@ -1602,9 +1602,6 @@ footer .footer-container .right-section {
     .gamiphy-get-started{
         display: none;
     }
-    .slider_custom_title{
-        top: 35%;
-    }
 
     .carousel-caption {
         top: -410px !important;
@@ -1877,11 +1874,6 @@ footer .footer-container .right-section {
     }
 }
 
-@media (max-width: 760px){
-    .slider_custom_title{
-        top: 32%;
-    }
-}
 
 @media (max-width: 621px){
     .line-breaker{
@@ -1940,11 +1932,6 @@ footer .footer-container .right-section {
 
 
     
-}
-@media (max-width: 386px){
-    .slider_custom_title{
-        top: 26px;
-    }
 }
 
 @media (max-width: 344px){

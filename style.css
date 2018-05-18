@@ -250,8 +250,26 @@ font-size: 17px;
 }
 /* media query related coding */
 
+
+@media (max-width: 991px) {
+    .slider_custom_title{
+        top: 35%;
+    }
+}
 @media (max-width: 768px){
     ol.children ol.children{
         padding-left: 6.3%;
+    }
+}
+
+@media (max-width: 760px){
+    .slider_custom_title{
+        top: 32%;
+    }
+}
+
+@media (max-width: 386px){
+    .slider_custom_title{
+        top: 26px;
     }
 }
