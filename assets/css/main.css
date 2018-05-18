@@ -138,7 +138,14 @@ header nav .navbar-collapse .navbar-nav .nav-item.active a {
 .navbar-toggler {
     /* border-color: #FFFFFF; */
 }
-
+.navbar-toggler:focus, .navbar-toggler:hover{
+    outline: none;
+}
+.navbar-collapse{
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
 .gamiphy-get-started {
     text-align: center;
     display: block;
@@ -736,7 +743,7 @@ footer .footer-container .right-section {
 }
 
 .top-section-container .top-section-title {
-    padding: 8em 0;
+    padding: 8em 0 5em 0;
     text-align: center;
 }
 
@@ -756,7 +763,7 @@ footer .footer-container .right-section {
 
 /* ********************************************** BLOG LIST PAGE BLOG SECTION  ***************************************** */
 #blogs-section {
-    padding: 3em 10%;
+    padding: 2.5em 10%;
 }
 #blogs-section .blog-card {
     margin: 15px 0px;   
