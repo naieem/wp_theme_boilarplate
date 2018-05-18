@@ -113,7 +113,7 @@ header {
 }
 
 .carousel-caption {
-    bottom: 170px !important;
+    top: -380px !important;
 }
 
 #carouselExampleSlidesOnly {
@@ -140,11 +140,6 @@ header nav .navbar-collapse .navbar-nav .nav-item.active a {
 }
 .navbar-toggler:focus, .navbar-toggler:hover{
     outline: none;
-}
-.navbar-collapse{
-    width: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
 }
 .gamiphy-get-started {
     text-align: center;
@@ -1607,9 +1602,17 @@ footer .footer-container .right-section {
     .gamiphy-get-started{
         display: none;
     }
+    .slider_custom_title{
+        top: 35%;
+    }
 
     .carousel-caption {
-        bottom: 100px !important;
+        top: -410px !important;
+    }
+
+    .navbar-collapse{
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.6);
     }
    
 
@@ -1617,7 +1620,7 @@ footer .footer-container .right-section {
 @media all and (max-width: 768px) {
 
     .gamiphy-silder-main-title {
-        font-size: 18px;
+        font-size: 20px;
     }
     .gamiphy-silder-sub-title {
         font-size: 34px;
@@ -1874,6 +1877,12 @@ footer .footer-container .right-section {
     }
 }
 
+@media (max-width: 760px){
+    .slider_custom_title{
+        top: 32%;
+    }
+}
+
 @media (max-width: 621px){
     .line-breaker{
         height: 5em;
@@ -1897,7 +1906,7 @@ footer .footer-container .right-section {
         font-size: 28px;
     }
     .gamiphy-silder-main-title {
-        font-size: 16px;
+        /* font-size: 16px; */
     }
 
 
@@ -1931,6 +1940,11 @@ footer .footer-container .right-section {
 
 
     
+}
+@media (max-width: 386px){
+    .slider_custom_title{
+        top: 26px;
+    }
 }
 
 @media (max-width: 344px){
