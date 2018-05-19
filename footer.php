@@ -69,9 +69,12 @@
             $('.dropdown > a').append('<b class="caret"></b>').dropdown();
             $('.dropdown .sub-menu').addClass('dropdown-menu');
        
-            $('.navbar-collapse.show').on('click', function(){
+            $('.navbar-collapse').on('shown.bs.collapse', function() {
                 $('.navbar-collapse.show').removeClass('show');
             });
+            // $('.navbar-collapse.show').on('click', function(){
+            //     $('.navbar-collapse.show').removeClass('show');
+            // });
         });
     </script>
     <div id="gamiphy-bot"></div>
