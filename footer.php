@@ -66,11 +66,10 @@
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script> 
     jQuery(document).ready(function($){
-        alert("yes");
             $('.dropdown > a').append('<b class="caret"></b>').dropdown();
             $('.dropdown .sub-menu').addClass('dropdown-menu');
        
-            $('.navbar-collapse.show').click(function(){
+            $('.navbar-collapse.show'),on('click', function(){
                 $('.navbar-collapse.show').removeClass('show');
             });
         });
