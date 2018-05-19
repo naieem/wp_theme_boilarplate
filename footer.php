@@ -70,7 +70,7 @@
             $('.dropdown .sub-menu').addClass('dropdown-menu');
        
             $('.navbar-collapse').on('shown.bs.collapse', function() {
-                $('.navbar-collapse.show').removeClass('show');
+                $('.navbar-collapse').removeClass('show');
             });
             // $('.navbar-collapse.show').on('click', function(){
             //     $('.navbar-collapse.show').removeClass('show');
