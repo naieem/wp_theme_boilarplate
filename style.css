@@ -270,6 +270,6 @@ font-size: 17px;
 
 @media (max-width: 386px){
     .slider_custom_title{
-        top: 26px;
+        top: 26%;
     }
 }
