@@ -65,7 +65,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script> 
-        $(document).ready(function() {
+    jQuery(document).ready(function($){
             $('.dropdown > a').append('<b class="caret"></b>').dropdown();
             $('.dropdown .sub-menu').addClass('dropdown-menu');
        
