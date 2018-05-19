@@ -69,14 +69,8 @@
             $('.dropdown > a').append('<b class="caret"></b>').dropdown();
             $('.dropdown .sub-menu').addClass('dropdown-menu');
        
-            $('.navbar-collapse').on('shown.bs.collapse', function() {
-                $('.navbar-collapse').collapse({
-                    toggle: false,
-                    hide: true
-                });
-            });
-            $('.navbar-collapse.show').on('click', function(){
-                // $('.navbar-collapse').removeClass('show');
+            $('.navbar-collapse.collapse').on('click', function(){
+                $('.navbar-collapse.collapse').removeClass('show');
             });
         });
     </script>
