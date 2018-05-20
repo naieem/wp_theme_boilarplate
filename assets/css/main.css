@@ -1551,6 +1551,157 @@ footer .footer-container .right-section {
     color: #FFFFFF;    
 }
 
+/* ************************************************************************************* */
+                                /* CONTACT US SECTION */
+/* ************************************************************************************* */
+
+#contact-us-section{
+    padding: 5% 20% 3%;
+}
+
+#contact-us-section .main-title{
+    font-size: 27px;
+    letter-spacing: -0.11px;
+    color: #293248;
+}
+#contact-us-section .description{
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.09px;
+    color: #767676;
+    margin-bottom: 50px;
+}
+
+#contact-us-section .our-details .details-line{
+    margin-bottom: 15px;
+}
+#contact-us-section .our-details .details-line .icon{
+    text-align: center;
+    max-width: 6.333333% !important;
+}
+#contact-us-section .our-details .details-line .icon .fa{
+    font-size: 18px;
+    color: #6418b0;
+}
+#contact-us-section .our-details .details-line .text{
+    font-size: 18px;
+    color: #767676;
+    padding-left: 0;
+}
+
+
+#contact-us-form-section{
+    padding: 0 20% 5%;
+}
+#contact-us-form-section .section-title{
+    font-size : 22px;
+    letter-spacing : -0.11px;
+    color : #293248;
+    padding-bottom: 30px;
+}
+#contact-us-form-section .section-title .one{
+    /* border-color : ; */
+    border: 1px solid #724DDD;
+    border-width : 1px;
+    width : 127px;
+}
+#contact-us-form-section .section-title .two{
+    /* border-color : #DAE1E9; */
+    border: 1px solid #DAE1E9;
+
+    border-width : 1px;
+    width: 100%;
+}
+#contact-us-form-section .contact-us-form textarea{
+    height: 125px;
+    resize: none;
+}
+#contact-us-form-section .contact-us-form button{
+    background : #451EAD;
+    font-size : 15px;
+    height: 53px;
+    line-height : 24px;
+    color : #FFFFFF;
+}
+
+#schedule-meeting-section{
+    padding: 0 20% 5%;
+}
+#schedule-meeting-section .section-title{
+    font-size : 22px;
+    letter-spacing : -0.11px;
+    color : #293248;
+    padding-bottom: 30px;
+}
+#schedule-meeting-section .section-title .one{
+    /* border-color : ; */
+    border: 1px solid #724DDD;
+    border-width : 1px;
+    width : 127px;
+}
+#schedule-meeting-section .section-title .two{
+    /* border-color : #DAE1E9; */
+    border: 1px solid #DAE1E9;
+
+    border-width : 1px;
+    width: 100%;
+}
+
+
+/* ****************************************************************************** */
+                        /* industries-section */
+/* ****************************************************************************** */
+
+#industries-section{
+    padding: 4% 15%;
+}
+#industries-section .description{
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: -0.09px;
+    color: #767676;
+    margin-bottom: 35px;
+}
+#industries-section .card{
+    border-radius: 0;
+    margin-bottom: 30px;
+}
+#industries-section .card .card-header{
+    background: transparent;
+    padding: 0;
+}
+#industries-section .card .card-header img{
+    width: 100%;
+    height: 200px;
+}
+#industries-section .card .card-body{
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: -0.11px;
+    color: #293248;
+    padding: 15px;
+}
+#industries-section .card .card-footer{
+    text-align: center;
+    background: transparent;
+    color: #767676;
+    letter-spacing: -0.11px;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 10px;
+    border-top: 0;
+}
+#industries-section .card .card-footer embed{
+    width: 7px;
+    margin-left: 3px;
+}
+#industries-section .card hr{
+    margin: 0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* ******************************************************  MEDIA QUERES  ********************************************** */
  /* Medium devices (tablets, 768px and up) */
 @media (min-width: 992px){
@@ -1664,6 +1815,13 @@ footer .footer-container .right-section {
    
 
 }
+
+@media (max-width: 850px){
+    #industries-section{
+        padding: 5% 10%;
+    }
+}
+
 @media all and (max-width: 768px) {
 
     .gamiphy-silder-main-title {
@@ -1921,6 +2079,30 @@ footer .footer-container .right-section {
 
     #gamiphy-benefits-section{
         padding: 7% 0;
+    }
+
+    /* contact us section */
+
+    #contact-us-section{
+        padding: 15% 0 10%;
+    }
+    #contact-us-section .our-details .details-line .text{
+        padding-left: 15px;
+    }
+    #contact-us-section .our-details .details-line .row{
+        flex-flow: row;
+    }
+    #contact-us-form-section{
+        padding: 0 0 15%;
+    }
+    #schedule-meeting-section{
+        padding: 0 0 15%;
+    }
+
+
+    /* industries-section */
+    #industries-section{
+        padding: 8% 0;
     }
 }
 
