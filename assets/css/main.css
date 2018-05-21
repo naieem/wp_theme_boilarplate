@@ -119,7 +119,7 @@ header {
     margin-right: 15px;
 }
 
-.carousel-caption {
+#carouselExampleSlidesOnly .carousel-caption {
     top: -380px !important;
 }
 
@@ -1779,7 +1779,7 @@ footer .footer-container .right-section {
         display: none;
     }
 
-    .carousel-caption {
+    #carouselExampleSlidesOnly .carousel-caption {
         top: -410px !important;
     }
 
