@@ -1,9 +1,9 @@
 <?php
 /**
-* Theme Options
-* Created by Naieem Mahmud Supto
-* naieem@gamiphy.co
-*/
+ * Theme Options
+ * Created by Naieem Mahmud Supto
+ * naieem@gamiphy.co
+ */
 
 $gamiphyset = 'gamiphy_settings';
 
@@ -12,19 +12,19 @@ $gameOptions = array(
 		'type' => 'text',
 		'label' => 'Youtube Video url',
 		'model' => 'youtube_video_url',
-		'description' => 'Enter youtube video url'
+		'description' => 'Enter youtube video url',
 	),
 	array(
 		'type' => 'text',
 		'label' => 'Enter number of post to display in blog page',
 		'model' => 'post_per_page',
-		'description' => 'Enter number of post to display in blog page'
+		'description' => 'Enter number of post to display in blog page',
 	),
 	array(
 		'type' => 'text',
 		'label' => 'Insert Getting started Link',
 		'model' => 'getting_started_url',
-		'description' => 'Insert Getting started Link'
+		'description' => 'Insert Getting started Link',
 	),
 	// array(
 	// 	'type' => 'textarea',
@@ -40,54 +40,66 @@ $gameOptions = array(
 		'button_text' => 'select logo',
 		'input_field_id' => 'site_logo',
 		'popWindowTitle' => 'Select Logo',
-		'previewId' => 'preview'
+		'previewId' => 'preview',
 	),
-    array(
-        'type' => 'media',
-        'label' => 'Select Image for slider',
-        'model' => 'slider_bg',
-        'description' => 'Select or insert slider background image',
-        'button_text' => 'Select Background Image',
-        'input_field_id' => 'site_background_image',
-        'popWindowTitle' => 'Slider Background Image',
-        'previewId' => 'preview_slider_bg'
-    ),
+	array(
+		'type' => 'media',
+		'label' => 'Select Image for slider',
+		'model' => 'slider_bg',
+		'description' => 'Select or insert slider background image',
+		'button_text' => 'Select Background Image',
+		'input_field_id' => 'site_background_image',
+		'popWindowTitle' => 'Slider Background Image',
+		'previewId' => 'preview_slider_bg',
+	),
 	array(
 		'type' => 'text',
 		'label' => 'Insert calendly url',
 		'model' => 'calendly_url',
-		'description' => 'Insert calendly url'
+		'description' => 'Insert calendly url',
 	),
 	array(
 		'type' => 'text',
 		'label' => 'Demo request success message',
 		'model' => 'demo_request_success',
-		'description' => 'Insert demo request success message'
+		'description' => 'Insert demo request success message',
 	),
 	array(
 		'type' => 'text',
 		'label' => 'Demo request error message',
 		'model' => 'demo_request_error',
-		'description' => 'Insert demo request error message'
+		'description' => 'Insert demo request error message',
 	),
-    array(
-        'type' => 'text',
-        'label' => 'Enter Blog page url for using in breadcrumb',
-        'model' => 'blog_page_url',
-        'description' => 'Insert blog page url'
-    ),
-    array(
-        'type' => 'text',
-        'label' => 'Enter home slider static title',
-        'model' => 'home_slider_title',
-        'description' => 'Insert home page slider title'
-    ),
-    array(
-        'type' => 'text',
-        'label' => 'Enter page ids for showing bot',
-        'model' => 'bot_showing_page_ids',
-        'description' => 'Insert in comma seperated form(ex: 14,87,59)'
-    )
+	array(
+		'type' => 'text',
+		'label' => 'Contact form submission success message',
+		'model' => 'contact_form_request_success',
+		'description' => 'Insert Contact form submission success message',
+	),
+	array(
+		'type' => 'text',
+		'label' => 'Contact form submission error message',
+		'model' => 'contact_form_request_error',
+		'description' => 'Insert Contact form submission error message',
+	),
+	array(
+		'type' => 'text',
+		'label' => 'Enter Blog page url for using in breadcrumb',
+		'model' => 'blog_page_url',
+		'description' => 'Insert blog page url',
+	),
+	array(
+		'type' => 'text',
+		'label' => 'Enter home slider static title',
+		'model' => 'home_slider_title',
+		'description' => 'Insert home page slider title',
+	),
+	array(
+		'type' => 'text',
+		'label' => 'Enter page ids for showing bot',
+		'model' => 'bot_showing_page_ids',
+		'description' => 'Insert in comma seperated form(ex: 14,87,59)',
+	),
 );
 global $my_menu_hook_akt;
 
@@ -95,18 +107,18 @@ global $my_menu_hook_akt;
 // adding admin script query =================
 // ===========================================
 function gamiphy_options_enqueue_scripts() {
-        wp_enqueue_script('thickbox');
-        wp_enqueue_style('thickbox');
- 
-        wp_enqueue_script('media-upload');
-        wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/js/uploader.js', array( 'jquery' ) );
+	wp_enqueue_script('thickbox');
+	wp_enqueue_style('thickbox');
+
+	wp_enqueue_script('media-upload');
+	wp_enqueue_script('custom-script', get_stylesheet_directory_uri() . '/js/uploader.js', array('jquery'));
 }
 // add_action('admin_enqueue_scripts', 'gamiphy_options_enqueue_scripts');
 
 //Internal css and js
 add_action('admin_head', 'gamiphy_styles_scripts');
 
-function gamiphy_styles_scripts() { ?>
+function gamiphy_styles_scripts() {?>
 	<style type="text/css">
 		form{
 			margin-left: 15px;
@@ -179,56 +191,55 @@ function gamiphy_styles_scripts() { ?>
 <?php }
 
 //register settings
-function theme_settings_init(){
+function theme_settings_init() {
 	global $gamiphyset;
-    register_setting( $gamiphyset, $gamiphyset );
+	register_setting($gamiphyset, $gamiphyset);
 }
-
 
 //add settings page to menu
 function add_settings_page() {
 	global $page;
-	$page = add_menu_page( __( 'Theme Options' ), __( 'Theme Options' ), 'manage_options', 'settings', 'theme_settings_page');
+	$page = add_menu_page(__('Theme Options'), __('Theme Options'), 'manage_options', 'settings', 'theme_settings_page');
 	/* Using registered $page handle to hook script load */
 	// ============================================================================
 	// Because we only want to load out custom js and css in only this page
 	// ==========================================================================
-    add_action('admin_print_scripts-' . $page, 'gamiphy_options_enqueue_scripts');
+	add_action('admin_print_scripts-' . $page, 'gamiphy_options_enqueue_scripts');
 }
 
-
 //add actions
-add_action( 'admin_init', 'theme_settings_init' );
-add_action( 'admin_menu', 'add_settings_page' );
-
+add_action('admin_init', 'theme_settings_init');
+add_action('admin_menu', 'add_settings_page');
 
 //start settings page
 function theme_settings_page() {
-	if ( ! isset( $_REQUEST['settings-updated'] ) )
+	if (!isset($_REQUEST['settings-updated'])) {
 		$_REQUEST['settings-updated'] = false;
+	}
+
 	global $gamiphyset;
-?>
+	?>
 
 <div class="wrap">
 
 	<form method="post" action="options.php">
 
-		<?php settings_fields( $gamiphyset ); ?>
+		<?php settings_fields($gamiphyset);?>
 
-		<?php $options = get_option( $gamiphyset ); ?>
+		<?php $options = get_option($gamiphyset);?>
 
-		<?php $theme_name = function_exists( 'wp_get_theme' ) ? wp_get_theme() : get_current_theme(); ?>
+		<?php $theme_name = function_exists('wp_get_theme') ? wp_get_theme() : get_current_theme();?>
 
-		<h2><?php printf( __( '%s Theme Options', 'gamiphy' ), ucfirst($theme_name) ); ?></h2>
+		<h2><?php printf(__('%s Theme Options', 'gamiphy'), ucfirst($theme_name));?></h2>
 		<?php
 
-		//show saved options message
-		if ( false !== $_REQUEST['settings-updated'] ) : ?>
-			<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible"> 
+	//show saved options message
+	if (false !== $_REQUEST['settings-updated']): ?>
+			<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible">
 				<p><strong>Options saved.</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>
 			</div>
 
-		<?php endif; ?>
+		<?php endif;?>
 		<div class="postbox gamiphy-container">
 			<button type="button" class="handlediv button-link" aria-expanded="false"><span class="screen-reader-text">Toggle panel: Information</span><span class="toggle-indicator" aria-hidden="true"></span></button>
 			<h2 class="hndle"><span>Gamiphy Theme Options Panel</span></h2>
@@ -236,27 +247,27 @@ function theme_settings_page() {
 				<table class="form-table">
 					<tbody>
 						<?php
-						foreach ($GLOBALS["gameOptions"] as $key => $option) {
-							switch ($option['type']) {
-								case 'text':
-								 echo returnTextOptionConfiguration($option,$options);
-									break;
-								case 'textarea':
-								 echo returnTextareaOptionConfiguration($option,$options);
-									break;
-								case 'media':
-								 echo returnMediaSelectionConfiguration($option,$options);
-									break;
-								
-								default:
-									# code...
-									break;
-							}
-						}
-						?>
+foreach ($GLOBALS["gameOptions"] as $key => $option) {
+		switch ($option['type']) {
+		case 'text':
+			echo returnTextOptionConfiguration($option, $options);
+			break;
+		case 'textarea':
+			echo returnTextareaOptionConfiguration($option, $options);
+			break;
+		case 'media':
+			echo returnMediaSelectionConfiguration($option, $options);
+			break;
+
+		default:
+			# code...
+			break;
+		}
+	}
+	?>
 					</tbody>
 				</table>
-			</div>		
+			</div>
 		</div>
 
 		<p><input name="submit" id="submit" class="button button-primary" value="Save Changes" type="submit"></p>
@@ -274,19 +285,19 @@ function theme_settings_page() {
  * @param  [type] $storedValue [setting value that is registered and saved]
  * @return [type]              [text]
  */
-function returnTextOptionConfiguration($options,$storedValue){
+function returnTextOptionConfiguration($options, $storedValue) {
 	$saved_value = $storedValue[$options["model"]];
-	$labelAndName = $GLOBALS["gamiphyset"].'['.$options["model"].']';
-	$label = $GLOBALS[$gamiphyset].$options["label"];
+	$labelAndName = $GLOBALS["gamiphyset"] . '[' . $options["model"] . ']';
+	$label = $GLOBALS[$gamiphyset] . $options["label"];
 	$description = $options["description"];
 	return '<tr valign="top">
 			<th scope="row">
-				<label for="'.$labelAndName.'">'.$label.'</label>
+				<label for="' . $labelAndName . '">' . $label . '</label>
 			</th>
 			<td>
 				<p>
-					<input type="text" class="full-width" name="'.$labelAndName.'" value="'.$saved_value.'"></p>
-				<p><span class="description">'.$description.'</span></p>
+					<input type="text" class="full-width" name="' . $labelAndName . '" value="' . $saved_value . '"></p>
+				<p><span class="description">' . $description . '</span></p>
 			</td>
 		</tr>';
 }
@@ -296,19 +307,19 @@ function returnTextOptionConfiguration($options,$storedValue){
  * @param  [type] $storedValue [setting value that is registered and saved]
  * @return [type]              [textarea]
  */
-function returnTextareaOptionConfiguration($options,$storedValue){
+function returnTextareaOptionConfiguration($options, $storedValue) {
 	$saved_value = $storedValue[$options["model"]];
-	$labelAndName = $GLOBALS["gamiphyset"].'['.$options["model"].']';
-	$label = $GLOBALS[$gamiphyset].$options["label"];
+	$labelAndName = $GLOBALS["gamiphyset"] . '[' . $options["model"] . ']';
+	$label = $GLOBALS[$gamiphyset] . $options["label"];
 	$description = $options["description"];
 	return '<tr valign="top">
 			<th scope="row">
-				<label for="'.$labelAndName.'">'.$label.'</label>
+				<label for="' . $labelAndName . '">' . $label . '</label>
 			</th>
 			<td>
 				<p>
-				<textarea name="'.$labelAndName.'" class="large-text" cols="78" rows="8">'.$saved_value.'</textarea></p>
-				<p><span class="description">'.$description.'</span></p>
+				<textarea name="' . $labelAndName . '" class="large-text" cols="78" rows="8">' . $saved_value . '</textarea></p>
+				<p><span class="description">' . $description . '</span></p>
 			</td>
 		</tr>';
 }
@@ -320,28 +331,28 @@ function returnTextareaOptionConfiguration($options,$storedValue){
  * @return [type]              [media]
  */
 
-function returnMediaSelectionConfiguration($options,$storedValue){
+function returnMediaSelectionConfiguration($options, $storedValue) {
 	$saved_value = $storedValue[$options["model"]];
-	$labelAndName = $GLOBALS["gamiphyset"].'['.$options["model"].']';
-	$label = $GLOBALS[$gamiphyset].$options["label"];
+	$labelAndName = $GLOBALS["gamiphyset"] . '[' . $options["model"] . ']';
+	$label = $GLOBALS[$gamiphyset] . $options["label"];
 	$description = $options["description"];
 	$buttonText = $options["button_text"];
 	$inputFieldId = $options["input_field_id"];
-	$popWindowTitle = $options['popWindowTitle']; 
+	$popWindowTitle = $options['popWindowTitle'];
 	$previewId = $options['previewId'];
 	return '<tr valign="top">
 				<th scope="row">
-					<label for="'.$labelAndName.'">'.$label.'</label>
+					<label for="' . $labelAndName . '">' . $label . '</label>
 				</th>
 				<td>
 					<p>
-					<input class="full-width" type="text" id="'.$inputFieldId.'" name="'.$labelAndName.'" value="'.$saved_value.'">
-					<input type="button" class="select_media_button button" data-pop-title="'.$popWindowTitle.'" data-input-id="'.$inputFieldId.'" data-preview-id="'.$previewId.'" value="'.$buttonText.'" />
+					<input class="full-width" type="text" id="' . $inputFieldId . '" name="' . $labelAndName . '" value="' . $saved_value . '">
+					<input type="button" class="select_media_button button" data-pop-title="' . $popWindowTitle . '" data-input-id="' . $inputFieldId . '" data-preview-id="' . $previewId . '" value="' . $buttonText . '" />
 					</p>
-					<p id="'.$previewId.'">
-						<img src="'.$saved_value.'">
+					<p id="' . $previewId . '">
+						<img src="' . $saved_value . '">
 					</p>
-					<p><span class="description">'.$description.'</span></p>
+					<p><span class="description">' . $description . '</span></p>
 				</td>
 			</tr>';
 }

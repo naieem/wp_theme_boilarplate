@@ -39,4 +39,24 @@ jQuery(document).ready(function($) {
 			}
 		});
 	});
+	/**
+	 * Function to fire on clicking to contact us form
+	 */
+	$(document).on( 'submit', 'form.contact-us-form', function(event) {
+		event.preventDefault();
+		var resultContainer = $('.action_result_container');
+		resultContainer.html('<img class="alignnone" src="https://cdnjs.cloudflare.com/ajax/libs/galleriffic/2.0.1/css/loader.gif" alt="" width="48" height="48">');
+		var data = $(this).serialize();
+		var currentForm = $(this);
+		$.ajax({
+			url : site.ajax_url,
+			type : 'post',
+			data : data + "&action=store_contact_form_info",
+			success : function( response ) {
+				currentForm.trigger("reset");
+				response = JSON.parse(response);
+				resultContainer.html(response.message)
+			}
+		});
+	});
 });
