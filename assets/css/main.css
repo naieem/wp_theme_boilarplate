@@ -626,6 +626,11 @@ body {
     margin-top: 2em;
 }
 
+.lets-start-block-content .take-quiz-container .take-quiz-btn:hover {
+    color: white !important;
+    opacity: 0.8;
+}
+
 /************************************************** PLATFORM SECTION STYLES ********************************************************/
 
 #platforms-section {
