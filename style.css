@@ -235,12 +235,18 @@ ol.children .comment-div{
     left: 45%;
 }
 .slider_request_demo a{
-font-size: 17px;
+    font-size: 17px;
     background: #51D7ED;
     text-transform: uppercase;
     color: #fff;
     padding: 10px 40px;
 }
+
+.slider_request_demo a:hover{
+    color: #fff !important;
+    opacity: 0.8;
+}
+
 .slider_custom_title{
     position: absolute;
     top: 40%;
