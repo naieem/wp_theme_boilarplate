@@ -269,6 +269,10 @@ body {
     align-items: center;
 }
 
+#find-out-section .find-out-section-container .take-quiz-btn:hover{
+    color: white !important;
+    opacity: 0.8;
+}
 
 #find-out-section-2{
     /* height : 140px; */
