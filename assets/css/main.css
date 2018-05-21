@@ -1702,6 +1702,22 @@ footer .footer-container .right-section {
     margin-right: auto;
 }
 
+
+/* ************************************************* */
+                /* **navbar-brand** */
+/* ************************************************* */
+.navbar-brand{
+    margin-left: 8em;
+}
+.gamiphy-get-started{
+    margin-right: 8em;
+}
+
+#landing-page-header #navbarSupportedContent{
+    margin-right: 8em;
+}
+
+
 /* ******************************************************  MEDIA QUERES  ********************************************** */
  /* Medium devices (tablets, 768px and up) */
 @media (min-width: 992px){
@@ -1740,6 +1756,16 @@ footer .footer-container .right-section {
 
 
 @media all and (max-width: 991px) {
+    .navbar-brand{
+        margin-left: unset;
+    }
+    .gamiphy-get-started{
+        margin-right: unset;
+    }
+    #landing-page-header #navbarSupportedContent{
+        margin-right: unset;
+    }
+
     .gamiphy-logo {
         float: left;
     }
