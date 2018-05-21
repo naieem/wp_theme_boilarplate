@@ -110,6 +110,11 @@ header {
     text-transform : uppercase;
 }
 
+.watch-video:hover {
+    color: white !important;
+    opacity: 0.8;
+}
+
 .gamiphy-play {
     margin-right: 15px;
 }
@@ -167,6 +172,11 @@ header nav .navbar-collapse .navbar-nav .nav-item.active a {
     align-items: center;
     margin: 0 auto;
     margin-top: 15px;
+}
+
+.gamiphy-get-started:hover , .gamiphy-get-started-mobile:hover {
+    color: white !important;
+    opacity: 0.8;
 }
 
 .logo-container {
@@ -228,6 +238,11 @@ body {
     box-shadow : 5.1px 8.16px 10.2px rgba(0, 0, 0, 0.13);
 }
 
+.take-quiz-button:hover {
+    color: white !important;
+    opacity: 0.8;
+}
+
 #find-out-section .find-out-section-container{
     display: flex;
     justify-content: center;
@@ -286,6 +301,10 @@ body {
     box-shadow : 5.1px 8.16px 10.2px rgba(0, 0, 0, 0.13);
 }
 
+#find-out-section-2 .take-quiz-button:hover {
+    color: white !important;
+    opacity: 0.8;
+}
 
 /************************************************** WHAT IS GAMIPHICATION SECTION STYLES ********************************************************/
 #what-is-gamiphication {
@@ -1702,22 +1721,6 @@ footer .footer-container .right-section {
     margin-right: auto;
 }
 
-
-/* ************************************************* */
-                /* **navbar-brand** */
-/* ************************************************* */
-.navbar-brand{
-    margin-left: 10%;
-}
-.gamiphy-get-started{
-    margin-right: 10%;
-}
-
-#landing-page-header #navbarSupportedContent{
-    margin-right: 10%;
-}
-
-
 /* ******************************************************  MEDIA QUERES  ********************************************** */
  /* Medium devices (tablets, 768px and up) */
 @media (min-width: 992px){
@@ -1756,16 +1759,6 @@ footer .footer-container .right-section {
 
 
 @media all and (max-width: 991px) {
-    .navbar-brand{
-        margin-left: unset;
-    }
-    .gamiphy-get-started{
-        margin-right: unset;
-    }
-    #landing-page-header #navbarSupportedContent{
-        margin-right: unset;
-    }
-
     .gamiphy-logo {
         float: left;
     }
@@ -1950,6 +1943,10 @@ footer .footer-container .right-section {
         background-color: #51D7ED !important;
     }
 
+    #find-out-section-2 .find-out-row .take-quiz-button {
+        color: white !important;
+        opacity: 0.8;
+    }
     /* footer */
     footer{
         padding: 4em 0;
@@ -2101,7 +2098,7 @@ footer .footer-container .right-section {
     #request-demo-section .request-demo-form-div{
         display: flex;
         order: 2;
-    }
+    }<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fgamiphy%2Fvideos%2F2047598918853477%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
 
     #gamiphy-benefits-section{
         padding: 7% 0;
