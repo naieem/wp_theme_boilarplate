@@ -119,8 +119,7 @@ function content_slider_func( $atts ) {
     <section id="carousel-section">
         <div class="container-fluid">
             <div id="customSlider" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <img src="<?php echo $background_image?>">
+                <div class="carousel-inner" style="background-image: url('<?php echo $background_image?>');" >
                     <?php
                         foreach ( $text_contents as $texts ) {
                             $counter++;
