@@ -155,16 +155,14 @@ add_action('widgets_init', 'gamiphy_widgets_init');
  * Enqueue scripts and styles.
  */
 function gamiphy_scripts() {
-	wp_enqueue_style('gamiphy-style', get_stylesheet_uri());
+	// wp_enqueue_style('gamiphy-style', get_stylesheet_uri());
 
-	wp_enqueue_script('gamiphy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
+	// wp_enqueue_script('gamiphy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '', true);
 
-	wp_enqueue_script('gamiphy-main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '20151215989889', true);
+	// wp_enqueue_script('gamiphy-main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true);
 
-	wp_enqueue_script('gamiphy-form-validator', get_template_directory_uri() . '/js/form-validator.js', array('jquery'), '20151215989889', true);
-
-	wp_enqueue_script('gamiphy-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);
-	wp_enqueue_script('gamiphy-video-popup-player', get_template_directory_uri() . '/js/video-player.js', array('jquery'), '20181505', true);
+	// wp_enqueue_script('gamiphy-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '', true);
+	// wp_enqueue_script('gamiphy-video-popup-player', get_template_directory_uri() . '/js/video-player.js', array('jquery'), '', true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
@@ -229,10 +227,10 @@ default:
                                 <?php comment_text();?>
                             </div>
                             <div class="col-8 align-items-center comment-reactions">
-                                <embed class="like-chat-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/lol.png">
+                                <!-- <embed class="like-chat-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/lol.png">
                                 <embed class="like-chat-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/like.png">
                                 <embed class="like-chat-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/cool.png">
-                                <span class="reaction-number">82</span>
+                                <span class="reaction-number">82</span> -->
                                 <span class="reaction">Reaction</span>
                                 <div class="reply comment-reply-link">
 							<?php comment_reply_link(array_merge($args, array(

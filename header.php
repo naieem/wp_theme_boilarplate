@@ -21,7 +21,6 @@ if (!is_home()) {?>
 ?>
     <meta charset="<?php bloginfo('charset');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="fVEr7l4Dd1tgkOoYQdX-Bi4ZbxXcmIIjW0ISWshF2pI" />
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <!-- <link rel="icon" href="assets/img/favicon.ico"> -->
     <script async>
@@ -47,15 +46,23 @@ if (!is_home()) {?>
         loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css");
         loadCSS("<?php echo get_stylesheet_directory_uri(); ?>/assets/css/main.css");
     </script>
+    <link rel="stylesheet"
+          href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/main.min.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.min.css">
     <?php wp_head();
 global $options;
 $options = get_option('gamiphy_settings');
 ?>
     <title>
         <?php if (isset($options['site_title'])) {
-    echo $options['site_title'];
+	echo $options['site_title'];
 } else {
-    echo "Gamiphy";
+	echo "Gamiphy";
 }
 ?></title>
     <script async src="https://static.gamiphy.co/js/api.min.js"></script>
@@ -98,9 +105,9 @@ $logo_url = get_post_meta($post->ID, 'logo_url', true);
 $hide_page_title = get_post_meta($post->ID, 'hide_title', true);
 ?>
 <header <?php if ($custom_header) {
-    echo 'id="landing-page-header"';
+	echo 'id="landing-page-header"';
 } else {
-    'id="gamiphy-header"';
+	'id="gamiphy-header"';
 }
 ?> >
     <div class="container-fluid">
@@ -111,11 +118,11 @@ $hide_page_title = get_post_meta($post->ID, 'hide_title', true);
 // then checking theme options logo
 // at last embed default logo
 if (isset($logo_url) && $logo_url != '') {
-    echo "<img src='" . $logo_url . "' class='gamiphy-logo'>";
+	echo "<img src='" . $logo_url . "' class='gamiphy-logo'>";
 } elseif (isset($options['site_logo']) && $options['site_logo'] != '') {
-    echo "<img src='" . $options['site_logo'] . "' class='gamiphy-logo'>";
+	echo "<img src='" . $options['site_logo'] . "' class='gamiphy-logo'>";
 } else {
-    echo '<embed class="gamiphy-logo" src="' . get_stylesheet_directory_uri() . '/assets/img/logo.svg" width="100%" height="100%">';
+	echo '<embed class="gamiphy-logo" src="' . get_stylesheet_directory_uri() . '/assets/img/logo.svg" width="100%" height="100%">';
 }
 ?>
             </a>
@@ -124,31 +131,31 @@ if (isset($logo_url) && $logo_url != '') {
                     aria-expanded="false" aria-label="Toggle navigation">
                 <!-- <span class="navbar-toggler-icon"></span> -->
                 <?php
-                if ($custom_header) {
-                    echo '<img class="navbar-toggler-custom-button" src="' . get_stylesheet_directory_uri() . '/assets/img/burger-black.png" width="35px">';
+if ($custom_header) {
+	echo '<img class="navbar-toggler-custom-button" src="' . get_stylesheet_directory_uri() . '/assets/img/burger-black.png" width="35px">';
 
-                } else {
-                    echo '<img class="navbar-toggler-custom-button" src="' . get_stylesheet_directory_uri() . '/assets/img/burger.svg" width="35px">';
+} else {
+	echo '<img class="navbar-toggler-custom-button" src="' . get_stylesheet_directory_uri() . '/assets/img/burger.svg" width="35px">';
 
-                }
+}
 ?>
 
             </button>
             <?php
 wp_nav_menu(array(
-    'theme_location' => 'menu-1',
-    'depth' => 2,
-    'menu_id' => 'primary-menu',
-    'menu_class' => 'navbar-nav ml-auto',
-    'container' => 'div',
-    'container_class' => 'collapse navbar-collapse',
-    'container_id' => 'navbarSupportedContent',
-    'walker' => new WP_Bootstrap_Navwalker(),
+	'theme_location' => 'menu-1',
+	'depth' => 2,
+	'menu_id' => 'primary-menu',
+	'menu_class' => 'navbar-nav ml-auto',
+	'container' => 'div',
+	'container_class' => 'collapse navbar-collapse',
+	'container_id' => 'navbarSupportedContent',
+	'walker' => new WP_Bootstrap_Navwalker(),
 ));
 ?>
             <?php
 if (!$custom_header) {
-    ?>
+	?>
                 <a class="nav-link gamiphy-get-started" href="<?php echo $options['getting_started_url']; ?>">Get
                     Started</a>
                 <?php
@@ -159,25 +166,26 @@ if (!$custom_header) {
 </header>
 <?php
 if (!is_home()) {
-    if (!$hide_banner_section) {
-        ?>
+	if (!$hide_banner_section) {
+		?>
         <section id="top-section">
             <div class="container-fluid">
                 <div class="row top-section-container"
-                     <?php if ($banner_image_url != '') {?>style="background-image: url('<?php echo $banner_image_url;
-        } ?>')">
+                     <?php if ($banner_image_url != '') {
+			?>style="background-image: url('<?php echo $banner_image_url;
+		} ?>')">
                     <div class="col-md-12">
                         <div class="row top-section-title">
                             <div class="col-md-12">
                                 <?php
 if (!$hide_page_title) {
-            ?>
+			?>
                                     <p class="title">
                                         <?php the_title();?>
                                     </p>
                                     <?php
 }
-        ?>
+		?>
                             </div>
                             <div class="col-md-12">
                             <span class="route">
@@ -195,7 +203,7 @@ if (!$hide_page_title) {
 }
 }
 if (is_home()) {
-    ?>
+	?>
     <section id="carousel-section">
         <div class="container-fluid">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -204,32 +212,32 @@ if (is_home()) {
                     <span class="slider_custom_title gamiphy-silder-main-title"><?php echo $options['home_slider_title']; ?></span>
                     <?php
 $slider_query = new WP_Query(array('post_type' => 'slider'));
-    $slider_count = 0;
-    if ($slider_query->have_posts()):
-        while ($slider_query->have_posts()): $slider_query->the_post();
-            $slider_count++;
-            ?>
-		                            <div class="carousel-item <?php if ($slider_count == 1) {
-                echo 'active';
-            }
-            ?>">
-		                                <?php //the_post_thumbnail( 'full' );?>
-		                                <div class="carousel-caption d-md-block">
-		                                    <!-- <p class="gamiphy-silder-main-title"><?php //echo get_the_excerpt(get_the_ID()); ?></p> -->
-		                                    <p class="gamiphy-silder-sub-title"><?php echo get_the_excerpt(get_the_ID()); ?>
-		                                    </p>
-		                                    <div class="breaker"></div>
-		                                    <a class="watch-video video-btn"  data-toggle="modal" data-src="<?php echo $options['youtube_video_url']; ?>" data-target="#videoModal" href="#">
-		                                        <embed class="gamiphy-play"
-		                                               src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/video.svg"
-		                                               width="40px" height="40px">
-		                                            <span> watch the video </span>
-		                                    </a>
-		                                    <a class="nav-link gamiphy-get-started-mobile" href="<?php echo $options['getting_started_url']; ?>">Get Started</a>
-		                                </div>
-		                            </div>
-		                        <?php endwhile;?>
-	                    <?php else: ?>
+	$slider_count = 0;
+	if ($slider_query->have_posts()):
+		while ($slider_query->have_posts()): $slider_query->the_post();
+			$slider_count++;
+			?>
+																																						                            <div class="carousel-item <?php if ($slider_count == 1) {
+				echo 'active';
+			}
+			?>">
+																																						                                <?php //the_post_thumbnail( 'full' );?>
+																																						                                <div class="carousel-caption d-md-block">
+																																						                                    <!-- <p class="gamiphy-silder-main-title"><?php //echo get_the_excerpt(get_the_ID()); ?></p> -->
+																																						                                    <p class="gamiphy-silder-sub-title"><?php echo get_the_excerpt(get_the_ID()); ?>
+																																						                                    </p>
+																																						                                    <div class="breaker"></div>
+																																						                                    <a class="watch-video video-btn"  data-toggle="modal" data-src="<?php echo $options['youtube_video_url']; ?>" data-target="#videoModal" href="#">
+																																						                                        <embed class="gamiphy-play"
+																																						                                               src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/video.svg"
+																																						                                               width="40px" height="40px">
+																																						                                            <span> watch the video </span>
+																																						                                    </a>
+																																						                                    <a class="nav-link gamiphy-get-started-mobile" href="<?php echo $options['getting_started_url']; ?>">Get Started</a>
+																																						                                </div>
+																																						                            </div>
+																																						                        <?php endwhile;?>
+																			                    <?php else: ?>
                         <p><?php _e('Sorry, no posts matched your criteria.');?></p>
                     <?php endif;?>
                 </div>
