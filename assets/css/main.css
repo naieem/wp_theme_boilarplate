@@ -2415,11 +2415,12 @@ ol.children .comment-div{
     padding: 0 20%;
 }
 #customSliderMobile .gamiphy-silder-main-title {
-    font-size : 45px;
-    line-height : 52px;
+    font-size : 32px;
+    line-height : 45px;
     color : #FFFFFF;
     position: relative;
     padding: 0 20%;
+    margin-bottom: 1em;
 }
 #customSlider .carousel-caption {
     position: relative;
@@ -2438,7 +2439,7 @@ ol.children .comment-div{
     bottom: unset;
     left: unset;
     z-index: 10;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: unset;
     color: #fff;
     text-align: center;
@@ -2461,10 +2462,10 @@ ol.children .comment-div{
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 100vh;
+    /* height: 100vh; */
     background-position: center;
-    min-height: 886px;
-    background-size: auto 100%;
+    min-height: 510px;
+    background-size: 100% 100%;
     display: flex;
     flex-flow: column;
     align-items: center;
