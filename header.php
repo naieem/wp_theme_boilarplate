@@ -21,6 +21,7 @@ if (!is_home()) {?>
 ?>
     <meta charset="<?php bloginfo('charset');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="fVEr7l4Dd1tgkOoYQdX-Bi4ZbxXcmIIjW0ISWshF2pI" />
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <!-- <link rel="icon" href="assets/img/favicon.ico"> -->
     <script>
