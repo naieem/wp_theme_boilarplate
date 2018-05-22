@@ -45,8 +45,6 @@ if (!is_home()) {?>
         loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css");
         loadCSS("<?php echo get_stylesheet_directory_uri(); ?>/assets/css/main.css");
     </script>
-    <link rel="stylesheet"
-          href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
