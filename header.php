@@ -53,7 +53,6 @@ if (!is_home()) {?>
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
           crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/main.min.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.min.css">
     <?php wp_head();
 global $options;
 $options = get_option('gamiphy_settings');
