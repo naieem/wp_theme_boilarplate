@@ -143,7 +143,7 @@ class gamiphy_html_widget extends WP_Widget {
 
     public static function render_control_template_scripts() {
         ?>
-        <script type="text/html" id="tmpl-widget-custom-html-control-fields">
+        <script async type="text/html" id="tmpl-widget-custom-html-control-fields">
             <# var elementIdPrefix = 'el' + String( Math.random() ).replace( /\D/g, '' ) + '_' #>
             <p>
                 <label for="{{ elementIdPrefix }}title"><?php esc_html_e( 'Title:' ); ?></label>

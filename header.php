@@ -24,7 +24,7 @@ if (!is_home()) {?>
     <meta name="google-site-verification" content="fVEr7l4Dd1tgkOoYQdX-Bi4ZbxXcmIIjW0ISWshF2pI" />
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <!-- <link rel="icon" href="assets/img/favicon.ico"> -->
-    <script>
+    <script async>
         function loadCSS( href, before, media ){ 
         "use strict"; 
         var ss = window.document.createElement( "link" ); 
@@ -58,8 +58,8 @@ $options = get_option('gamiphy_settings');
     echo "Gamiphy";
 }
 ?></title>
-    <script src="https://static.gamiphy.co/js/api.min.js"></script>
-    <script>
+    <script async src="https://static.gamiphy.co/js/api.min.js"></script>
+    <script async>
         var w = window.innerWidth;
         var h = window.innerHeight;
         w = w * 90 / 100;
@@ -69,7 +69,7 @@ $options = get_option('gamiphy_settings');
         }
     </script>
     <!-- Facebook Pixel Code -->
-    <script>
+    <script async>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};

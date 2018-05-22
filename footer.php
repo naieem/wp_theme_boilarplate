@@ -64,7 +64,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-    <script> 
+    <script async> 
     jQuery(document).ready(function($){
             $('.dropdown > a').append('<b class="caret"></b>').dropdown();
             $('.dropdown .sub-menu').addClass('dropdown-menu');
@@ -78,7 +78,7 @@
     <?php
     if(isBotShowingValid($post->ID)){
         ?>
-        <script>var _c = new Date().getTime();document.write('<script src="//static-test.gamiphy.co/gamiphy-bot/5afcd67677d805001546c549.js?cb='+ _c +'"\>\<\/script>');</script>
+        <script async>var _c = new Date().getTime();document.write('<script src="//static-test.gamiphy.co/gamiphy-bot/5afcd67677d805001546c549.js?cb='+ _c +'"\>\<\/script>');</script>
     <?php
 }
     ?>
