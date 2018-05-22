@@ -41,11 +41,11 @@ if (!is_home()) {?>
         // here's where you specify the CSS files to be loaded asynchronously
 
         // load Google Web Font 
-        loadCSS("<?php echo get_stylesheet_directory_uri(); ?>/assets/css/font-awesome/css/font-awesome.min.css" );
-        loadCSS("https://fonts.googleapis.com/css?family=Raleway" );
-        loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" );
+        loadCSS("<?php echo get_stylesheet_directory_uri(); ?>/assets/css/font-awesome/css/font-awesome.min.css");
+        loadCSS("https://fonts.googleapis.com/css?family=Raleway");
+        loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css");
+        loadCSS("<?php echo get_stylesheet_directory_uri(); ?>/assets/css/main.css");
     </script>
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/main.css">
     <?php wp_head();
 global $options;
 $options = get_option('gamiphy_settings');
