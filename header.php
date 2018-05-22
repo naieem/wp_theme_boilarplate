@@ -37,7 +37,6 @@ if (!is_home()) {?>
         } ); 
         return ss; 
         }
-
         // here's where you specify the CSS files to be loaded asynchronously
 
         // load Google Web Font 
