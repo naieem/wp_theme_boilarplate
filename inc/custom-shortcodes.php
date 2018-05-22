@@ -108,7 +108,7 @@ function content_slider_func( $atts ) {
     ), $atts );
 
     $background_image = $atts['background_image'];
-    $background_image_mobile = $attr['background_image_mobile'];
+    $background_image_mobile = $atts['background_image_mobile'];
     $isButtonExists = $atts['button'];
     $button_text = $atts['button_text'];
     $button_link = $atts['button_link'];
@@ -143,7 +143,7 @@ function content_slider_func( $atts ) {
                 ?>
                 </div>
 
-                
+
                 <div class="carousel-inner mobile-carousel-inner" style="background-image: url('<?php echo $background_image_mobile?>');" >
                     <?php
                         foreach ( $text_contents as $texts ) {
