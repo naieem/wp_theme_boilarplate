@@ -41,11 +41,10 @@ if (!is_home()) {?>
 
         // load Google Web Font 
         loadCSS("https://static-test.gamiphy.co/gamiphy-bot-src/assets/css/font-awesome.min.css");
-        loadCSS("https://fonts.googleapis.com/css?family=Raleway");
+        loadCSS("https://static.gamiphy.co/assets/fonts/raleway/raleway.css");
         loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css");
         loadCSS("<?php echo get_stylesheet_directory_uri(); ?>/assets/css/main.css");
     </script>
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
           crossorigin="anonymous">
