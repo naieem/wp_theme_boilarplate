@@ -194,27 +194,27 @@ $slider_query = new WP_Query(array('post_type' => 'slider'));
 		while ($slider_query->have_posts()): $slider_query->the_post();
 			$slider_count++;
 			?>
-								                            <div class="carousel-item <?php if ($slider_count == 1) {
+																																						                            <div class="carousel-item <?php if ($slider_count == 1) {
 				echo 'active';
 			}
 			?>">
-								                                <?php //the_post_thumbnail( 'full' );?>
-								                                <div class="carousel-caption d-md-block">
-								                                    <!-- <p class="gamiphy-silder-main-title"><?php //echo get_the_excerpt(get_the_ID()); ?></p> -->
-								                                    <p class="gamiphy-silder-sub-title"><?php echo get_the_excerpt(get_the_ID()); ?>
-								                                    </p>
-								                                    <div class="breaker"></div>
-								                                    <a class="watch-video video-btn"  data-toggle="modal" data-src="<?php echo $options['youtube_video_url']; ?>" data-target="#videoModal" href="#">
-								                                        <embed class="gamiphy-play"
-								                                               src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/video.svg"
-								                                               width="40px" height="40px">
-								                                            <span> watch the video </span>
-								                                    </a>
-								                                    <a class="nav-link gamiphy-get-started-mobile" href="<?php echo $options['getting_started_url']; ?>">Get Started</a>
-								                                </div>
-								                            </div>
-								                        <?php endwhile;?>
-				                    <?php else: ?>
+																																						                                <?php //the_post_thumbnail( 'full' );?>
+																																						                                <div class="carousel-caption d-md-block">
+																																						                                    <!-- <p class="gamiphy-silder-main-title"><?php //echo get_the_excerpt(get_the_ID()); ?></p> -->
+																																						                                    <p class="gamiphy-silder-sub-title"><?php echo get_the_excerpt(get_the_ID()); ?>
+																																						                                    </p>
+																																						                                    <div class="breaker"></div>
+																																						                                    <a class="watch-video video-btn"  data-toggle="modal" data-src="<?php echo $options['youtube_video_url']; ?>" data-target="#videoModal" href="#">
+																																						                                        <embed class="gamiphy-play"
+																																						                                               src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/video.svg"
+																																						                                               width="40px" height="40px">
+																																						                                            <span> watch the video </span>
+																																						                                    </a>
+																																						                                    <a class="nav-link gamiphy-get-started-mobile" href="<?php echo $options['getting_started_url']; ?>">Get Started</a>
+																																						                                </div>
+																																						                            </div>
+																																						                        <?php endwhile;?>
+																			                    <?php else: ?>
                         <p><?php _e('Sorry, no posts matched your criteria.');?></p>
                     <?php endif;?>
                 </div>

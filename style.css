@@ -202,10 +202,21 @@ ol.children .comment-div{
 .gamiphy-logo{
     max-height: 30px;
 }
-#customSlider .carousel-caption{
+/* #customSlider .carousel-caption{
     bottom:700px !important;
-}
+} */
 
+#customSlider .carousel-inner{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    background-position: center;
+    min-height: 650px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
 
 .modal-dialog {
     max-width: 800px;
@@ -230,17 +241,23 @@ ol.children .comment-div{
 }
 
 .slider_request_demo{
-        position: absolute;
+    position: absolute;
     top: 30%;
-    left: 45%;
+    /* left: 45%; */
 }
 .slider_request_demo a{
-font-size: 17px;
+    font-size: 17px;
     background: #51D7ED;
     text-transform: uppercase;
     color: #fff;
     padding: 10px 40px;
 }
+
+.slider_request_demo a:hover{
+    color: #fff !important;
+    opacity: 0.8;
+}
+
 .slider_custom_title{
     position: absolute;
     top: 40%;
@@ -254,6 +271,9 @@ font-size: 17px;
 @media (max-width: 991px) {
     .slider_custom_title{
         top: 35%;
+    }
+    #customSlider .gamiphy-silder-main-title{
+        font-size: 36px;
     }
 }
 @media (max-width: 768px){
