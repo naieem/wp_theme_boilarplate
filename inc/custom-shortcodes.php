@@ -142,6 +142,7 @@ function content_slider_func( $atts ) {
                 }
                 ?>
                 </div>
+
                 
                 <div class="carousel-inner mobile-carousel-inner" style="background-image: url('<?php echo $background_image_mobile?>');" >
                     <?php
