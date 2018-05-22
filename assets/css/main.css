@@ -2107,7 +2107,7 @@ footer .footer-container .right-section {
     #request-demo-section .request-demo-form-div{
         display: flex;
         order: 2;
-    }<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fgamiphy%2Fvideos%2F2047598918853477%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+    }
 
     #gamiphy-benefits-section{
         padding: 7% 0;
@@ -2480,6 +2480,11 @@ ol.children .comment-div{
 }
 /* media query related coding */
 
+@media (min-width: 769px){
+    #customSlider .mobile-carousel-inner{
+        display: none;
+    }
+}
 
 @media (max-width: 991px) {
     .slider_custom_title{
@@ -2492,6 +2497,10 @@ ol.children .comment-div{
 @media (max-width: 768px){
     ol.children ol.children{
         padding-left: 6.3%;
+    }
+
+    #customSlider .desktop-carousel-inner{
+        display: none;
     }
 }
 
