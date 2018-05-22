@@ -24,17 +24,17 @@
                 <div class="col-md-5 right-section">
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="https://www.facebook.com/gamiphy/">
+                            <a rel=”nofollow” href="https://www.facebook.com/gamiphy/">
                                 <div class="social-icon-container">
                                     <embed class="social-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/fb.svg" width="7" height="15">
                                 </div>
                             </a>
-                            <a href="https://twitter.com/Gamiphy1?lang=en">
+                            <a rel=”nofollow” href="https://twitter.com/Gamiphy1?lang=en">
                                 <div class="social-icon-container">
                                     <embed class="social-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/twitter.svg" width="16" height="13">
                                 </div>
                             </a>
-                            <a href="https://www.linkedin.com/company/gamiphy/">
+                            <a rel=”nofollow” href="https://www.linkedin.com/company/gamiphy/">
                                 <div class="social-icon-container">
                                     <embed class="social-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/linkedin.svg" width="15" height="16">
                                 </div>
