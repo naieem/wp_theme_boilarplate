@@ -23,9 +23,27 @@ if (!is_home()) {?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <!-- <link rel="icon" href="assets/img/favicon.ico"> -->
-    <link rel="stylesheet"
-          href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/font-awesome/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script>
+        function loadCSS( href, before, media ){ 
+        "use strict"; 
+        var ss = window.document.createElement( "link" ); 
+        var ref = before || window.document.getElementsByTagName( "script" )[ 0 ]; 
+        ss.rel = "stylesheet"; 
+        ss.href = href; 
+        ss.media = "only x"; 
+        ref.parentNode.insertBefore( ss, ref ); 
+        setTimeout( function(){ 
+        ss.media = media || "all"; 
+        } ); 
+        return ss; 
+        }
+
+        // here's where you specify the CSS files to be loaded asynchronously
+
+        // load Google Web Font 
+        loadCSS("<?php echo get_stylesheet_directory_uri(); ?>/assets/css/font-awesome/css/font-awesome.min.css" );
+        loadCSS("https://fonts.googleapis.com/css?family=Raleway" );
+    </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
           crossorigin="anonymous">
