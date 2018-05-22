@@ -22,7 +22,7 @@ if (!is_home()) {?>
     <meta charset="<?php bloginfo('charset');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="icon" href="https://gamiphy.co/wp-content/uploads/2018/05/logo-black@2x-min-1.png"> 
+    <link rel="icon" href="https://gamiphy.co/wp-content/uploads/2018/05/favicon.png"> 
     <script async>
         function loadCSS( href, before, media ){ 
         "use strict"; 
