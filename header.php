@@ -23,6 +23,29 @@ if (!is_home()) {?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <!-- <link rel="icon" href="assets/img/favicon.ico"> -->
+    <script async>
+        function loadCSS( href, before, media ){ 
+        "use strict"; 
+        var ss = window.document.createElement( "link" ); 
+        var ref = before || window.document.getElementsByTagName( "script" )[ 0 ]; 
+        ss.rel = "stylesheet"; 
+        ss.href = href; 
+        ss.media = "only x"; 
+        ref.parentNode.insertBefore( ss, ref ); 
+        setTimeout( function(){ 
+        ss.media = media || "all"; 
+        } ); 
+        return ss; 
+        }
+
+        // here's where you specify the CSS files to be loaded asynchronously
+
+        // load Google Web Font 
+        loadCSS("https://static-test.gamiphy.co/gamiphy-bot-src/assets/css/font-awesome.min.css");
+        loadCSS("https://fonts.googleapis.com/css?family=Raleway");
+        loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css");
+        loadCSS("<?php echo get_stylesheet_directory_uri(); ?>/assets/css/main.css");
+    </script>
     <link rel="stylesheet"
           href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -42,8 +65,8 @@ $options = get_option('gamiphy_settings');
 	echo "Gamiphy";
 }
 ?></title>
-    <script src="https://static.gamiphy.co/js/api.min.js"></script>
-    <script>
+    <script async src="https://static.gamiphy.co/js/api.min.js"></script>
+    <script async>
         var w = window.innerWidth;
         var h = window.innerHeight;
         w = w * 90 / 100;
@@ -53,7 +76,7 @@ $options = get_option('gamiphy_settings');
         }
     </script>
     <!-- Facebook Pixel Code -->
-    <script>
+    <script async>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};

@@ -330,8 +330,8 @@ function list_of_registered_demo() {
 	?>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
 
-	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
-	<script type="text/javascript">
+	<script async type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+	<script async type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(document).ready( function () {
 		    	$('#request_table').DataTable();
@@ -383,8 +383,8 @@ function list_of_contacted_person() {
 	?>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
 
-	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
-	<script type="text/javascript">
+	<script async type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+	<script async type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(document).ready( function () {
 		    	$('#request_table').DataTable();

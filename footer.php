@@ -65,18 +65,16 @@ $options = get_option('gamiphy_settings');
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
 
-
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
 
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/skip-link-focus-fix.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/skip-link-focus-fix.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
 
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/video-player.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
+    <script async> 
 
-
-    <script>
     jQuery(document).ready(function($){
             $('.dropdown > a').append('<b class="caret"></b>').dropdown();
             $('.dropdown .sub-menu').addClass('dropdown-menu');
