@@ -2406,10 +2406,6 @@ ol.children .comment-div{
 .gamiphy-logo{
     max-height: 30px;
 }
-/* #customSlider .carousel-caption{
-    bottom:700px !important;
-} */
-
 
 #customSlider .gamiphy-silder-main-title {
     font-size : 45px;
@@ -2418,7 +2414,25 @@ ol.children .comment-div{
     position: relative;
     padding: 0 20%;
 }
+#customSliderMobile .gamiphy-silder-main-title {
+    font-size : 45px;
+    line-height : 52px;
+    color : #FFFFFF;
+    position: relative;
+    padding: 0 20%;
+}
 #customSlider .carousel-caption {
+    position: relative;
+    right: unset;
+    bottom: unset;
+    left: unset;
+    z-index: 10;
+    padding-top: 100px;
+    padding-bottom: unset;
+    color: #fff;
+    text-align: center;
+}
+#customSliderMobile .carousel-caption {
     position: relative;
     right: unset;
     bottom: unset;
@@ -2442,7 +2456,8 @@ ol.children .comment-div{
     flex-flow: column;
     align-items: center;
 }
-#customSlider .carousel-inner.mobile-carousel-inner{
+
+#customSliderMobile .carousel-inner.mobile-carousel-inner{
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -2507,7 +2522,7 @@ ol.children .comment-div{
 /* media query related coding */
 
 @media (min-width: 769px){
-    #customSlider .mobile-carousel-inner{
+    #customSliderMobile{
         display: none !important;
     }
 }
@@ -2530,11 +2545,11 @@ ol.children .comment-div{
         padding-left: 6.3%;
     }
 
-    #customSlider .desktop-carousel-inner{
+    #customSlider{
         display: none;
     }
 
-    #customSlider .gamiphy-silder-main-title{
+    #customSliderMobile .gamiphy-silder-main-title{
         padding: 0;
     }
 }
