@@ -2508,7 +2508,7 @@ ol.children .comment-div{
 
 @media (min-width: 769px){
     #customSlider .mobile-carousel-inner{
-        display: none;
+        display: none !important;
     }
 }
 
@@ -2532,6 +2532,10 @@ ol.children .comment-div{
 
     #customSlider .desktop-carousel-inner{
         display: none;
+    }
+
+    #customSlider .gamiphy-silder-main-title{
+        padding: 0;
     }
 }
 
