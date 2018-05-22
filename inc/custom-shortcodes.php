@@ -142,10 +142,11 @@ function content_slider_func( $atts ) {
                 }
                 ?>
                 </div>
-
-
+            </div>
+            <div id="customSliderMobile" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner mobile-carousel-inner" style="background-image: url('<?php echo $background_image_mobile?>');" >
                     <?php
+                        $counter=0;
                         foreach ( $text_contents as $texts ) {
                             $counter++;
                             ?>

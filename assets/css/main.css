@@ -72,15 +72,6 @@ header {
     z-index: 10;
 }
 
-
-#customSlider .gamiphy-silder-main-title {
-    font-size : 45px;
-    line-height : 52px;
-    color : #FFFFFF;
-    position: relative;
-    bottom: 670px;
-}
-
 .gamiphy-silder-main-title {
     font-size : 20px;
     letter-spacing : -0.1px;
@@ -2415,9 +2406,43 @@ ol.children .comment-div{
 .gamiphy-logo{
     max-height: 30px;
 }
-/* #customSlider .carousel-caption{
-    bottom:700px !important;
-} */
+
+#customSlider .gamiphy-silder-main-title {
+    font-size : 45px;
+    line-height : 52px;
+    color : #FFFFFF;
+    position: relative;
+    padding: 0 20%;
+}
+#customSliderMobile .gamiphy-silder-main-title {
+    font-size : 45px;
+    line-height : 52px;
+    color : #FFFFFF;
+    position: relative;
+    padding: 0 20%;
+}
+#customSlider .carousel-caption {
+    position: relative;
+    right: unset;
+    bottom: unset;
+    left: unset;
+    z-index: 10;
+    padding-top: 100px;
+    padding-bottom: unset;
+    color: #fff;
+    text-align: center;
+}
+#customSliderMobile .carousel-caption {
+    position: relative;
+    right: unset;
+    bottom: unset;
+    left: unset;
+    z-index: 10;
+    padding-top: 100px;
+    padding-bottom: unset;
+    color: #fff;
+    text-align: center;
+}
 
 #customSlider .carousel-inner{
     position: relative;
@@ -2428,7 +2453,23 @@ ol.children .comment-div{
     min-height: 650px;
     background-size: cover;
     display: flex;
-    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+}
+
+#customSliderMobile .carousel-inner.mobile-carousel-inner{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    background-position: center;
+    min-height: 886px;
+    background-size: auto 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .modal-dialog {
@@ -2454,8 +2495,8 @@ ol.children .comment-div{
 }
 
 .slider_request_demo{
-    position: absolute;
-    top: 30%;
+    position: relative;
+    /* top: 30%; */
     /* left: 45%; */
 }
 .slider_request_demo a{
@@ -2481,17 +2522,22 @@ ol.children .comment-div{
 /* media query related coding */
 
 @media (min-width: 769px){
-    #customSlider .mobile-carousel-inner{
-        display: none;
+    #customSliderMobile{
+        display: none !important;
     }
 }
 
+@media (max-width: 1084px){
+    #customSlider .gamiphy-silder-main-title{
+        padding: 0 15%;
+    }
+}
 @media (max-width: 991px) {
     .slider_custom_title{
         top: 35%;
     }
     #customSlider .gamiphy-silder-main-title{
-        font-size: 36px;
+        padding: 0 10%;
     }
 }
 @media (max-width: 768px){
@@ -2499,8 +2545,12 @@ ol.children .comment-div{
         padding-left: 6.3%;
     }
 
-    #customSlider .desktop-carousel-inner{
+    #customSlider{
         display: none;
+    }
+
+    #customSliderMobile .gamiphy-silder-main-title{
+        padding: 0;
     }
 }
 
