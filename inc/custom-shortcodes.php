@@ -100,6 +100,7 @@ add_shortcode( 'demorequestform', 'demo_request_func' );
 function content_slider_func( $atts ) {
     $request = shortcode_atts( array(
         'background_image' => '',
+        'background_image_mobile'=>'',
         'text_contents' => '',
         'button' => '', // true or false
         'button_text' => '',
@@ -107,6 +108,7 @@ function content_slider_func( $atts ) {
     ), $atts );
 
     $background_image = $atts['background_image'];
+    $background_image_mobile = $attr['background_image_mobile'];
     $isButtonExists = $atts['button'];
     $button_text = $atts['button_text'];
     $button_link = $atts['button_link'];
@@ -119,7 +121,29 @@ function content_slider_func( $atts ) {
     <section id="carousel-section">
         <div class="container-fluid">
             <div id="customSlider" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" style="background-image: url('<?php echo $background_image?>');" >
+                <div class="carousel-inner desktop-carousel-inner" style="background-image: url('<?php echo $background_image?>');" >
+                    <?php
+                        foreach ( $text_contents as $texts ) {
+                            $counter++;
+                            ?>
+                            <div class="carousel-item <?php if($counter == 1) echo 'active';?>">
+
+                                <div class="carousel-caption d-md-block">
+                                    <p class="gamiphy-silder-main-title"><?php echo $texts; ?></p>
+                                    <div class="breaker"></div>
+                                </div>
+                            </div>
+                    <?php } 
+                    if(isset($isButtonExists) && $isButtonExists == 'true'){?>
+                    <div class="slider_request_demo">
+                        <a  class="btn" href="<?php echo $button_link;?>"><?php echo $button_text;?></a>
+                    </div>
+                    <?php
+                }
+                ?>
+                </div>
+                
+                <div class="carousel-inner mobile-carousel-inner" style="background-image: url('<?php echo $background_image_mobile?>');" >
                     <?php
                         foreach ( $text_contents as $texts ) {
                             $counter++;

@@ -276,9 +276,22 @@ ol.children .comment-div{
         font-size: 36px;
     }
 }
+
+@media (min-width: 769px){
+    /* hide mobile slider */
+    #customSlider .mobile-carousel-inner{
+        display: none;
+    }
+}
+
 @media (max-width: 768px){
     ol.children ol.children{
         padding-left: 6.3%;
+    }
+
+    /* hide desktop slider */
+    #customSlider .desktop-carousel-inner{
+        display: none;
     }
 }
 
