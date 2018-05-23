@@ -129,7 +129,7 @@ header nav .navbar-collapse .navbar-nav .nav-item a {
     margin-right: .5em;
 }
 
-header nav .navbar-collapse .navbar-nav .nav-item.active a {
+header nav .navbar-collapse .navbar-nav .nav-item.active a.nav-link {
     border-color: #FFFFFF;
     border-bottom: solid 1px white;
 }
@@ -1551,7 +1551,7 @@ footer .footer-container .right-section {
     letter-spacing: -0.15px;
     color: #3D345F;
     text-align: center;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 #request-demo-form-two-section .request-demo-form input {
     border-color: #DAE1E9;
